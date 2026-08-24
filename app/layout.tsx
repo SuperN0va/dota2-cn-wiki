@@ -4,8 +4,11 @@ import { SiteHeader } from '../components/site-header';
 import { meta, searchEntries } from '../lib/data';
 import './globals.css';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 'http://localhost:3000');
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://midian-dota2-cn.cpti3-tools.chatgpt.site'),
+  metadataBase: new URL(siteUrl),
   title: { default: 'DOTA 2 中文 WIKI', template: '%s｜DOTA 2 中文 WIKI' },
   description: 'DOTA 2 全英雄、技能、物品与版本改动的中文检索资料库。',
   icons: { icon: 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/global/dota2_logo_symbol.png' },

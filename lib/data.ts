@@ -1,10 +1,10 @@
-import heroesRaw from '../data/heroes.json?raw';
-import itemsRaw from '../data/items.json?raw';
-import patchesRaw from '../data/patches.json?raw';
-import patchIndexRaw from '../data/patch-index.json?raw';
-import metaRaw from '../data/meta.json?raw';
-import cnNewsRaw from '../data/cn-news.json?raw';
-import validationRaw from '../data/validation-report.json?raw';
+import heroesRaw from '../data/heroes.json';
+import itemsRaw from '../data/items.json';
+import patchesRaw from '../data/patches.json';
+import patchIndexRaw from '../data/patch-index.json';
+import metaRaw from '../data/meta.json';
+import cnNewsRaw from '../data/cn-news.json';
+import validationRaw from '../data/validation-report.json';
 
 export type Note = { text: string; indent: number; icon?: string | null; original?: string };
 
@@ -88,20 +88,20 @@ export type Patch = {
   heroes: Array<{ id: number; notes: Note[]; abilities: Array<{ id: number; notes: Note[] }> }>;
 };
 
-export const heroes = JSON.parse(heroesRaw) as Hero[];
-export const items = JSON.parse(itemsRaw) as Item[];
-export const patches = JSON.parse(patchesRaw) as Patch[];
-export const patchIndex = JSON.parse(patchIndexRaw) as Array<{
+export const heroes = heroesRaw as unknown as Hero[];
+export const items = itemsRaw as unknown as Item[];
+export const patches = patchesRaw as unknown as Patch[];
+export const patchIndex = patchIndexRaw as unknown as Array<{
   version: string; name: string; timestamp: number; generalSections: number; heroChanges: number; itemChanges: number;
 }>;
-export const meta = JSON.parse(metaRaw) as {
+export const meta = metaRaw as unknown as {
   generatedAt: string;
   latestPatch: string;
   counts: { heroes: number; items: number; itemRecords: number; patches: number; cnNews: number; legacyPages: number };
   sources: Array<{ id: string; name: string; url: string; language: string; license: string }>;
 };
-export const cnNews = JSON.parse(cnNewsRaw) as Array<{ title: string; url: string }>;
-export const validation = JSON.parse(validationRaw) as { generatedAt: string; passed: boolean; checks: Array<{ name: string; pass: boolean; detail: string }> };
+export const cnNews = cnNewsRaw as unknown as Array<{ title: string; url: string }>;
+export const validation = validationRaw as unknown as { generatedAt: string; passed: boolean; checks: Array<{ name: string; pass: boolean; detail: string }> };
 
 export const heroById = new Map(heroes.map((hero) => [hero.id, hero]));
 export const heroBySlug = new Map(heroes.map((hero) => [hero.slug, hero]));

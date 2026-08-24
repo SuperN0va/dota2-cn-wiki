@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState, useSyncExternalStore } from 'react';
 
 type HeroSummary = {
   id: number;
@@ -17,20 +17,34 @@ type HeroSummary = {
 
 const attributes = ['全部', '力量', '敏捷', '智力', '全才'];
 const roles = ['核心', '辅助', '爆发', '控制', '耐久', '逃生', '推进', '先手'];
+const viewModeKey = 'hero-view-mode';
+const viewModeEvent = 'hero-view-mode-change';
+
+function readViewMode(): 'grid' | 'compact' {
+  return window.localStorage.getItem(viewModeKey) === 'compact' ? 'compact' : 'grid';
+}
+
+function subscribeViewMode(callback: () => void) {
+  const handleStorage = (event: StorageEvent) => {
+    if (event.key === viewModeKey) callback();
+  };
+  window.addEventListener('storage', handleStorage);
+  window.addEventListener(viewModeEvent, callback);
+  return () => {
+    window.removeEventListener('storage', handleStorage);
+    window.removeEventListener(viewModeEvent, callback);
+  };
+}
 
 export function HeroBrowser({ heroes, latestPatch }: { heroes: HeroSummary[]; latestPatch: string }) {
   const [attribute, setAttribute] = useState('全部');
   const [role, setRole] = useState('');
   const [query, setQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'compact'>('grid');
-
-  useEffect(() => {
-    if (window.localStorage.getItem('hero-view-mode') === 'compact') setViewMode('compact');
-  }, []);
+  const viewMode = useSyncExternalStore(subscribeViewMode, readViewMode, () => 'grid');
 
   const changeView = (mode: 'grid' | 'compact') => {
-    setViewMode(mode);
-    window.localStorage.setItem('hero-view-mode', mode);
+    window.localStorage.setItem(viewModeKey, mode);
+    window.dispatchEvent(new Event(viewModeEvent));
   };
 
   const counts = useMemo(() => Object.fromEntries(attributes.map((item) => [item, item === '全部' ? heroes.length : heroes.filter((hero) => hero.attribute === item).length])), [heroes]);
