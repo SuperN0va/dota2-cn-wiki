@@ -2,6 +2,8 @@
 
 面向中文玩家的 DOTA 2 英雄、技能、物品与版本改动资料库。当前数据以 Valve / DOTA 2 官方简体中文内容为主，并补充 Liquipedia 的早期版本历史；详细来源与许可见网站的“数据与许可”页面。
 
+在线访问：[https://dota2-cn-wiki.vercel.app](https://dota2-cn-wiki.vercel.app)
+
 ## 本地运行
 
 ```bash
