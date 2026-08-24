@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ version: 
   return {
     title: `${patch.name} — 完整更新日志`,
     description,
-    openGraph: { title: `${patch.name} 完整更新日志｜秘典`, description, images: [] },
-    twitter: { title: `${patch.name} 完整更新日志｜秘典`, description, images: [] },
+    openGraph: { title: `${patch.name} 完整更新日志｜DOTA 2 中文 WIKI`, description, images: [] },
+    twitter: { title: `${patch.name} 完整更新日志｜DOTA 2 中文 WIKI`, description, images: [] },
   };
 }
 

@@ -15,8 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${item.name} — 属性与版本历史`,
     description,
-    openGraph: { title: `${item.name}｜秘典`, description, images: [{ url: item.image }] },
-    twitter: { title: `${item.name}｜秘典`, description, images: [item.image] },
+    openGraph: { title: `${item.name}｜DOTA 2 中文 WIKI`, description, images: [{ url: item.image }] },
+    twitter: { title: `${item.name}｜DOTA 2 中文 WIKI`, description, images: [item.image] },
   };
 }
 

@@ -3,7 +3,7 @@ import { cnNews, formatDate, meta, validation } from '../../lib/data';
 
 export const metadata: Metadata = {
   title: '数据来源、同步与许可',
-  description: '秘典的数据来源优先级、同步方法、验证结果与图片/文字许可说明。',
+  description: 'DOTA 2 中文 WIKI 的数据来源优先级、同步方法、验证结果与图片/文字许可说明。',
 };
 
 export default function SourcesPage() {

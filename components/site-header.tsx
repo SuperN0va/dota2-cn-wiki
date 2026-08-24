@@ -46,11 +46,13 @@ export function SiteHeader({ latestPatch, entries }: { latestPatch: string; entr
   return (
     <>
       <header className="site-header">
-        <Link className="brand" href="/" aria-label="秘典首页">
-          <span className="brand-mark">秘</span>
+        <Link className="brand" href="/" aria-label="DOTA 2 中文 WIKI 首页">
+          <span className="brand-logo" aria-hidden="true">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/global/dota2_logo_symbol.png" alt="" />
+          </span>
           <span className="brand-copy">
-            <strong>秘典</strong>
-            <small>DOTA 2 中文资料库</small>
+            <strong>DOTA 2 中文 WIKI</strong>
+            <small>玩家资料库 · 非官方网站</small>
           </span>
         </Link>
 

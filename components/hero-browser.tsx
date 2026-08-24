@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 type HeroSummary = {
   id: number;
@@ -22,6 +22,16 @@ export function HeroBrowser({ heroes, latestPatch }: { heroes: HeroSummary[]; la
   const [attribute, setAttribute] = useState('全部');
   const [role, setRole] = useState('');
   const [query, setQuery] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'compact'>('grid');
+
+  useEffect(() => {
+    if (window.localStorage.getItem('hero-view-mode') === 'compact') setViewMode('compact');
+  }, []);
+
+  const changeView = (mode: 'grid' | 'compact') => {
+    setViewMode(mode);
+    window.localStorage.setItem('hero-view-mode', mode);
+  };
 
   const counts = useMemo(() => Object.fromEntries(attributes.map((item) => [item, item === '全部' ? heroes.length : heroes.filter((hero) => hero.attribute === item).length])), [heroes]);
   const filtered = useMemo(() => {
@@ -75,10 +85,16 @@ export function HeroBrowser({ heroes, latestPatch }: { heroes: HeroSummary[]; la
 
         <div className="catalog-meta">
           <span><strong>{filtered.length}</strong> / {heroes.length} 位英雄</span>
-          {(attribute !== '全部' || role || query) && <button type="button" onClick={() => { setAttribute('全部'); setRole(''); setQuery(''); }}>清除筛选</button>}
+          <div className="catalog-meta-actions">
+            {(attribute !== '全部' || role || query) && <button className="clear-filters" type="button" onClick={() => { setAttribute('全部'); setRole(''); setQuery(''); }}>清除筛选</button>}
+            <div className="view-switch" role="group" aria-label="英雄展示方式">
+              <button className={viewMode === 'grid' ? 'is-active' : ''} type="button" onClick={() => changeView('grid')} aria-pressed={viewMode === 'grid'} title="卡片视图"><span aria-hidden="true">▦</span> 卡片</button>
+              <button className={viewMode === 'compact' ? 'is-active' : ''} type="button" onClick={() => changeView('compact')} aria-pressed={viewMode === 'compact'} title="紧凑列表"><span aria-hidden="true">☷</span> 列表</button>
+            </div>
+          </div>
         </div>
 
-        <div className="hero-grid">
+        <div className={`hero-grid${viewMode === 'compact' ? ' is-compact' : ''}`}>
           {filtered.map((hero) => (
             <Link className="hero-card" href={`/heroes/${hero.slug}`} key={hero.id}>
               <div className="hero-art">

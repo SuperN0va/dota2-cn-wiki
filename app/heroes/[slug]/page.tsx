@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${hero.name} — 技能与版本历史`,
     description: `${hero.name}（${hero.nameEnglish}）官方中文资料、当前技能数值和完整改动时间线。`,
-    openGraph: { title: `${hero.name}｜秘典`, description: hero.hype, images: [{ url: hero.image }] },
-    twitter: { title: `${hero.name}｜秘典`, description: hero.hype, images: [hero.image] },
+    openGraph: { title: `${hero.name}｜DOTA 2 中文 WIKI`, description: hero.hype, images: [{ url: hero.image }] },
+    twitter: { title: `${hero.name}｜DOTA 2 中文 WIKI`, description: hero.hype, images: [hero.image] },
   };
 }
 

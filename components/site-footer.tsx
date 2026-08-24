@@ -4,7 +4,7 @@ export function SiteFooter({ generatedAt }: { generatedAt: string }) {
   return (
     <footer className="site-footer">
       <div>
-        <strong>秘典</strong>
+        <strong>DOTA 2 中文 WIKI</strong>
         <span>独立 DOTA 2 中文资料项目，并非 Valve 或完美世界官方网站。</span>
       </div>
       <div className="footer-links">
