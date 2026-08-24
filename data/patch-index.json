@@ -1,0 +1,938 @@
+[
+  {
+    "version": "7.41e",
+    "name": "7.41e",
+    "timestamp": 1785394800,
+    "generalSections": 2,
+    "heroChanges": 57,
+    "itemChanges": 34
+  },
+  {
+    "version": "7.41d",
+    "name": "7.41d",
+    "timestamp": 1780556400,
+    "generalSections": 1,
+    "heroChanges": 82,
+    "itemChanges": 18
+  },
+  {
+    "version": "7.41c",
+    "name": "7.41c",
+    "timestamp": 1778050800,
+    "generalSections": 2,
+    "heroChanges": 82,
+    "itemChanges": 15
+  },
+  {
+    "version": "7.41b",
+    "name": "7.41b",
+    "timestamp": 1775545200,
+    "generalSections": 1,
+    "heroChanges": 61,
+    "itemChanges": 23
+  },
+  {
+    "version": "7.41a",
+    "name": "7.41a",
+    "timestamp": 1774594800,
+    "generalSections": 0,
+    "heroChanges": 37,
+    "itemChanges": 3
+  },
+  {
+    "version": "7.41",
+    "name": "7.41",
+    "timestamp": 1774335600,
+    "generalSections": 4,
+    "heroChanges": 126,
+    "itemChanges": 125
+  },
+  {
+    "version": "7.40c",
+    "name": "7.40c",
+    "timestamp": 1768982400,
+    "generalSections": 0,
+    "heroChanges": 39,
+    "itemChanges": 2
+  },
+  {
+    "version": "7.40b",
+    "name": "7.40b",
+    "timestamp": 1766476800,
+    "generalSections": 0,
+    "heroChanges": 66,
+    "itemChanges": 4
+  },
+  {
+    "version": "7.40",
+    "name": "7.40",
+    "timestamp": 1765785600,
+    "generalSections": 5,
+    "heroChanges": 120,
+    "itemChanges": 74
+  },
+  {
+    "version": "7.39e",
+    "name": "7.39e",
+    "timestamp": 1759388400,
+    "generalSections": 1,
+    "heroChanges": 49,
+    "itemChanges": 11
+  },
+  {
+    "version": "7.39d",
+    "name": "7.39d",
+    "timestamp": 1754377200,
+    "generalSections": 1,
+    "heroChanges": 47,
+    "itemChanges": 24
+  },
+  {
+    "version": "7.39c",
+    "name": "7.39c",
+    "timestamp": 1750748400,
+    "generalSections": 2,
+    "heroChanges": 49,
+    "itemChanges": 14
+  },
+  {
+    "version": "7.39b",
+    "name": "7.39b",
+    "timestamp": 1748502000,
+    "generalSections": 1,
+    "heroChanges": 39,
+    "itemChanges": 8
+  },
+  {
+    "version": "7.39",
+    "name": "7.39",
+    "timestamp": 1747897200,
+    "generalSections": 3,
+    "heroChanges": 118,
+    "itemChanges": 84
+  },
+  {
+    "version": "7.38c",
+    "name": "7.38c",
+    "timestamp": 1743058800,
+    "generalSections": 3,
+    "heroChanges": 50,
+    "itemChanges": 29
+  },
+  {
+    "version": "7.38b",
+    "name": "7.38b",
+    "timestamp": 1741075200,
+    "generalSections": 1,
+    "heroChanges": 46,
+    "itemChanges": 33
+  },
+  {
+    "version": "7.38",
+    "name": "7.38",
+    "timestamp": 1739865600,
+    "generalSections": 5,
+    "heroChanges": 126,
+    "itemChanges": 94
+  },
+  {
+    "version": "7.37e",
+    "name": "7.37e",
+    "timestamp": 1732003200,
+    "generalSections": 0,
+    "heroChanges": 56,
+    "itemChanges": 1
+  },
+  {
+    "version": "7.37d",
+    "name": "7.37d",
+    "timestamp": 1727766000,
+    "generalSections": 0,
+    "heroChanges": 59,
+    "itemChanges": 14
+  },
+  {
+    "version": "7.37c",
+    "name": "7.37c",
+    "timestamp": 1724828400,
+    "generalSections": 0,
+    "heroChanges": 39,
+    "itemChanges": 7
+  },
+  {
+    "version": "7.37b",
+    "name": "7.37b",
+    "timestamp": 1723618800,
+    "generalSections": 0,
+    "heroChanges": 63,
+    "itemChanges": 6
+  },
+  {
+    "version": "7.37",
+    "name": "7.37",
+    "timestamp": 1722409200,
+    "generalSections": 1,
+    "heroChanges": 100,
+    "itemChanges": 29
+  },
+  {
+    "version": "7.36c",
+    "name": "7.36c",
+    "timestamp": 1719212400,
+    "generalSections": 0,
+    "heroChanges": 59,
+    "itemChanges": 12
+  },
+  {
+    "version": "7.36b",
+    "name": "7.36b",
+    "timestamp": 1717657200,
+    "generalSections": 1,
+    "heroChanges": 90,
+    "itemChanges": 24
+  },
+  {
+    "version": "7.36a",
+    "name": "7.36a",
+    "timestamp": 1716706800,
+    "generalSections": 1,
+    "heroChanges": 51,
+    "itemChanges": 1
+  },
+  {
+    "version": "7.36",
+    "name": "7.36",
+    "timestamp": 1716361200,
+    "generalSections": 1,
+    "heroChanges": 124,
+    "itemChanges": 18
+  },
+  {
+    "version": "7.35d",
+    "name": "7.35d",
+    "timestamp": 1711004400,
+    "generalSections": 0,
+    "heroChanges": 46,
+    "itemChanges": 24
+  },
+  {
+    "version": "7.35c",
+    "name": "7.35c",
+    "timestamp": 1708502400,
+    "generalSections": 0,
+    "heroChanges": 27,
+    "itemChanges": 47
+  },
+  {
+    "version": "7.35b",
+    "name": "7.35b",
+    "timestamp": 1703145600,
+    "generalSections": 0,
+    "heroChanges": 34,
+    "itemChanges": 15
+  },
+  {
+    "version": "7.35",
+    "name": "7.35",
+    "timestamp": 1702540800,
+    "generalSections": 1,
+    "heroChanges": 116,
+    "itemChanges": 71
+  },
+  {
+    "version": "7.34e",
+    "name": "7.34e",
+    "timestamp": 1700467200,
+    "generalSections": 0,
+    "heroChanges": 29,
+    "itemChanges": 6
+  },
+  {
+    "version": "7.34d",
+    "name": "7.34d",
+    "timestamp": 1696402800,
+    "generalSections": 0,
+    "heroChanges": 53,
+    "itemChanges": 8
+  },
+  {
+    "version": "7.34c",
+    "name": "7.34c",
+    "timestamp": 1694156400,
+    "generalSections": 0,
+    "heroChanges": 57,
+    "itemChanges": 5
+  },
+  {
+    "version": "7.34b",
+    "name": "7.34b",
+    "timestamp": 1691996400,
+    "generalSections": 0,
+    "heroChanges": 40,
+    "itemChanges": 2
+  },
+  {
+    "version": "7.34",
+    "name": "7.34",
+    "timestamp": 1691478000,
+    "generalSections": 1,
+    "heroChanges": 124,
+    "itemChanges": 59
+  },
+  {
+    "version": "7.33e",
+    "name": "7.33e",
+    "timestamp": 1689145200,
+    "generalSections": 0,
+    "heroChanges": 11,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.33d",
+    "name": "7.33d",
+    "timestamp": 1686812400,
+    "generalSections": 0,
+    "heroChanges": 45,
+    "itemChanges": 4
+  },
+  {
+    "version": "7.33c",
+    "name": "7.33c",
+    "timestamp": 1683961200,
+    "generalSections": 1,
+    "heroChanges": 70,
+    "itemChanges": 29
+  },
+  {
+    "version": "7.33b",
+    "name": "7.33b",
+    "timestamp": 1682406000,
+    "generalSections": 1,
+    "heroChanges": 32,
+    "itemChanges": 16
+  },
+  {
+    "version": "7.33",
+    "name": "7.33",
+    "timestamp": 1681974000,
+    "generalSections": 1,
+    "heroChanges": 121,
+    "itemChanges": 100
+  },
+  {
+    "version": "7.32e",
+    "name": "7.32e",
+    "timestamp": 1678089600,
+    "generalSections": 1,
+    "heroChanges": 70,
+    "itemChanges": 19
+  },
+  {
+    "version": "7.32d",
+    "name": "7.32d",
+    "timestamp": 1669708800,
+    "generalSections": 1,
+    "heroChanges": 65,
+    "itemChanges": 9
+  },
+  {
+    "version": "7.32c",
+    "name": "7.32c",
+    "timestamp": 1664262000,
+    "generalSections": 1,
+    "heroChanges": 51,
+    "itemChanges": 5
+  },
+  {
+    "version": "7.32b",
+    "name": "7.32b",
+    "timestamp": 1661842800,
+    "generalSections": 1,
+    "heroChanges": 49,
+    "itemChanges": 8
+  },
+  {
+    "version": "7.32",
+    "name": "7.32",
+    "timestamp": 1661238000,
+    "generalSections": 1,
+    "heroChanges": 123,
+    "itemChanges": 47
+  },
+  {
+    "version": "7.31d",
+    "name": "7.31d",
+    "timestamp": 1654671600,
+    "generalSections": 1,
+    "heroChanges": 59,
+    "itemChanges": 12
+  },
+  {
+    "version": "7.31c",
+    "name": "7.31c",
+    "timestamp": 1651474800,
+    "generalSections": 0,
+    "heroChanges": 41,
+    "itemChanges": 8
+  },
+  {
+    "version": "7.31b",
+    "name": "7.31b",
+    "timestamp": 1646035200,
+    "generalSections": 1,
+    "heroChanges": 17,
+    "itemChanges": 3
+  },
+  {
+    "version": "7.31",
+    "name": "7.31",
+    "timestamp": 1645603200,
+    "generalSections": 1,
+    "heroChanges": 122,
+    "itemChanges": 71
+  },
+  {
+    "version": "7.30e",
+    "name": "7.30e",
+    "timestamp": 1635404400,
+    "generalSections": 1,
+    "heroChanges": 35,
+    "itemChanges": 25
+  },
+  {
+    "version": "7.30d",
+    "name": "7.30d",
+    "timestamp": 1632553200,
+    "generalSections": 0,
+    "heroChanges": 32,
+    "itemChanges": 7
+  },
+  {
+    "version": "7.30c",
+    "name": "7.30c",
+    "timestamp": 1631257200,
+    "generalSections": 1,
+    "heroChanges": 72,
+    "itemChanges": 17
+  },
+  {
+    "version": "7.30b",
+    "name": "7.30b",
+    "timestamp": 1629615600,
+    "generalSections": 0,
+    "heroChanges": 5,
+    "itemChanges": 2
+  },
+  {
+    "version": "7.30",
+    "name": "7.30",
+    "timestamp": 1629183600,
+    "generalSections": 1,
+    "heroChanges": 121,
+    "itemChanges": 46
+  },
+  {
+    "version": "7.29d",
+    "name": "7.29d",
+    "timestamp": 1621839600,
+    "generalSections": 1,
+    "heroChanges": 14,
+    "itemChanges": 6
+  },
+  {
+    "version": "7.29c",
+    "name": "7.29c",
+    "timestamp": 1619679600,
+    "generalSections": 1,
+    "heroChanges": 20,
+    "itemChanges": 5
+  },
+  {
+    "version": "7.29b",
+    "name": "7.29b",
+    "timestamp": 1618556400,
+    "generalSections": 0,
+    "heroChanges": 41,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.29",
+    "name": "7.29",
+    "timestamp": 1617951600,
+    "generalSections": 1,
+    "heroChanges": 119,
+    "itemChanges": 107
+  },
+  {
+    "version": "7.28c",
+    "name": "7.28c",
+    "timestamp": 1613721600,
+    "generalSections": 0,
+    "heroChanges": 14,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.28b",
+    "name": "7.28b",
+    "timestamp": 1610265600,
+    "generalSections": 0,
+    "heroChanges": 41,
+    "itemChanges": 10
+  },
+  {
+    "version": "7.28a",
+    "name": "7.28a",
+    "timestamp": 1608537600,
+    "generalSections": 0,
+    "heroChanges": 46,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.28",
+    "name": "7.28",
+    "timestamp": 1608192000,
+    "generalSections": 0,
+    "heroChanges": 0,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.27d",
+    "name": "7.27d",
+    "timestamp": 1598425200,
+    "generalSections": 0,
+    "heroChanges": 29,
+    "itemChanges": 4
+  },
+  {
+    "version": "7.27c",
+    "name": "7.27c",
+    "timestamp": 1594969200,
+    "generalSections": 0,
+    "heroChanges": 7,
+    "itemChanges": 1
+  },
+  {
+    "version": "7.27b",
+    "name": "7.27b",
+    "timestamp": 1594796400,
+    "generalSections": 1,
+    "heroChanges": 108,
+    "itemChanges": 5
+  },
+  {
+    "version": "7.27a",
+    "name": "7.27a",
+    "timestamp": 1593846000,
+    "generalSections": 0,
+    "heroChanges": 0,
+    "itemChanges": 2
+  },
+  {
+    "version": "7.27",
+    "name": "7.27",
+    "timestamp": 1593327600,
+    "generalSections": 1,
+    "heroChanges": 0,
+    "itemChanges": 106
+  },
+  {
+    "version": "7.26c",
+    "name": "7.26c",
+    "timestamp": 1588402800,
+    "generalSections": 0,
+    "heroChanges": 80,
+    "itemChanges": 2
+  },
+  {
+    "version": "7.26b",
+    "name": "7.26b",
+    "timestamp": 1588057200,
+    "generalSections": 1,
+    "heroChanges": 0,
+    "itemChanges": 5
+  },
+  {
+    "version": "7.26a",
+    "name": "7.26a",
+    "timestamp": 1587452400,
+    "generalSections": 1,
+    "heroChanges": 27,
+    "itemChanges": 28
+  },
+  {
+    "version": "7.26",
+    "name": "7.26",
+    "timestamp": 1587106800,
+    "generalSections": 1,
+    "heroChanges": 0,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.25c",
+    "name": "7.25c",
+    "timestamp": 1586156400,
+    "generalSections": 1,
+    "heroChanges": 12,
+    "itemChanges": 11
+  },
+  {
+    "version": "7.25b",
+    "name": "7.25b",
+    "timestamp": 1585033200,
+    "generalSections": 1,
+    "heroChanges": 2,
+    "itemChanges": 3
+  },
+  {
+    "version": "7.25a",
+    "name": "7.25a",
+    "timestamp": 1584514800,
+    "generalSections": 0,
+    "heroChanges": 5,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.25",
+    "name": "7.25",
+    "timestamp": 1584428400,
+    "generalSections": 1,
+    "heroChanges": 79,
+    "itemChanges": 66
+  },
+  {
+    "version": "7.24b",
+    "name": "7.24b",
+    "timestamp": 1582704000,
+    "generalSections": 0,
+    "heroChanges": 12,
+    "itemChanges": 5
+  },
+  {
+    "version": "7.24",
+    "name": "7.24",
+    "timestamp": 1580025600,
+    "generalSections": 1,
+    "heroChanges": 69,
+    "itemChanges": 54
+  },
+  {
+    "version": "7.23f",
+    "name": "7.23f",
+    "timestamp": 1578297600,
+    "generalSections": 1,
+    "heroChanges": 11,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.23e",
+    "name": "7.23e",
+    "timestamp": 1576310400,
+    "generalSections": 1,
+    "heroChanges": 27,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.23d",
+    "name": "7.23d",
+    "timestamp": 1576051200,
+    "generalSections": 1,
+    "heroChanges": 6,
+    "itemChanges": 14
+  },
+  {
+    "version": "7.23c",
+    "name": "7.23c",
+    "timestamp": 1575619200,
+    "generalSections": 1,
+    "heroChanges": 27,
+    "itemChanges": 21
+  },
+  {
+    "version": "7.23b",
+    "name": "7.23b",
+    "timestamp": 1575014400,
+    "generalSections": 1,
+    "heroChanges": 17,
+    "itemChanges": 15
+  },
+  {
+    "version": "7.23a",
+    "name": "7.23a",
+    "timestamp": 1574841600,
+    "generalSections": 1,
+    "heroChanges": 10,
+    "itemChanges": 20
+  },
+  {
+    "version": "7.23",
+    "name": "7.23",
+    "timestamp": 1574755200,
+    "generalSections": 0,
+    "heroChanges": 0,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.22h",
+    "name": "7.22h",
+    "timestamp": 1569740400,
+    "generalSections": 1,
+    "heroChanges": 5,
+    "itemChanges": 4
+  },
+  {
+    "version": "7.22g",
+    "name": "7.22g",
+    "timestamp": 1567753200,
+    "generalSections": 1,
+    "heroChanges": 26,
+    "itemChanges": 7
+  },
+  {
+    "version": "7.22f",
+    "name": "7.22f",
+    "timestamp": 1564297200,
+    "generalSections": 0,
+    "heroChanges": 47,
+    "itemChanges": 1
+  },
+  {
+    "version": "7.22e",
+    "name": "7.22e",
+    "timestamp": 1563087600,
+    "generalSections": 1,
+    "heroChanges": 39,
+    "itemChanges": 2
+  },
+  {
+    "version": "7.22d",
+    "name": "7.22d",
+    "timestamp": 1561878000,
+    "generalSections": 0,
+    "heroChanges": 44,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.22c",
+    "name": "7.22c",
+    "timestamp": 1560063600,
+    "generalSections": 0,
+    "heroChanges": 46,
+    "itemChanges": 1
+  },
+  {
+    "version": "7.22b",
+    "name": "7.22b",
+    "timestamp": 1558940400,
+    "generalSections": 0,
+    "heroChanges": 6,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.22",
+    "name": "7.22",
+    "timestamp": 1558681200,
+    "generalSections": 1,
+    "heroChanges": 100,
+    "itemChanges": 16
+  },
+  {
+    "version": "7.21d",
+    "name": "7.21d",
+    "timestamp": 1553410800,
+    "generalSections": 1,
+    "heroChanges": 35,
+    "itemChanges": 4
+  },
+  {
+    "version": "7.21c",
+    "name": "7.21c",
+    "timestamp": 1551513600,
+    "generalSections": 1,
+    "heroChanges": 40,
+    "itemChanges": 2
+  },
+  {
+    "version": "7.21b",
+    "name": "7.21b",
+    "timestamp": 1550304000,
+    "generalSections": 1,
+    "heroChanges": 33,
+    "itemChanges": 1
+  },
+  {
+    "version": "7.21",
+    "name": "7.21",
+    "timestamp": 1548748800,
+    "generalSections": 1,
+    "heroChanges": 108,
+    "itemChanges": 29
+  },
+  {
+    "version": "7.20e",
+    "name": "7.20e",
+    "timestamp": 1544342400,
+    "generalSections": 0,
+    "heroChanges": 34,
+    "itemChanges": 4
+  },
+  {
+    "version": "7.20d",
+    "name": "7.20d",
+    "timestamp": 1543564800,
+    "generalSections": 1,
+    "heroChanges": 21,
+    "itemChanges": 11
+  },
+  {
+    "version": "7.20c",
+    "name": "7.20c",
+    "timestamp": 1543046400,
+    "generalSections": 0,
+    "heroChanges": 37,
+    "itemChanges": 7
+  },
+  {
+    "version": "7.20b",
+    "name": "7.20b",
+    "timestamp": 1542700800,
+    "generalSections": 0,
+    "heroChanges": 18,
+    "itemChanges": 1
+  },
+  {
+    "version": "7.20",
+    "name": "7.20",
+    "timestamp": 1542614400,
+    "generalSections": 0,
+    "heroChanges": 100,
+    "itemChanges": 38
+  },
+  {
+    "version": "7.19d",
+    "name": "7.19d",
+    "timestamp": 1539327600,
+    "generalSections": 0,
+    "heroChanges": 13,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.19c",
+    "name": "7.19c",
+    "timestamp": 1536908400,
+    "generalSections": 0,
+    "heroChanges": 16,
+    "itemChanges": 1
+  },
+  {
+    "version": "7.19b",
+    "name": "7.19b",
+    "timestamp": 1535785200,
+    "generalSections": 1,
+    "heroChanges": 23,
+    "itemChanges": 8
+  },
+  {
+    "version": "7.19",
+    "name": "7.19",
+    "timestamp": 1532847600,
+    "generalSections": 1,
+    "heroChanges": 29,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.18",
+    "name": "7.18",
+    "timestamp": 1529910000,
+    "generalSections": 0,
+    "heroChanges": 57,
+    "itemChanges": 5
+  },
+  {
+    "version": "7.17",
+    "name": "7.17",
+    "timestamp": 1528614000,
+    "generalSections": 0,
+    "heroChanges": 51,
+    "itemChanges": 5
+  },
+  {
+    "version": "7.16",
+    "name": "7.16",
+    "timestamp": 1527404400,
+    "generalSections": 1,
+    "heroChanges": 64,
+    "itemChanges": 12
+  },
+  {
+    "version": "7.15",
+    "name": "7.15",
+    "timestamp": 1525935600,
+    "generalSections": 1,
+    "heroChanges": 0,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.14",
+    "name": "7.14",
+    "timestamp": 1524553200,
+    "generalSections": 1,
+    "heroChanges": 64,
+    "itemChanges": 22
+  },
+  {
+    "version": "7.13b",
+    "name": "7.13b",
+    "timestamp": 1523602800,
+    "generalSections": 1,
+    "heroChanges": 0,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.13",
+    "name": "7.13",
+    "timestamp": 1523516400,
+    "generalSections": 1,
+    "heroChanges": 0,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.12",
+    "name": "7.12",
+    "timestamp": 1522306800,
+    "generalSections": 1,
+    "heroChanges": 52,
+    "itemChanges": 10
+  },
+  {
+    "version": "7.11",
+    "name": "7.11",
+    "timestamp": 1521097200,
+    "generalSections": 1,
+    "heroChanges": 0,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.10",
+    "name": "7.10",
+    "timestamp": 1519891200,
+    "generalSections": 1,
+    "heroChanges": 69,
+    "itemChanges": 7
+  },
+  {
+    "version": "7.09",
+    "name": "7.09",
+    "timestamp": 1518681600,
+    "generalSections": 1,
+    "heroChanges": 0,
+    "itemChanges": 0
+  },
+  {
+    "version": "7.08",
+    "name": "7.08",
+    "timestamp": 1517472000,
+    "generalSections": 1,
+    "heroChanges": 23,
+    "itemChanges": 11
+  }
+]

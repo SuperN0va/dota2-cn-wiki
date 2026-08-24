@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-08-24T08:18:16.801Z",
+  "passed": true,
+  "checks": [
+    {
+      "name": "英雄总数",
+      "pass": true,
+      "detail": "127 位"
+    },
+    {
+      "name": "英雄 ID 唯一",
+      "pass": true,
+      "detail": "无重复 ID"
+    },
+    {
+      "name": "英雄中文资料完整",
+      "pass": true,
+      "detail": "名称、背景、技能均存在"
+    },
+    {
+      "name": "英雄图片地址完整",
+      "pass": true,
+      "detail": "均使用 HTTPS"
+    },
+    {
+      "name": "物品记录总数",
+      "pass": true,
+      "detail": "544 条"
+    },
+    {
+      "name": "物品 ID 唯一",
+      "pass": true,
+      "detail": "无重复 ID"
+    },
+    {
+      "name": "官方版本覆盖",
+      "pass": true,
+      "detail": "117 个版本"
+    },
+    {
+      "name": "版本索引一致",
+      "pass": true,
+      "detail": "117/117"
+    },
+    {
+      "name": "最新版本一致",
+      "pass": true,
+      "detail": "7.41e"
+    },
+    {
+      "name": "版本中文内容存在",
+      "pass": true,
+      "detail": "检测到中文更新正文"
+    },
+    {
+      "name": "来源可追溯",
+      "pass": true,
+      "detail": "3 个来源"
+    }
+  ]
+}

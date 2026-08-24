@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-08-24T08:18:04.512Z",
+  "latestPatch": "7.41e",
+  "counts": {
+    "heroes": 127,
+    "items": 408,
+    "itemRecords": 544,
+    "patches": 117,
+    "cnNews": 51,
+    "legacyPages": 488
+  },
+  "sources": [
+    {
+      "id": "valve",
+      "name": "Valve Dota 2 官方数据",
+      "url": "https://www.dota2.com/datafeed",
+      "language": "简体中文",
+      "license": "Valve 游戏资料与媒体资源"
+    },
+    {
+      "id": "perfectworld",
+      "name": "Dota 2 国服官方网站",
+      "url": "https://www.dota2.com.cn/news/gamepost/index.htm",
+      "language": "简体中文",
+      "license": "官方更新公告"
+    },
+    {
+      "id": "liquipedia",
+      "name": "Liquipedia Dota 2 Wiki",
+      "url": "https://liquipedia.net/dota2/Main_Page",
+      "language": "英文历史补充",
+      "license": "文字 CC BY-SA 3.0；媒体许可逐文件判断"
+    }
+  ]
+}
