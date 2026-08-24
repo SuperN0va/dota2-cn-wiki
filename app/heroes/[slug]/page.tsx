@@ -130,14 +130,21 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
   ]).filter(Boolean) as Array<{ kind: string; className: string; ability: Ability; text: string }>;
   const talentRows = [3, 2, 1, 0].map((index) => ({ level: [10, 15, 20, 25][index], left: hero.talents[index * 2 + 1], right: hero.talents[index * 2] }));
   const profile = hero.liquipediaProfile;
-  const statRows: Array<[string, string]> = [
-    ['生命值', formatStat(hero.stats.health)], ['生命恢复', formatStat(hero.stats.healthRegen, '/秒')],
-    ['魔法值', formatStat(hero.stats.mana)], ['魔法恢复', formatStat(hero.stats.manaRegen, '/秒')],
-    ['攻击力', (hero.stats.damage as number[]).join(' – ')], ['护甲', formatStat(hero.stats.armor)],
-    ['魔法抗性', formatStat(hero.stats.magicResistance, '%')], ['攻击类型', formatStat(hero.stats.attackCapability)],
-    ['攻击距离', formatStat(hero.stats.attackRange)], ['弹道速度', hero.stats.attackCapability === '近战' ? '即时（近战）' : formatStat(hero.stats.projectileSpeed)],
-    ['基础攻击间隔', formatStat(hero.stats.attackRate, ' 秒')], ['移动速度', formatStat(hero.stats.movementSpeed)],
-    ['转身速率', formatStat(hero.stats.turnRate)], ['昼 / 夜视野', `${formatStat(hero.stats.sightRangeDay)} / ${formatStat(hero.stats.sightRangeNight)}`],
+  const vitalStats = [
+    { label: '生命值', value: formatStat(hero.stats.health), regen: hero.stats.healthRegen ? `+${formatStat(hero.stats.healthRegen, '/秒')}` : '—', tone: 'health' },
+    { label: '魔法值', value: formatStat(hero.stats.mana), regen: hero.stats.manaRegen ? `+${formatStat(hero.stats.manaRegen, '/秒')}` : '—', tone: 'mana' },
+  ];
+  const statRows: Array<{ label: string; value: string; tone: 'defense' | 'combat' | 'mobility' | 'vision'; groupStart?: boolean }> = [
+    { label: '护甲', value: formatStat(hero.stats.armor), tone: 'defense' },
+    { label: '魔法抗性', value: formatStat(hero.stats.magicResistance, '%'), tone: 'defense' },
+    { label: '攻击力', value: (hero.stats.damage as number[]).join(' – '), tone: 'combat', groupStart: true },
+    { label: '弹道速度', value: hero.stats.attackCapability === '近战' ? '即时（近战）' : formatStat(hero.stats.projectileSpeed), tone: 'combat' },
+    { label: '攻击距离', value: formatStat(hero.stats.attackRange), tone: 'combat' },
+    { label: '攻击类型', value: formatStat(hero.stats.attackCapability), tone: 'combat' },
+    { label: '基础攻击间隔', value: formatStat(hero.stats.attackRate, ' 秒'), tone: 'combat' },
+    { label: '移动速度', value: formatStat(hero.stats.movementSpeed), tone: 'mobility', groupStart: true },
+    { label: '转身速率', value: formatStat(hero.stats.turnRate), tone: 'mobility' },
+    { label: '昼 / 夜视野', value: `${formatStat(hero.stats.sightRangeDay)} / ${formatStat(hero.stats.sightRangeNight)}`, tone: 'vision', groupStart: true },
   ];
 
   return (
@@ -231,9 +238,17 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
         </div>
 
         <aside className="detail-aside">
-          <section className="quick-stats"><p className="eyebrow">详细属性</p>{statRows.map(([label, value]) => <div key={label}><span>{label}</span><strong>{value}</strong></div>)}</section>
+          <section className="quick-stats">
+            <header className="sidebar-panel-heading"><p className="eyebrow">详细属性</p><small>当前版本</small></header>
+            <div className="stat-vitals">
+              {vitalStats.map((stat) => <div className={`vital-stat is-${stat.tone}`} key={stat.label}><span>{stat.label}</span><strong>{stat.value}</strong><small>{stat.regen}</small></div>)}
+            </div>
+            <div className="stat-table">
+              {statRows.map((stat) => <div className={`stat-row is-${stat.tone}${stat.groupStart ? ' group-start' : ''}`} key={stat.label}><span>{stat.label}</span><strong>{stat.value}</strong></div>)}
+            </div>
+          </section>
           <section className="model-card" id="hero-model">
-            <p className="eyebrow">英雄模型</p>
+            <header className="sidebar-panel-heading"><p className="eyebrow">英雄模型</p><small>模型资料</small></header>
             <dl>
               <div><dt>内部单位名</dt><dd>{hero.internalName}</dd></div>
               <div><dt>攻击前摇 / 后摇</dt><dd>{profile?.attackPoint ?? '—'} / {profile?.attackBackswing ?? '—'} 秒</dd></div>

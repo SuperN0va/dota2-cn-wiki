@@ -309,13 +309,34 @@ a.talent-cell:hover { background: #171b1d; color: #e1ddd4; }
 .original-note p { background: #171817; color: #77766f; font-style: italic; margin: 6px 0; padding: 8px; }
 .detail-aside { display: grid; gap: 14px; height: fit-content; }
 .quick-stats, .bio-card, .provenance-card, .model-card { background: var(--panel); border: 1px solid #252a2c; padding: 18px; }
-.quick-stats > div { align-items: center; border-top: 1px solid #252a2c; display: flex; font-size: 9px; justify-content: space-between; padding: 9px 0; }
-.quick-stats span { color: #666b67; }
-.quick-stats strong { color: #aaa8a1; font-weight: 500; max-width: 160px; overflow-wrap: anywhere; text-align: right; }
+.quick-stats { overflow: hidden; padding: 0; }
+.sidebar-panel-heading { align-items: center; display: flex; justify-content: space-between; padding-bottom: 14px; }
+.quick-stats > .sidebar-panel-heading { padding: 18px 18px 14px; }
+.sidebar-panel-heading .eyebrow { margin: 0; }
+.sidebar-panel-heading small { color: #555c5d; font-size: 7px; letter-spacing: .12em; text-transform: uppercase; }
+.stat-vitals { border-top: 1px solid #303638; padding: 0; }
+.vital-stat { align-items: center; color: #f4f3eb; display: grid; gap: 8px; grid-template-columns: 52px 1fr auto; min-height: 38px; padding: 6px 14px; position: relative; text-shadow: 0 1px 2px rgba(0,0,0,.75); }
+.vital-stat::after { background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent); content: ""; height: 1px; left: 0; opacity: .6; position: absolute; right: 0; top: 0; }
+.vital-stat.is-health { background: linear-gradient(90deg, #245a2b, #4bbf37 72%, #61d836); }
+.vital-stat.is-mana { background: linear-gradient(90deg, #205db8, #3099da 72%, #54cbe0); }
+.vital-stat span { color: rgba(255,255,255,.84); font-size: 8px; letter-spacing: .08em; }
+.vital-stat strong { font: 700 17px/1 Georgia, serif; text-align: center; }
+.vital-stat small { color: rgba(13,30,25,.84); font-size: 8px; font-weight: 700; min-width: 48px; text-align: right; }
+.stat-table { padding: 4px 16px 13px; }
+.stat-row { align-items: center; border-top: 1px solid #292f31; display: flex; font-size: 9px; justify-content: space-between; min-height: 34px; padding: 7px 0; position: relative; }
+.stat-row:first-child { border-top: 0; }
+.stat-row.group-start { border-top: 2px solid #3a4042; margin-top: 2px; }
+.stat-row span { font-weight: 650; letter-spacing: .015em; }
+.stat-row strong { color: #dedbd1; font: 600 10px/1.35 Georgia, "STSong", serif; max-width: 160px; overflow-wrap: anywhere; text-align: right; }
+.stat-row.is-defense span { color: #65aadb; }
+.stat-row.is-combat span { color: #d5aa62; }
+.stat-row.is-mobility span { color: #83b98a; }
+.stat-row.is-vision span { color: #889fce; }
 .model-card dl { margin: 0; }
-.model-card dl div { border-top: 1px solid #252a2c; display: grid; font-size: 9px; gap: 8px; grid-template-columns: 1fr 1.35fr; padding: 9px 0; }
-.model-card dt { color: #666b67; }
-.model-card dd { color: #aaa8a1; margin: 0; overflow-wrap: anywhere; text-align: right; }
+.model-card dl div { border-top: 1px solid #292f31; display: grid; font-size: 9px; gap: 8px; grid-template-columns: 1fr 1.35fr; padding: 9px 0; }
+.model-card dl div:nth-child(4), .model-card dl div:nth-child(6) { border-top: 2px solid #3a4042; }
+.model-card dt { color: #7398b2; font-weight: 600; }
+.model-card dd { color: #d0cdc4; font: 500 9px/1.45 Georgia, "STSong", serif; margin: 0; overflow-wrap: anywhere; text-align: right; }
 .model-card > a { color: #b99d62; display: inline-block; font-size: 9px; margin-top: 11px; }
 .model-card > small { color: #5f645f; display: block; font-size: 8px; line-height: 1.65; margin-top: 9px; }
 .bio-card > p:last-child { color: #7d817d; font: 10px/1.9 "STSong", serif; margin: 0; }
