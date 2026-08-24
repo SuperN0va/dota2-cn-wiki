@@ -3,8 +3,8 @@ import path from 'node:path';
 
 const DATA = path.join(process.cwd(), 'data');
 const load = async (name) => JSON.parse(await readFile(path.join(DATA, name), 'utf8'));
-const [heroes, items, patches, patchIndex, meta, legacy] = await Promise.all([
-  load('heroes.json'), load('items.json'), load('patches.json'), load('patch-index.json'), load('meta.json'), load('legacy.json'),
+const [heroes, items, patches, patchIndex, meta, legacy, esports] = await Promise.all([
+  load('heroes.json'), load('items.json'), load('patches.json'), load('patch-index.json'), load('meta.json'), load('legacy.json'), load('esports.json'),
 ]);
 
 const checks = [];
@@ -73,6 +73,12 @@ check('官方版本覆盖', patches.length >= 100, `${patches.length} 个版本`
 check('版本索引一致', patches.length === patchIndex.length, `${patches.length}/${patchIndex.length}`);
 check('最新版本一致', meta.latestPatch === patchIndex[0]?.version, meta.latestPatch);
 check('版本中文内容存在', patches.some((patch) => patch.general.some((section) => /[\u4e00-\u9fff]/.test(section.title + section.notes.map((note) => note.text).join('')))), '检测到中文更新正文');
+check('当前职业战队覆盖', esports.teams.filter((team) => team.roster.length).length >= 30, `${esports.teams.filter((team) => team.roster.length).length} 支当前阵容`);
+check('职业选手覆盖', esports.players.filter((player) => player.teamSlug).length >= 150, `${esports.players.length} 名选手，${esports.players.filter((player) => player.teamSlug).length} 名在当前阵容`);
+check('选手与战队标识唯一', unique(esports.players.map((player) => player.slug)) && unique(esports.teams.map((team) => team.slug)), '选手与战队 slug 无重复');
+check('当前阵容关联完整', esports.teams.every((team) => team.roster.every((slug) => esports.players.some((player) => player.slug === slug))) && esports.players.every((player) => !player.teamSlug || esports.teams.some((team) => team.slug === player.teamSlug)), '选手与战队双向关联无断链');
+check('职业图片本地化', esports.teams.every((team) => team.logo.startsWith('/assets/esports/')) && esports.players.every((player) => player.flag.startsWith('/assets/esports/')), '战队 Logo 与国籍旗帜均为本地缓存');
+check('近期转会完整', esports.transfers.length === 50 && esports.transfers.every((transfer) => transfer.date && transfer.players.length && transfer.referenceUrl), `${esports.transfers.length} 条记录均含日期、选手与来源`);
 check('来源可追溯', meta.sources?.length === 3 && meta.sources.every((source) => source.url), `${meta.sources?.length || 0} 个来源`);
 
 const report = { generatedAt: new Date().toISOString(), passed: checks.every((item) => item.pass), checks };

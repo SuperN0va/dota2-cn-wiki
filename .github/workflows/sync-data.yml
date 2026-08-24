@@ -37,26 +37,32 @@ jobs:
       - name: Fetch official and historical data
         run: pnpm run data:sync
 
+      - name: Fetch current esports directories
+        run: pnpm run data:sync:esports
+
       - name: Validate generated data
         run: pnpm run data:validate
 
       - name: Commit updated snapshots
         shell: bash
         run: |
-          if git diff --quiet -- \
+          changes="$(git status --porcelain -- \
             data/heroes.json \
             data/items.json \
             data/patches.json \
             data/patch-index.json \
             data/cn-news.json \
             data/legacy.json \
-            data/liquipedia-profiles.json; then
+            data/liquipedia-profiles.json \
+            data/esports.json \
+            public/assets/esports)"
+          if [ -z "$changes" ]; then
             git restore data/meta.json data/validation-report.json
             echo "No data changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data
+          git add data public/assets/esports
           git commit -m "chore(data): sync DOTA 2 updates"
           git push

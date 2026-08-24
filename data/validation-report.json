@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T10:39:05.201Z",
+  "generatedAt": "2026-08-24T15:30:05.574Z",
   "passed": true,
   "checks": [
     {
@@ -156,6 +156,36 @@
       "name": "版本中文内容存在",
       "pass": true,
       "detail": "检测到中文更新正文"
+    },
+    {
+      "name": "当前职业战队覆盖",
+      "pass": true,
+      "detail": "39 支当前阵容"
+    },
+    {
+      "name": "职业选手覆盖",
+      "pass": true,
+      "detail": "262 名选手，189 名在当前阵容"
+    },
+    {
+      "name": "选手与战队标识唯一",
+      "pass": true,
+      "detail": "选手与战队 slug 无重复"
+    },
+    {
+      "name": "当前阵容关联完整",
+      "pass": true,
+      "detail": "选手与战队双向关联无断链"
+    },
+    {
+      "name": "职业图片本地化",
+      "pass": true,
+      "detail": "战队 Logo 与国籍旗帜均为本地缓存"
+    },
+    {
+      "name": "近期转会完整",
+      "pass": true,
+      "detail": "50 条记录均含日期、选手与来源"
     },
     {
       "name": "来源可追溯",

@@ -246,8 +246,18 @@ function normalizePatch(patch) {
     general: (patch.general_notes || []).map((section) => ({
       title: stripHtml(section.title) || '综合改动', notes: (section.generic || []).map(normalizeNote),
     })),
-    items: (patch.items || []).map((entry) => ({ id: entry.ability_id, notes: (entry.ability_notes || []).map(normalizeNote) })),
-    neutralItems: (patch.neutral_items || []).map((entry) => ({ id: entry.ability_id, notes: (entry.ability_notes || []).map(normalizeNote) })),
+    items: (patch.items || []).map((entry) => ({
+      id: entry.ability_id,
+      notes: (entry.ability_notes || []).map(normalizeNote),
+      ...(entry.title ? { title: stripHtml(entry.title) } : {}),
+      ...(entry.is_general_note ? { isGeneralNote: true } : {}),
+    })),
+    neutralItems: (patch.neutral_items || []).map((entry) => ({
+      id: entry.ability_id,
+      notes: (entry.ability_notes || []).map(normalizeNote),
+      ...(entry.title ? { title: stripHtml(entry.title) } : {}),
+      ...(entry.is_general_note ? { isGeneralNote: true } : {}),
+    })),
     heroes: (patch.heroes || []).map((entry) => ({
       id: entry.hero_id,
       notes: (entry.hero_notes || []).map(normalizeNote),
@@ -645,7 +655,19 @@ const fetchedPatches = await mapPool(missingPatches, 6, async (patch, index) => 
   return normalizePatch(data);
 });
 for (const patch of fetchedPatches) previousByVersion.set(patch.version, patch);
-const patches = patchList.map((entry) => previousByVersion.get(entry.patch_number)).filter(Boolean);
+let patches = patchList.map((entry) => previousByVersion.get(entry.patch_number)).filter(Boolean);
+const headingRepairVersions = patches.filter((patch) => (
+  [...patch.items, ...patch.neutralItems].some((entry) => entry.id < 0 && !entry.title)
+)).map((patch) => patch.version);
+if (headingRepairVersions.length) {
+  console.log(`补全 ${headingRepairVersions.length} 个版本的物品分组标题…`);
+  const repaired = await mapPool(headingRepairVersions, 6, async (version) => {
+    const data = await fetchJson(`${VALVE}/patchnotes?version=${encodeURIComponent(version)}&language=${LANGUAGE}`);
+    return normalizePatch(data);
+  });
+  const repairedByVersion = new Map(repaired.map((patch) => [patch.version, patch]));
+  patches = patches.map((patch) => repairedByVersion.get(patch.version) || patch);
+}
 
 const heroById = new Map(heroes.map((hero) => [hero.id, hero]));
 const itemById = new Map(items.map((item) => [item.id, item]));

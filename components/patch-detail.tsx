@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
+import { AbilityImage } from './ability-image';
+import { AttributeIcon } from './attribute-icon';
 import type { Note } from '../lib/data';
 
 type EntityChange = {
@@ -10,7 +12,12 @@ type EntityChange = {
   slug: string;
   image: string;
   notes: Note[];
-  abilities?: Array<{ id: number; name: string; image?: string; notes: Note[] }>;
+  hasDetail?: boolean;
+  attribute?: string;
+  kind?: 'hero' | 'special-unit';
+  sectionTitle?: string;
+  abilities?: Array<{ id: number; name: string; image?: string; isInnate?: boolean; useSharedInnateIcon?: boolean; notes: Note[] }>;
+  subunits?: EntityChange[];
 };
 
 type PatchView = {
@@ -23,12 +30,67 @@ type PatchView = {
 const tabs = [
   { id: 'general', label: '综合改动' },
   { id: 'items', label: '物品改动' },
-  { id: 'neutral', label: '中立物品' },
+  { id: 'neutral', label: '中立物品与附魔' },
   { id: 'heroes', label: '英雄改动' },
 ];
 
 function NoteList({ notes }: { notes: Note[] }) {
-  return <ul className="change-notes">{notes.map((note, index) => <li style={{ marginLeft: `${Math.max(0, note.indent - 1) * 18}px` }} key={`${note.text}:${index}`}>{note.text}</li>)}</ul>;
+  const visibleNotes = notes.filter((note) => note.text.trim());
+  return <ul className="change-notes">{visibleNotes.map((note, index) => <li style={{ marginLeft: `${Math.max(0, note.indent - 1) * 18}px` }} key={`${note.text}:${index}`}>{note.text}</li>)}</ul>;
+}
+
+function hasChanges(entry: EntityChange): boolean {
+  return entry.notes.some((note) => note.text.trim())
+    || Boolean(entry.abilities?.some((ability) => ability.notes.some((note) => note.text.trim())))
+    || Boolean(entry.subunits?.some(hasChanges));
+}
+
+function searchableText(entry: EntityChange): string {
+  return [
+    entry.name,
+    entry.slug,
+    ...entry.notes.map((note) => note.text),
+    ...(entry.abilities?.flatMap((ability) => [ability.name, ...ability.notes.map((note) => note.text)]) || []),
+    ...(entry.subunits?.map(searchableText) || []),
+  ].join(' ');
+}
+
+function AbilityChanges({ entry }: { entry: EntityChange }) {
+  return entry.abilities?.map((ability, abilityIndex) => (
+    <div className="ability-change" key={`${entry.id}:${ability.id}:${abilityIndex}`}>
+      {(ability.image || ability.useSharedInnateIcon) && (
+        <AbilityImage
+          src={ability.image || ''}
+          alt={`${ability.name}图标`}
+          isInnate={ability.isInnate && ability.useSharedInnateIcon !== false}
+        />
+      )}
+      <div><h3>{ability.name}</h3><NoteList notes={ability.notes} /></div>
+    </div>
+  ));
+}
+
+function EntityHeading({ entry, label, href }: { entry: EntityChange; label: string; href?: string }) {
+  return (
+    <header>
+      {entry.image ? <img className="entity-portrait" src={entry.image} alt="" /> : <span className="entity-placeholder">?</span>}
+      <div>
+        <small>{label}</small>
+        <div className="entity-title-line">{entry.attribute && <AttributeIcon attribute={entry.attribute} />}<h2>{entry.name}</h2></div>
+      </div>
+      {entry.hasDetail && href && <Link href={href}>查看完整资料 →</Link>}
+    </header>
+  );
+}
+
+function SpecialUnitChange({ entry }: { entry: EntityChange }) {
+  return (
+    <section className="special-unit-change">
+      <EntityHeading entry={entry} label="关联英雄单位" href={`/heroes/${entry.slug}`} />
+      <NoteList notes={entry.notes} />
+      <AbilityChanges entry={entry} />
+    </section>
+  );
 }
 
 export function PatchDetail({ patch }: { patch: PatchView }) {
@@ -38,8 +100,19 @@ export function PatchDetail({ patch }: { patch: PatchView }) {
 
   const entities = useMemo(() => {
     const source = tab === 'items' ? patch.items : tab === 'neutral' ? patch.neutralItems : patch.heroes;
-    return source.filter((entry) => !needle || `${entry.name} ${entry.slug} ${entry.notes.map((note) => note.text).join(' ')}`.toLocaleLowerCase('zh-CN').includes(needle));
+    return source.filter(hasChanges).filter((entry) => !needle || searchableText(entry).toLocaleLowerCase('zh-CN').includes(needle));
   }, [needle, patch, tab]);
+
+  const entityGroups = useMemo(() => {
+    const groups: Array<{ title: string; entries: EntityChange[] }> = [];
+    for (const entry of entities) {
+      const title = entry.sectionTitle || (tab === 'neutral' ? '中立物品' : tab === 'heroes' ? '英雄' : '物品');
+      const current = groups.at(-1);
+      if (!current || current.title !== title) groups.push({ title, entries: [entry] });
+      else current.entries.push(entry);
+    }
+    return groups;
+  }, [entities, tab]);
 
   return (
     <section className="patch-body">
@@ -60,21 +133,24 @@ export function PatchDetail({ patch }: { patch: PatchView }) {
         </div>
       ) : (
         <div className="entity-changes">
-          {entities.map((entry) => (
-            <article className="entity-change" key={entry.id}>
-              <header>
-                {entry.image ? <img src={entry.image} alt="" /> : <span className="entity-placeholder">?</span>}
-                <div><small>{tab === 'heroes' ? '英雄' : tab === 'neutral' ? '中立物品' : '物品'}</small><h2>{entry.name}</h2></div>
-                <Link href={tab === 'heroes' ? `/heroes/${entry.slug}` : `/items/${entry.slug}`}>查看完整资料 →</Link>
-              </header>
-              <NoteList notes={entry.notes} />
-              {entry.abilities?.map((ability) => (
-                <div className="ability-change" key={ability.id}>
-                  {ability.image && <img src={ability.image} alt="" />}
-                  <div><h3>{ability.name}</h3><NoteList notes={ability.notes} /></div>
-                </div>
-              ))}
-            </article>
+          {entityGroups.map((group, groupIndex) => (
+            <section className="entity-change-group" key={`${group.title}:${groupIndex}`}>
+              {(tab === 'neutral' || entityGroups.length > 1) && <header className="entity-group-heading"><span />{group.title}</header>}
+              <div>
+                {group.entries.map((entry, entryIndex) => (
+                  <article className="entity-change" key={`${tab}:${entry.id}:${entryIndex}`}>
+                    <EntityHeading
+                      entry={entry}
+                      label={tab === 'heroes' ? '英雄' : group.title === '附魔' ? '附魔' : tab === 'neutral' ? '中立物品' : '物品'}
+                      href={tab === 'heroes' ? `/heroes/${entry.slug}` : `/items/${entry.slug}`}
+                    />
+                    <NoteList notes={entry.notes} />
+                    <AbilityChanges entry={entry} />
+                    {entry.subunits?.map((subunit, subunitIndex) => <SpecialUnitChange entry={subunit} key={`${entry.id}:${subunit.id}:${subunitIndex}`} />)}
+                  </article>
+                ))}
+              </div>
+            </section>
           ))}
           {!entities.length && <div className="catalog-empty">没有匹配的改动记录。</div>}
         </div>

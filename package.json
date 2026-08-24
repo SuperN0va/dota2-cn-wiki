@@ -13,6 +13,7 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "data:sync": "node scripts/sync-data.mjs",
     "data:sync:fast": "node scripts/sync-data.mjs --no-liquipedia",
+    "data:sync:esports": "node scripts/sync-esports.mjs",
     "data:validate": "node scripts/validate-data.mjs"
   },
   "dependencies": {

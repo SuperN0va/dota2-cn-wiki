@@ -1,0 +1,5767 @@
+{
+  "generatedAt": "2026-08-24T15:27:44.757Z",
+  "sourceUrl": "https://liquipedia.net/dota2/Portal:Players",
+  "transferSourceUrl": "https://liquipedia.net/dota2/Portal:Transfers",
+  "scope": "Current rosters from regional team portals and the 50 latest notable transfers.",
+  "teams": [
+    {
+      "slug": "amaru-gaming",
+      "name": "Amaru Gaming",
+      "region": "Americas",
+      "subregion": "South America",
+      "sourceUrl": "https://liquipedia.net/dota2/Amaru_Gaming",
+      "logo": "/assets/esports/teams/amaru-gaming-0f1fbee8.png",
+      "roster": [
+        "genek",
+        "k1",
+        "oscar",
+        "panda",
+        "pipi"
+      ]
+    },
+    {
+      "slug": "aurora-gaming",
+      "name": "Aurora Gaming",
+      "region": "Europe",
+      "subregion": "Eastern Europe & CIS",
+      "sourceUrl": "https://liquipedia.net/dota2/Aurora_Gaming",
+      "logo": "/assets/esports/teams/aurora-gaming-192e499e.png",
+      "roster": [
+        "kaori",
+        "mikoto",
+        "mira",
+        "nightfall",
+        "ws"
+      ]
+    },
+    {
+      "slug": "boomboys",
+      "name": "BoomBoys",
+      "region": "Europe",
+      "subregion": "Eastern Europe & CIS",
+      "sourceUrl": "https://liquipedia.net/dota2/BoomBoys",
+      "logo": "/assets/esports/teams/boomboys-80493f78.png",
+      "roster": [
+        "gpk",
+        "kataomi",
+        "kiritych",
+        "miero",
+        "save"
+      ]
+    },
+    {
+      "slug": "carstensz-esports",
+      "name": "Carstensz Esports",
+      "region": "Southeast Asia",
+      "subregion": "",
+      "sourceUrl": "https://liquipedia.net/dota2/Carstensz_Esports",
+      "logo": "/assets/esports/teams/carstensz-esports-1c61391a.png",
+      "roster": []
+    },
+    {
+      "slug": "cdub-esports",
+      "name": "CDUB Esports",
+      "region": "Americas",
+      "subregion": "North America",
+      "sourceUrl": "https://liquipedia.net/dota2/CDUB_Esports",
+      "logo": "/assets/esports/teams/cdub-esports-4f7b0df4.png",
+      "roster": [
+        "luis-luis-angel-ruben"
+      ]
+    },
+    {
+      "slug": "cloud-rising",
+      "name": "Cloud Rising",
+      "sourceUrl": "https://liquipedia.net/dota2/Cloud_Rising",
+      "region": "",
+      "subregion": "",
+      "logo": "/assets/esports/teams/cloud-rising-768f2fcf.png",
+      "roster": []
+    },
+    {
+      "slug": "dogsent",
+      "name": "DOGSENT",
+      "sourceUrl": "https://liquipedia.net/dota2/DOGSENT",
+      "region": "",
+      "subregion": "",
+      "logo": "/assets/esports/teams/dogsent-67b980c2.png",
+      "roster": []
+    },
+    {
+      "slug": "enjoy",
+      "name": "Enjoy",
+      "sourceUrl": "https://liquipedia.net/dota2/Enjoy",
+      "region": "",
+      "subregion": "",
+      "logo": "/assets/esports/teams/enjoy-5c5196fd.png",
+      "roster": []
+    },
+    {
+      "slug": "execration",
+      "name": "Execration",
+      "region": "Southeast Asia",
+      "subregion": "",
+      "sourceUrl": "https://liquipedia.net/dota2/Execration",
+      "logo": "/assets/esports/teams/execration-42c84324.png",
+      "roster": [
+        "akashi",
+        "bob",
+        "cml",
+        "shanks",
+        "tino"
+      ]
+    },
+    {
+      "slug": "gamerlegion",
+      "name": "GamerLegion",
+      "region": "Americas",
+      "subregion": "North America",
+      "sourceUrl": "https://liquipedia.net/dota2/GamerLegion",
+      "logo": "/assets/esports/teams/gamerlegion-20d871de.png",
+      "roster": [
+        "bignum",
+        "fayde",
+        "ghost-daniel-chan",
+        "rcy",
+        "speeed"
+      ]
+    },
+    {
+      "slug": "glyph",
+      "name": "GLYPH",
+      "sourceUrl": "https://liquipedia.net/dota2/GLYPH",
+      "region": "",
+      "subregion": "",
+      "logo": "/assets/esports/teams/glyph-c7c6e834.png",
+      "roster": []
+    },
+    {
+      "slug": "hokori",
+      "name": "Hokori",
+      "region": "Americas",
+      "subregion": "South America",
+      "sourceUrl": "https://liquipedia.net/dota2/Hokori",
+      "logo": "/assets/esports/teams/hokori-f0aa85e4.png",
+      "roster": [
+        "gardick",
+        "lumi-re",
+        "lumpy",
+        "vitaly"
+      ]
+    },
+    {
+      "slug": "huligani",
+      "name": "HULIGANI",
+      "region": "Europe",
+      "subregion": "Eastern Europe & CIS",
+      "sourceUrl": "https://liquipedia.net/dota2/HULIGANI",
+      "logo": "/assets/esports/teams/huligani-442db089.png",
+      "roster": [
+        "mirage",
+        "respect",
+        "sayuw",
+        "vazya"
+      ]
+    },
+    {
+      "slug": "ilbirs-esports",
+      "name": "Ilbirs eSports",
+      "sourceUrl": "https://liquipedia.net/dota2/Ilbirs_eSports",
+      "region": "",
+      "subregion": "",
+      "logo": "/assets/esports/teams/ilbirs-esports-6db79405.png",
+      "roster": []
+    },
+    {
+      "slug": "infamous-gaming",
+      "name": "Infamous Gaming",
+      "region": "Americas",
+      "subregion": "South America",
+      "sourceUrl": "https://liquipedia.net/dota2/Infamous_Gaming",
+      "logo": "/assets/esports/teams/infamous-gaming-3fb850d5.png",
+      "roster": [
+        "chaaannn",
+        "jp",
+        "lalatronii",
+        "sl4d1n",
+        "takecaremia"
+      ]
+    },
+    {
+      "slug": "inner-circle-x-insanity",
+      "name": "Inner Circle x Insanity",
+      "region": "Europe",
+      "subregion": "Eastern Europe & CIS",
+      "sourceUrl": "https://liquipedia.net/dota2/Inner_Circle_x_Insanity",
+      "logo": "/assets/esports/teams/inner-circle-x-insanity-6516d013.png",
+      "roster": [
+        "423",
+        "fernans",
+        "laise",
+        "se",
+        "stojkov"
+      ]
+    },
+    {
+      "slug": "iron-wing",
+      "name": "Iron Wing",
+      "region": "Europe",
+      "subregion": "Eastern Europe & CIS",
+      "sourceUrl": "https://liquipedia.net/dota2/Iron_Wing",
+      "logo": "/assets/esports/teams/iron-wing-7c2c5c3f.png",
+      "roster": [
+        "33",
+        "ari",
+        "bzm",
+        "pure-russian-player",
+        "whitemon"
+      ]
+    },
+    {
+      "slug": "ivory",
+      "name": "Ivory",
+      "region": "Southeast Asia",
+      "subregion": "",
+      "sourceUrl": "https://liquipedia.net/dota2/Ivory",
+      "logo": "/assets/esports/teams/ivory-1f7c3fca.png",
+      "roster": [
+        "abeng",
+        "carlo",
+        "jg",
+        "karma",
+        "mac"
+      ]
+    },
+    {
+      "slug": "l1-team",
+      "name": "L1 TEAM",
+      "sourceUrl": "https://liquipedia.net/dota2/L1_TEAM",
+      "region": "",
+      "subregion": "",
+      "logo": "/assets/esports/teams/l1-team-85ba4568.png",
+      "roster": []
+    },
+    {
+      "slug": "level-up",
+      "name": "Level UP",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "sourceUrl": "https://liquipedia.net/dota2/Level_UP",
+      "logo": "/assets/esports/teams/level-up-7de16a3a.png",
+      "roster": [
+        "ainkrad",
+        "bb3px",
+        "htrd",
+        "queezy",
+        "woe"
+      ]
+    },
+    {
+      "slug": "lgd-gaming",
+      "name": "LGD Gaming",
+      "region": "Americas",
+      "subregion": "South America",
+      "sourceUrl": "https://liquipedia.net/dota2/LGD_Gaming",
+      "logo": "/assets/esports/teams/lgd-gaming-64655c66.png",
+      "roster": [
+        "kj",
+        "tailung",
+        "thiolicor",
+        "topson",
+        "wisper",
+        "yuma"
+      ]
+    },
+    {
+      "slug": "mouz",
+      "name": "MOUZ",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "sourceUrl": "https://liquipedia.net/dota2/MOUZ",
+      "logo": "/assets/esports/teams/mouz-6ad278c6.png",
+      "roster": [
+        "boom",
+        "crystallis",
+        "midone",
+        "panto",
+        "yamich"
+      ]
+    },
+    {
+      "slug": "natus-vincere",
+      "name": "Natus Vincere",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "sourceUrl": "https://liquipedia.net/dota2/Natus_Vincere",
+      "logo": "/assets/esports/teams/natus-vincere-e35f6f92.png",
+      "roster": [
+        "daze",
+        "gotthejuice",
+        "niku",
+        "pma",
+        "riddys"
+      ]
+    },
+    {
+      "slug": "nemiga-gaming",
+      "name": "Nemiga Gaming",
+      "region": "Europe",
+      "subregion": "Eastern Europe & CIS",
+      "sourceUrl": "https://liquipedia.net/dota2/Nemiga_Gaming",
+      "logo": "/assets/esports/teams/nemiga-gaming-4c9c5db2.png",
+      "roster": [
+        "ariel",
+        "covisnine",
+        "fishman",
+        "selfhate",
+        "young-g"
+      ]
+    },
+    {
+      "slug": "nigma-galaxy",
+      "name": "Nigma Galaxy",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "sourceUrl": "https://liquipedia.net/dota2/Nigma_Galaxy",
+      "logo": "/assets/esports/teams/nigma-galaxy-cb2467ad.png",
+      "roster": [
+        "davai",
+        "gh",
+        "lorenof",
+        "omar",
+        "sumail"
+      ]
+    },
+    {
+      "slug": "og",
+      "name": "OG",
+      "region": "Southeast Asia",
+      "subregion": "",
+      "sourceUrl": "https://liquipedia.net/dota2/OG",
+      "logo": "/assets/esports/teams/og-fa6f4e63.png",
+      "roster": [
+        "natsumi",
+        "raven",
+        "skem",
+        "tims",
+        "yopaj"
+      ]
+    },
+    {
+      "slug": "old-boys",
+      "name": "Old Boys",
+      "region": "China",
+      "subregion": "",
+      "sourceUrl": "https://liquipedia.net/dota2/Old_Boys",
+      "logo": "/assets/esports/teams/old-boys-3d084783.png",
+      "roster": [
+        "820",
+        "dd",
+        "hao",
+        "longdd",
+        "mu",
+        "sansheng",
+        "yyf",
+        "zhou",
+        "zsmj"
+      ]
+    },
+    {
+      "slug": "playtime",
+      "name": "PlayTime",
+      "region": "Americas",
+      "subregion": "South America",
+      "sourceUrl": "https://liquipedia.net/dota2/PlayTime",
+      "logo": "/assets/esports/teams/ptime-e131645e.png",
+      "roster": [
+        "elmisho",
+        "scofield",
+        "wits"
+      ]
+    },
+    {
+      "slug": "power-rangers",
+      "name": "Power Rangers",
+      "region": "Europe",
+      "subregion": "Eastern Europe & CIS",
+      "sourceUrl": "https://liquipedia.net/dota2/Power_Rangers",
+      "logo": "/assets/esports/teams/power-rangers-bf1ec7ef.png",
+      "roster": [
+        "alberkaaa",
+        "till-the-end",
+        "immersion",
+        "nicky-cool",
+        "ta2000"
+      ]
+    },
+    {
+      "slug": "ptime",
+      "name": "PTime",
+      "sourceUrl": "https://liquipedia.net/dota2/PTime",
+      "region": "",
+      "subregion": "",
+      "logo": "/assets/esports/teams/ptime-e131645e.png",
+      "roster": []
+    },
+    {
+      "slug": "re-arise",
+      "name": "RE Arise",
+      "sourceUrl": "https://liquipedia.net/dota2/RE_Arise",
+      "region": "",
+      "subregion": "",
+      "logo": "/assets/esports/teams/re-arise-ef944eec.png",
+      "roster": []
+    },
+    {
+      "slug": "rekonix",
+      "name": "REKONIX",
+      "sourceUrl": "https://liquipedia.net/dota2/REKONIX",
+      "region": "",
+      "subregion": "",
+      "logo": "/assets/esports/teams/rekonix-f5626873.png",
+      "roster": []
+    },
+    {
+      "slug": "rune-eaters",
+      "name": "Rune Eaters",
+      "region": "Europe",
+      "subregion": "Eastern Europe & CIS",
+      "sourceUrl": "https://liquipedia.net/dota2/Rune_Eaters",
+      "logo": "/assets/esports/teams/rune-eaters-9c1ea13a.png",
+      "roster": [
+        "aik",
+        "copy",
+        "darklord",
+        "ekki",
+        "malik"
+      ]
+    },
+    {
+      "slug": "team-falcons",
+      "name": "Team Falcons",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "sourceUrl": "https://liquipedia.net/dota2/Team_Falcons",
+      "logo": "/assets/esports/teams/team-falcons-ffc4fafd.png",
+      "roster": [
+        "atf",
+        "cr1t",
+        "malr1ne",
+        "skiter",
+        "sneyking"
+      ]
+    },
+    {
+      "slug": "team-liquid",
+      "name": "Team Liquid",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "sourceUrl": "https://liquipedia.net/dota2/Team_Liquid",
+      "logo": "/assets/esports/teams/team-liquid-6cf5f613.png",
+      "roster": [
+        "ace",
+        "boxi",
+        "micke",
+        "nisha",
+        "tofu"
+      ]
+    },
+    {
+      "slug": "team-lynx",
+      "name": "Team Lynx",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "sourceUrl": "https://liquipedia.net/dota2/Team_Lynx",
+      "logo": "/assets/esports/teams/team-lynx-e64adfa7.png",
+      "roster": [
+        "kreker",
+        "mellojul",
+        "qbfy",
+        "vladikthehtiviy"
+      ]
+    },
+    {
+      "slug": "team-nemesis",
+      "name": "Team Nemesis",
+      "region": "Southeast Asia",
+      "subregion": "",
+      "sourceUrl": "https://liquipedia.net/dota2/Team_Nemesis",
+      "logo": "/assets/esports/teams/team-nemesis-abcca762.png",
+      "roster": [
+        "jabz",
+        "jackky",
+        "jhocam",
+        "ken",
+        "narman"
+      ]
+    },
+    {
+      "slug": "team-resilience",
+      "name": "Team Resilience",
+      "region": "China",
+      "subregion": "",
+      "sourceUrl": "https://liquipedia.net/dota2/Team_Resilience",
+      "logo": "/assets/esports/teams/team-resilience-08fd4a06.png",
+      "roster": [
+        "echo",
+        "erika",
+        "niu",
+        "planet",
+        "zzq"
+      ]
+    },
+    {
+      "slug": "team-spirit",
+      "name": "Team Spirit",
+      "region": "Europe",
+      "subregion": "Eastern Europe & CIS",
+      "sourceUrl": "https://liquipedia.net/dota2/Team_Spirit",
+      "logo": "/assets/esports/teams/team-spirit-ab12d6d1.png",
+      "roster": [
+        "collapse",
+        "larl",
+        "not-me",
+        "rue",
+        "yatoro"
+      ]
+    },
+    {
+      "slug": "team-spirit-academy",
+      "name": "Team Spirit Academy",
+      "region": "Europe",
+      "subregion": "Eastern Europe & CIS",
+      "sourceUrl": "https://liquipedia.net/dota2/Team_Spirit_Academy",
+      "logo": "/assets/esports/teams/team-spirit-academy-0b698477.png",
+      "roster": [
+        "86-russian-player",
+        "aidar",
+        "kae",
+        "kiseki",
+        "kyford"
+      ]
+    },
+    {
+      "slug": "team-vision",
+      "name": "TEAM VISION",
+      "region": "Europe",
+      "subregion": "Eastern Europe & CIS",
+      "sourceUrl": "https://liquipedia.net/dota2/TEAM_VISION",
+      "logo": "/assets/esports/teams/team-vision-9d22cb3b.png",
+      "roster": [
+        "9class",
+        "dukalis",
+        "noone",
+        "noticed",
+        "satanic-russian-player"
+      ]
+    },
+    {
+      "slug": "team-yandex",
+      "name": "Team Yandex",
+      "region": "Europe",
+      "subregion": "Eastern Europe & CIS",
+      "sourceUrl": "https://liquipedia.net/dota2/Team_Yandex",
+      "logo": "/assets/esports/teams/team-yandex-e09ec9e2.png",
+      "roster": [
+        "chira-junior",
+        "dm",
+        "malady",
+        "saksa",
+        "watson"
+      ]
+    },
+    {
+      "slug": "vici-gaming",
+      "name": "Vici Gaming",
+      "sourceUrl": "https://liquipedia.net/dota2/Vici_Gaming",
+      "region": "",
+      "subregion": "",
+      "logo": "/assets/esports/teams/vici-gaming-9dee1da5.png",
+      "roster": []
+    },
+    {
+      "slug": "virtus-pro",
+      "name": "Virtus.pro",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "sourceUrl": "https://liquipedia.net/dota2/Virtus.pro",
+      "logo": "/assets/esports/teams/virtus-pro-6c9d0a9f.png",
+      "roster": [
+        "abed",
+        "fly",
+        "hellscream",
+        "saberlight",
+        "timado"
+      ]
+    },
+    {
+      "slug": "vp-prodigy",
+      "name": "VP.Prodigy",
+      "sourceUrl": "https://liquipedia.net/dota2/VP.Prodigy",
+      "region": "",
+      "subregion": "",
+      "logo": "/assets/esports/teams/vp-prodigy-60a79867.png",
+      "roster": []
+    },
+    {
+      "slug": "winter-bear",
+      "name": "Winter Bear",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "sourceUrl": "https://liquipedia.net/dota2/Winter_Bear",
+      "logo": "/assets/esports/teams/winter-bear-d6f73de6.png",
+      "roster": [
+        "jeezy",
+        "kachal",
+        "mikey",
+        "stoic"
+      ]
+    },
+    {
+      "slug": "xtreme-gaming",
+      "name": "Xtreme Gaming",
+      "region": "China",
+      "subregion": "",
+      "sourceUrl": "https://liquipedia.net/dota2/Xtreme_Gaming",
+      "logo": "/assets/esports/teams/xtreme-gaming-d35d94eb.png",
+      "roster": [
+        "ame",
+        "fy",
+        "nothingtosay",
+        "xnova",
+        "xxs"
+      ]
+    },
+    {
+      "slug": "yakult-brothers",
+      "name": "Yakult Brothers",
+      "region": "China",
+      "subregion": "",
+      "sourceUrl": "https://liquipedia.net/dota2/Yakult_Brothers",
+      "logo": "/assets/esports/teams/yakult-brothers-cd404e64.png",
+      "roster": [
+        "emo",
+        "kaka",
+        "lou",
+        "43bb27c2a954",
+        "4a7a16b111b7"
+      ]
+    },
+    {
+      "slug": "yangon-galacticos",
+      "name": "Yangon Galacticos",
+      "region": "Southeast Asia",
+      "subregion": "",
+      "sourceUrl": "https://liquipedia.net/dota2/Yangon_Galacticos",
+      "logo": "/assets/esports/teams/yangon-galacticos-fe9968df.png",
+      "roster": [
+        "ksh",
+        "momo",
+        "skill-lay",
+        "young-ph",
+        "zawrain"
+      ]
+    },
+    {
+      "slug": "yellow-submarine",
+      "name": "Yellow Submarine",
+      "region": "Europe",
+      "subregion": "Eastern Europe & CIS",
+      "sourceUrl": "https://liquipedia.net/dota2/Yellow_Submarine",
+      "logo": "/assets/esports/teams/yellow-submarine-38c7a84c.png",
+      "roster": [
+        "batyuk",
+        "rain-russian-player",
+        "shigetsu",
+        "xakoda"
+      ]
+    },
+    {
+      "slug": "zero-tenacity",
+      "name": "Zero Tenacity",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "sourceUrl": "https://liquipedia.net/dota2/Zero_Tenacity",
+      "logo": "/assets/esports/teams/zero-tenacity-2273a5f0.png",
+      "roster": [
+        "desire",
+        "dream",
+        "mooz",
+        "nefrit",
+        "worick"
+      ]
+    }
+  ],
+  "players": [
+    {
+      "slug": "33",
+      "name": "33",
+      "realName": "Neta Shapira",
+      "role": "Captain",
+      "country": "Israel",
+      "profileUrl": "https://liquipedia.net/dota2/33",
+      "teamSlug": "iron-wing",
+      "teamName": "Iron Wing",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/israel-2a3e847d.png",
+      "teamLogo": "/assets/esports/teams/iron-wing-7c2c5c3f.png"
+    },
+    {
+      "slug": "423",
+      "name": "423",
+      "realName": "Altanginj Bilguun",
+      "role": "",
+      "country": "Mongolia",
+      "profileUrl": "https://liquipedia.net/dota2/423",
+      "teamSlug": "inner-circle-x-insanity",
+      "teamName": "Inner Circle x Insanity",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/mongolia-f6adabf7.png",
+      "teamLogo": "/assets/esports/teams/inner-circle-x-insanity-6516d013.png"
+    },
+    {
+      "slug": "4nalog",
+      "name": "4nalog",
+      "country": "Brazil",
+      "profileUrl": "https://liquipedia.net/dota2/4nalog",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/brazil-5aa61298.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "7jesu",
+      "name": "7jesu",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/7jesu",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "820",
+      "name": "820",
+      "realName": "Zou Yitian",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/820",
+      "teamSlug": "old-boys",
+      "teamName": "Old Boys",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/old-boys-3d084783.png"
+    },
+    {
+      "slug": "86-russian-player",
+      "name": "86",
+      "realName": "Arsentii Babiuk",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=86_(Russian_player)&action=edit&redlink=1",
+      "teamSlug": "team-spirit-academy",
+      "teamName": "Team Spirit Academy",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/team-spirit-academy-0b698477.png"
+    },
+    {
+      "slug": "9class",
+      "name": "9Class",
+      "realName": "Edgar Naltakian",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/9Class",
+      "teamSlug": "team-vision",
+      "teamName": "TEAM VISION",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/team-vision-9d22cb3b.png"
+    },
+    {
+      "slug": "abed",
+      "name": "Abed",
+      "realName": "Abed Yusop",
+      "role": "",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Abed",
+      "teamSlug": "virtus-pro",
+      "teamName": "Virtus.pro",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": "/assets/esports/teams/virtus-pro-6c9d0a9f.png"
+    },
+    {
+      "slug": "abeng",
+      "name": "Abeng",
+      "realName": "Federico Dicdican Jr.",
+      "role": "",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Abeng",
+      "teamSlug": "ivory",
+      "teamName": "Ivory",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": "/assets/esports/teams/ivory-1f7c3fca.png"
+    },
+    {
+      "slug": "ace",
+      "name": "Ace",
+      "realName": "Marcus Hoelgaard",
+      "role": "",
+      "country": "Denmark",
+      "profileUrl": "https://liquipedia.net/dota2/Ace",
+      "teamSlug": "team-liquid",
+      "teamName": "Team Liquid",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/denmark-d85aec70.png",
+      "teamLogo": "/assets/esports/teams/team-liquid-6cf5f613.png"
+    },
+    {
+      "slug": "ace12",
+      "name": "Ace12",
+      "country": "Mongolia",
+      "profileUrl": "https://liquipedia.net/dota2/Ace12",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/mongolia-f6adabf7.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "ahyad",
+      "name": "Ahyad",
+      "country": "Malaysia",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Ahyad&action=edit&redlink=1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/malaysia-fbaa6886.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "aidar",
+      "name": "Aidar",
+      "realName": "Aidar Nurgalin",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Aidar&action=edit&redlink=1",
+      "teamSlug": "team-spirit-academy",
+      "teamName": "Team Spirit Academy",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/team-spirit-academy-0b698477.png"
+    },
+    {
+      "slug": "aik",
+      "name": "aik",
+      "realName": "Alim Bespayev",
+      "role": "",
+      "country": "Kazakhstan",
+      "profileUrl": "https://liquipedia.net/dota2/Aik",
+      "teamSlug": "rune-eaters",
+      "teamName": "Rune Eaters",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png",
+      "teamLogo": "/assets/esports/teams/rune-eaters-9c1ea13a.png"
+    },
+    {
+      "slug": "ainkrad",
+      "name": "Ainkrad",
+      "realName": "Aliaksei Dziveyeuski",
+      "role": "",
+      "country": "Belarus",
+      "profileUrl": "https://liquipedia.net/dota2/Ainkrad",
+      "teamSlug": "level-up",
+      "teamName": "Level UP",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/belarus-55273be2.png",
+      "teamLogo": "/assets/esports/teams/level-up-7de16a3a.png"
+    },
+    {
+      "slug": "akashi",
+      "name": "Akashi",
+      "realName": "Eljohn Canonigo Andales",
+      "role": "",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Akashi",
+      "teamSlug": "execration",
+      "teamName": "Execration",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": "/assets/esports/teams/execration-42c84324.png"
+    },
+    {
+      "slug": "alberkaaa",
+      "name": "alberkaaa",
+      "realName": "Albert Chernoivanov",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Alberkaaa",
+      "teamSlug": "power-rangers",
+      "teamName": "Power Rangers",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/power-rangers-bf1ec7ef.png"
+    },
+    {
+      "slug": "ame",
+      "name": "Ame",
+      "realName": "Wang Chunyu",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Ame",
+      "teamSlug": "xtreme-gaming",
+      "teamName": "Xtreme Gaming",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/xtreme-gaming-d35d94eb.png"
+    },
+    {
+      "slug": "ani-san",
+      "name": "ani-san",
+      "country": "Kazakhstan",
+      "profileUrl": "https://liquipedia.net/dota2/Ani-san",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "ankou",
+      "name": "Ankou",
+      "country": "Estonia",
+      "profileUrl": "https://liquipedia.net/dota2/Ankou",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/estonia-f6069512.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "ari",
+      "name": "Ari",
+      "realName": "Matthew Walker",
+      "role": "",
+      "country": "United Kingdom",
+      "profileUrl": "https://liquipedia.net/dota2/Ari",
+      "teamSlug": "iron-wing",
+      "teamName": "Iron Wing",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/united-kingdom-dedbdf3d.png",
+      "teamLogo": "/assets/esports/teams/iron-wing-7c2c5c3f.png"
+    },
+    {
+      "slug": "ariel",
+      "name": "ariel",
+      "realName": "Alexander Kolyasev",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Ariel",
+      "teamSlug": "nemiga-gaming",
+      "teamName": "Nemiga Gaming",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/nemiga-gaming-4c9c5db2.png"
+    },
+    {
+      "slug": "arthur",
+      "name": "Arthur",
+      "country": "Malaysia",
+      "profileUrl": "https://liquipedia.net/dota2/Arthur",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/malaysia-fbaa6886.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "astini",
+      "name": "Astini",
+      "country": "Brazil",
+      "profileUrl": "https://liquipedia.net/dota2/Astini",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/brazil-5aa61298.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "atf",
+      "name": "ATF",
+      "realName": "Ammar Al-Assaf",
+      "role": "Captain",
+      "country": "Jordan",
+      "profileUrl": "https://liquipedia.net/dota2/ATF",
+      "teamSlug": "team-falcons",
+      "teamName": "Team Falcons",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/jordan-52455c79.png",
+      "teamLogo": "/assets/esports/teams/team-falcons-ffc4fafd.png"
+    },
+    {
+      "slug": "aui-2000",
+      "name": "Aui_2000",
+      "country": "Canada",
+      "profileUrl": "https://liquipedia.net/dota2/Aui_2000",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/canada-b65341cf.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "faith-bian",
+      "name": "Bach",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Faith_bian",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "batyuk",
+      "name": "Batyuk",
+      "realName": "Bohdan Batiuk",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Batyuk",
+      "teamSlug": "yellow-submarine",
+      "teamName": "Yellow Submarine",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/yellow-submarine-38c7a84c.png"
+    },
+    {
+      "slug": "bb3px",
+      "name": "bb3px",
+      "realName": "Nikolai Evdokimychev",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Bb3px",
+      "teamSlug": "level-up",
+      "teamName": "Level UP",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/level-up-7de16a3a.png"
+    },
+    {
+      "slug": "bignum",
+      "name": "Bignum",
+      "realName": "Danil Shekhovtsov",
+      "role": "Captain",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Bignum",
+      "teamSlug": "gamerlegion",
+      "teamName": "GamerLegion",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/gamerlegion-20d871de.png"
+    },
+    {
+      "slug": "bob",
+      "name": "Bob",
+      "realName": "Mark Anthony A. Urbina",
+      "role": "",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Bob",
+      "teamSlug": "execration",
+      "teamName": "Execration",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": "/assets/esports/teams/execration-42c84324.png"
+    },
+    {
+      "slug": "boom",
+      "name": "BOOM",
+      "realName": "Miroslav Bičan",
+      "role": "",
+      "country": "Czechia",
+      "profileUrl": "https://liquipedia.net/dota2/BOOM",
+      "teamSlug": "mouz",
+      "teamName": "MOUZ",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/czechia-0c07ce6a.png",
+      "teamLogo": "/assets/esports/teams/mouz-6ad278c6.png"
+    },
+    {
+      "slug": "boxi",
+      "name": "Boxi",
+      "realName": "Samuel Svahn",
+      "role": "",
+      "country": "Sweden",
+      "profileUrl": "https://liquipedia.net/dota2/Boxi",
+      "teamSlug": "team-liquid",
+      "teamName": "Team Liquid",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/sweden-7f3632ee.png",
+      "teamLogo": "/assets/esports/teams/team-liquid-6cf5f613.png"
+    },
+    {
+      "slug": "bulba",
+      "name": "BuLba",
+      "country": "United States",
+      "profileUrl": "https://liquipedia.net/dota2/BuLba",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/united-states-4c74097c.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "bzm",
+      "name": "bzm",
+      "realName": "Bozhidar Bogdanov",
+      "role": "",
+      "country": "Bulgaria",
+      "profileUrl": "https://liquipedia.net/dota2/Bzm",
+      "teamSlug": "iron-wing",
+      "teamName": "Iron Wing",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/bulgaria-ab228a6f.png",
+      "teamLogo": "/assets/esports/teams/iron-wing-7c2c5c3f.png"
+    },
+    {
+      "slug": "carlo",
+      "name": "Carlo",
+      "realName": "Juan Carlo Chua Manalo",
+      "role": "",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Carlo",
+      "teamSlug": "ivory",
+      "teamName": "Ivory",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": "/assets/esports/teams/ivory-1f7c3fca.png"
+    },
+    {
+      "slug": "casual",
+      "name": "casual",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Casual&action=edit&redlink=1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "chaaannn",
+      "name": "CHAAANNN",
+      "realName": "Jose Carlos Vilcatoma Diaz",
+      "role": "",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/CHAAANNN",
+      "teamSlug": "infamous-gaming",
+      "teamName": "Infamous Gaming",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/infamous-gaming-3fb850d5.png"
+    },
+    {
+      "slug": "chira-junior",
+      "name": "CHIRA_JUNIOR",
+      "realName": "Ilya Chirtsov",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/CHIRA_JUNIOR",
+      "teamSlug": "team-yandex",
+      "teamName": "Team Yandex",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/team-yandex-e09ec9e2.png"
+    },
+    {
+      "slug": "cml",
+      "name": "cml",
+      "realName": "Bryle Jacob Alvizo",
+      "role": "Captain",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Cml",
+      "teamSlug": "execration",
+      "teamName": "Execration",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": "/assets/esports/teams/execration-42c84324.png"
+    },
+    {
+      "slug": "collapse",
+      "name": "Collapse",
+      "realName": "Magomed Khalilov",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Collapse",
+      "teamSlug": "team-spirit",
+      "teamName": "Team Spirit",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/team-spirit-ab12d6d1.png"
+    },
+    {
+      "slug": "conjure-x",
+      "name": "conjure.x",
+      "country": "Kazakhstan",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Conjure.x&action=edit&redlink=1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "copy",
+      "name": "Copy",
+      "realName": "Philipp Bühler",
+      "role": "",
+      "country": "Germany",
+      "profileUrl": "https://liquipedia.net/dota2/Copy",
+      "teamSlug": "rune-eaters",
+      "teamName": "Rune Eaters",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/germany-05b4afb5.png",
+      "teamLogo": "/assets/esports/teams/rune-eaters-9c1ea13a.png"
+    },
+    {
+      "slug": "covisnine",
+      "name": "Covisnine",
+      "realName": "Nikita Fedorov",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Covisnine&action=edit&redlink=1",
+      "teamSlug": "nemiga-gaming",
+      "teamName": "Nemiga Gaming",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/nemiga-gaming-4c9c5db2.png"
+    },
+    {
+      "slug": "cr1t",
+      "name": "Cr1t-",
+      "realName": "Andreas Nielsen",
+      "role": "",
+      "country": "Denmark",
+      "profileUrl": "https://liquipedia.net/dota2/Cr1t-",
+      "teamSlug": "team-falcons",
+      "teamName": "Team Falcons",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/denmark-d85aec70.png",
+      "teamLogo": "/assets/esports/teams/team-falcons-ffc4fafd.png"
+    },
+    {
+      "slug": "creepachyo",
+      "name": "Creepachyo",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Creepachyo&action=edit&redlink=1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "crystallis",
+      "name": "Crystallis",
+      "realName": "Remco Arets",
+      "role": "",
+      "country": "Netherlands",
+      "profileUrl": "https://liquipedia.net/dota2/Crystallis",
+      "teamSlug": "mouz",
+      "teamName": "MOUZ",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/netherlands-74d2fd5f.png",
+      "teamLogo": "/assets/esports/teams/mouz-6ad278c6.png"
+    },
+    {
+      "slug": "cutie",
+      "name": "cutie",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Cutie&action=edit&redlink=1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "dalul",
+      "name": "dalul",
+      "country": "Indonesia",
+      "profileUrl": "https://liquipedia.net/dota2/Dalul",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/indonesia-90350932.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "darklord",
+      "name": "Darklord^",
+      "realName": "Mikhail Blinov",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Darklord%5E",
+      "teamSlug": "rune-eaters",
+      "teamName": "Rune Eaters",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/rune-eaters-9c1ea13a.png"
+    },
+    {
+      "slug": "darkmago",
+      "name": "DarkMago",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/DarkMago",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "davai",
+      "name": "Davai",
+      "realName": "Cedric Deckmyn",
+      "role": "",
+      "country": "Belgium",
+      "profileUrl": "https://liquipedia.net/dota2/Davai",
+      "teamSlug": "nigma-galaxy",
+      "teamName": "Nigma Galaxy",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/belgium-c2fbbf99.png",
+      "teamLogo": "/assets/esports/teams/nigma-galaxy-cb2467ad.png"
+    },
+    {
+      "slug": "daze",
+      "name": "daze",
+      "realName": "Tamir Tokpanov",
+      "role": "",
+      "country": "Kazakhstan",
+      "profileUrl": "https://liquipedia.net/dota2/Daze",
+      "teamSlug": "natus-vincere",
+      "teamName": "Natus Vincere",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png",
+      "teamLogo": "/assets/esports/teams/natus-vincere-e35f6f92.png"
+    },
+    {
+      "slug": "dd",
+      "name": "DD",
+      "realName": "Xie Bin",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/DD",
+      "teamSlug": "old-boys",
+      "teamName": "Old Boys",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/old-boys-3d084783.png"
+    },
+    {
+      "slug": "desire",
+      "name": "dEsire",
+      "realName": "Athanasios Kartsabas",
+      "role": "",
+      "country": "Greece",
+      "profileUrl": "https://liquipedia.net/dota2/DEsire",
+      "teamSlug": "zero-tenacity",
+      "teamName": "Zero Tenacity",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/greece-195f59dd.png",
+      "teamLogo": "/assets/esports/teams/zero-tenacity-2273a5f0.png"
+    },
+    {
+      "slug": "dm",
+      "name": "DM",
+      "realName": "Dmitry Dorokhin",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/DM",
+      "teamSlug": "team-yandex",
+      "teamName": "Team Yandex",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/team-yandex-e09ec9e2.png"
+    },
+    {
+      "slug": "dream",
+      "name": "dream`",
+      "realName": "Kyial Tayirov",
+      "role": "",
+      "country": "Kyrgyzstan",
+      "profileUrl": "https://liquipedia.net/dota2/Dream%60",
+      "teamSlug": "zero-tenacity",
+      "teamName": "Zero Tenacity",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/kyrgyzstan-4cee1eb5.png",
+      "teamLogo": "/assets/esports/teams/zero-tenacity-2273a5f0.png"
+    },
+    {
+      "slug": "dreamocel",
+      "name": "Dreamocel",
+      "country": "Indonesia",
+      "profileUrl": "https://liquipedia.net/dota2/Dreamocel",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/indonesia-90350932.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "dric",
+      "name": "Dric~",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Dric~",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "dukalis",
+      "name": "Dukalis",
+      "realName": "Andrey Kuropatkin",
+      "role": "Captain",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Dukalis",
+      "teamSlug": "team-vision",
+      "teamName": "TEAM VISION",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/team-vision-9d22cb3b.png"
+    },
+    {
+      "slug": "echo",
+      "name": "Echo",
+      "realName": "Xu Ziliang",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Echo",
+      "teamSlug": "team-resilience",
+      "teamName": "Team Resilience",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/team-resilience-08fd4a06.png"
+    },
+    {
+      "slug": "ekki",
+      "name": "Ekki",
+      "realName": "Marcel Hołowienko",
+      "role": "",
+      "country": "Poland",
+      "profileUrl": "https://liquipedia.net/dota2/Ekki",
+      "teamSlug": "rune-eaters",
+      "teamName": "Rune Eaters",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/poland-18feaf9d.png",
+      "teamLogo": "/assets/esports/teams/rune-eaters-9c1ea13a.png"
+    },
+    {
+      "slug": "elmisho",
+      "name": "Elmisho",
+      "realName": "Yelsthin Brayan Verde Hurtado",
+      "role": "",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/Elmisho",
+      "teamSlug": "playtime",
+      "teamName": "PlayTime",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/ptime-e131645e.png"
+    },
+    {
+      "slug": "emo",
+      "name": "Emo",
+      "realName": "Zhou Yi",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Emo",
+      "teamSlug": "yakult-brothers",
+      "teamName": "Yakult Brothers",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/yakult-brothers-cd404e64.png"
+    },
+    {
+      "slug": "erika",
+      "name": "Erika",
+      "realName": "Yang Shaohan",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Erika",
+      "teamSlug": "team-resilience",
+      "teamName": "Team Resilience",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/team-resilience-08fd4a06.png"
+    },
+    {
+      "slug": "ethereal-kazakhstani-player",
+      "name": "Ethereal",
+      "country": "Kazakhstan",
+      "profileUrl": "https://liquipedia.net/dota2/Ethereal_(Kazakhstani_player)",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "fayde",
+      "name": "Fayde",
+      "realName": "Victor Zuev",
+      "role": "",
+      "country": "United States",
+      "profileUrl": "https://liquipedia.net/dota2/Fayde",
+      "teamSlug": "gamerlegion",
+      "teamName": "GamerLegion",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/united-states-4c74097c.png",
+      "teamLogo": "/assets/esports/teams/gamerlegion-20d871de.png"
+    },
+    {
+      "slug": "fbz",
+      "name": "Fbz",
+      "country": "Indonesia",
+      "profileUrl": "https://liquipedia.net/dota2/Fbz",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/indonesia-90350932.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "fernans",
+      "name": "Fernans",
+      "realName": "Vladyslav Kochetkov",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Fernans",
+      "teamSlug": "inner-circle-x-insanity",
+      "teamName": "Inner Circle x Insanity",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/inner-circle-x-insanity-6516d013.png"
+    },
+    {
+      "slug": "fishman",
+      "name": "Fishman",
+      "realName": "Dzmitry Palishchuk",
+      "role": "",
+      "country": "Belarus",
+      "profileUrl": "https://liquipedia.net/dota2/Fishman",
+      "teamSlug": "nemiga-gaming",
+      "teamName": "Nemiga Gaming",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/belarus-55273be2.png",
+      "teamLogo": "/assets/esports/teams/nemiga-gaming-4c9c5db2.png"
+    },
+    {
+      "slug": "flokk1n",
+      "name": "Flokk1n",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Flokk1n&action=edit&redlink=1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "fly",
+      "name": "Fly",
+      "realName": "Tal Aizik",
+      "role": "",
+      "country": "Israel",
+      "profileUrl": "https://liquipedia.net/dota2/Fly",
+      "teamSlug": "virtus-pro",
+      "teamName": "Virtus.pro",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/israel-2a3e847d.png",
+      "teamLogo": "/assets/esports/teams/virtus-pro-6c9d0a9f.png"
+    },
+    {
+      "slug": "fortniteman",
+      "name": "fortniteMan",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/FortniteMan",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "frank",
+      "name": "Frank",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/Frank",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "fy",
+      "name": "fy",
+      "realName": "Xu Linsen",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Fy",
+      "teamSlug": "xtreme-gaming",
+      "teamName": "Xtreme Gaming",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/xtreme-gaming-d35d94eb.png"
+    },
+    {
+      "slug": "gardick",
+      "name": "Gardick",
+      "realName": "Brayan Antony López Cárdenas",
+      "role": "Captain",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/Gardick",
+      "teamSlug": "hokori",
+      "teamName": "Hokori",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/hokori-f0aa85e4.png"
+    },
+    {
+      "slug": "genek",
+      "name": "Genek",
+      "realName": "Moises Asencios Santillan",
+      "role": "",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/Genek",
+      "teamSlug": "amaru-gaming",
+      "teamName": "Amaru Gaming",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/amaru-gaming-0f1fbee8.png"
+    },
+    {
+      "slug": "gh",
+      "name": "GH",
+      "realName": "Maroun Merhej",
+      "role": "",
+      "country": "Lebanon",
+      "profileUrl": "https://liquipedia.net/dota2/GH",
+      "teamSlug": "nigma-galaxy",
+      "teamName": "Nigma Galaxy",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/lebanon-a26f94be.png",
+      "teamLogo": "/assets/esports/teams/nigma-galaxy-cb2467ad.png"
+    },
+    {
+      "slug": "ghost-daniel-chan",
+      "name": "Ghost",
+      "realName": "Daniel Chan Kok Hong",
+      "role": "",
+      "country": "Malaysia",
+      "profileUrl": "https://liquipedia.net/dota2/Ghost_(Daniel_Chan)",
+      "teamSlug": "gamerlegion",
+      "teamName": "GamerLegion",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/malaysia-fbaa6886.png",
+      "teamLogo": "/assets/esports/teams/gamerlegion-20d871de.png"
+    },
+    {
+      "slug": "godkid",
+      "name": "GodKid-",
+      "country": "North Macedonia",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=GodKid-&action=edit&redlink=1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/north-macedonia-13ae0c3d.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "gotthejuice",
+      "name": "gotthejuice",
+      "realName": "Taras Linnikov",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Gotthejuice",
+      "teamSlug": "natus-vincere",
+      "teamName": "Natus Vincere",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/natus-vincere-e35f6f92.png"
+    },
+    {
+      "slug": "gpk",
+      "name": "gpk",
+      "realName": "Danil Skutin",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Gpk",
+      "teamSlug": "boomboys",
+      "teamName": "BoomBoys",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/boomboys-80493f78.png"
+    },
+    {
+      "slug": "guesswho",
+      "name": "GuessWho",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/GuessWho",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "hao",
+      "name": "Hao",
+      "realName": "Chen Zhihao",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Hao",
+      "teamSlug": "old-boys",
+      "teamName": "Old Boys",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/old-boys-3d084783.png"
+    },
+    {
+      "slug": "till-the-end",
+      "name": "Hduo",
+      "realName": "Ilya Deriglazov",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Till_the_end",
+      "teamSlug": "power-rangers",
+      "teamName": "Power Rangers",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/power-rangers-bf1ec7ef.png"
+    },
+    {
+      "slug": "hellscream",
+      "name": "Hellscream",
+      "realName": "Kirill Lagutik",
+      "role": "",
+      "country": "Belarus",
+      "profileUrl": "https://liquipedia.net/dota2/Hellscream",
+      "teamSlug": "virtus-pro",
+      "teamName": "Virtus.pro",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/belarus-55273be2.png",
+      "teamLogo": "/assets/esports/teams/virtus-pro-6c9d0a9f.png"
+    },
+    {
+      "slug": "htrd",
+      "name": "Htrd",
+      "realName": "Andrey Fedorov",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Htrd",
+      "teamSlug": "level-up",
+      "teamName": "Level UP",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/level-up-7de16a3a.png"
+    },
+    {
+      "slug": "illidan",
+      "name": "Illidan",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Illidan",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "immersion",
+      "name": "Immersion",
+      "realName": "Aleksandr Khmelevskoi",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Immersion",
+      "teamSlug": "power-rangers",
+      "teamName": "Power Rangers",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/power-rangers-bf1ec7ef.png"
+    },
+    {
+      "slug": "inyourdream",
+      "name": "inYourdreaM",
+      "country": "Indonesia",
+      "profileUrl": "https://liquipedia.net/dota2/InYourdreaM",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/indonesia-90350932.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "jabz",
+      "name": "Jabz",
+      "realName": "Anucha Jirawong",
+      "role": "Captain",
+      "country": "Thailand",
+      "profileUrl": "https://liquipedia.net/dota2/Jabz",
+      "teamSlug": "team-nemesis",
+      "teamName": "Team Nemesis",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/thailand-35498317.png",
+      "teamLogo": "/assets/esports/teams/team-nemesis-abcca762.png"
+    },
+    {
+      "slug": "jackky",
+      "name": "JaCkky",
+      "realName": "Souliya Khoomphetsavong",
+      "role": "",
+      "country": "Laos",
+      "profileUrl": "https://liquipedia.net/dota2/JaCkky",
+      "teamSlug": "team-nemesis",
+      "teamName": "Team Nemesis",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/laos-252c9c3a.png",
+      "teamLogo": "/assets/esports/teams/team-nemesis-abcca762.png"
+    },
+    {
+      "slug": "janter",
+      "name": "JANTER",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/JANTER",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "jeezy",
+      "name": "Jeezy",
+      "realName": "Berke Can Yenigün",
+      "role": "",
+      "country": "Turkey",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Jeezy&action=edit&redlink=1",
+      "teamSlug": "winter-bear",
+      "teamName": "Winter Bear",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/turkey-c1c8242d.png",
+      "teamLogo": "/assets/esports/teams/winter-bear-d6f73de6.png"
+    },
+    {
+      "slug": "jg",
+      "name": "JG",
+      "realName": "Julius Mendoza Galeon",
+      "role": "",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/JG",
+      "teamSlug": "ivory",
+      "teamName": "Ivory",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": "/assets/esports/teams/ivory-1f7c3fca.png"
+    },
+    {
+      "slug": "jhocam",
+      "name": "Jhocam",
+      "realName": "Tri Kuncoro",
+      "role": "",
+      "country": "Indonesia",
+      "profileUrl": "https://liquipedia.net/dota2/Jhocam",
+      "teamSlug": "team-nemesis",
+      "teamName": "Team Nemesis",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/indonesia-90350932.png",
+      "teamLogo": "/assets/esports/teams/team-nemesis-abcca762.png"
+    },
+    {
+      "slug": "jikroy",
+      "name": "Jikroy",
+      "country": "Indonesia",
+      "profileUrl": "https://liquipedia.net/dota2/Jikroy",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/indonesia-90350932.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "jp",
+      "name": "JP",
+      "realName": "Gerardo Jeanpier Torres Chavez",
+      "role": "",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=JP&action=edit&redlink=1",
+      "teamSlug": "infamous-gaming",
+      "teamName": "Infamous Gaming",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/infamous-gaming-3fb850d5.png"
+    },
+    {
+      "slug": "k1",
+      "name": "K1",
+      "realName": "Héctor Antonio Rodríguez Asto",
+      "role": "",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/K1",
+      "teamSlug": "amaru-gaming",
+      "teamName": "Amaru Gaming",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/amaru-gaming-0f1fbee8.png"
+    },
+    {
+      "slug": "kachal",
+      "name": "KaChal",
+      "realName": "Aliakbar Jalilvand",
+      "role": "",
+      "country": "Iran",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=KaChal&action=edit&redlink=1",
+      "teamSlug": "winter-bear",
+      "teamName": "Winter Bear",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/iran-13691138.png",
+      "teamLogo": "/assets/esports/teams/winter-bear-d6f73de6.png"
+    },
+    {
+      "slug": "kae",
+      "name": "kae",
+      "realName": "Evgeny Zolotarev",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Kae&action=edit&redlink=1",
+      "teamSlug": "team-spirit-academy",
+      "teamName": "Team Spirit Academy",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/team-spirit-academy-0b698477.png"
+    },
+    {
+      "slug": "kai",
+      "name": "Kai",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Kai&action=edit&redlink=1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "kaka",
+      "name": "kaka",
+      "realName": "Hu Liangzhi",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Kaka",
+      "teamSlug": "yakult-brothers",
+      "teamName": "Yakult Brothers",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/yakult-brothers-cd404e64.png"
+    },
+    {
+      "slug": "kaori",
+      "name": "kaori",
+      "realName": "Oleh Medvedok",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Kaori",
+      "teamSlug": "aurora-gaming",
+      "teamName": "Aurora Gaming",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/aurora-gaming-192e499e.png"
+    },
+    {
+      "slug": "karma",
+      "name": "Karma丶",
+      "realName": "Philip Joshua Torres",
+      "role": "",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Karma%E4%B8%B6",
+      "teamSlug": "ivory",
+      "teamName": "Ivory",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": "/assets/esports/teams/ivory-1f7c3fca.png"
+    },
+    {
+      "slug": "kataomi",
+      "name": "Kataomi`",
+      "realName": "Vladislav Semenov",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Kataomi",
+      "teamSlug": "boomboys",
+      "teamName": "BoomBoys",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/boomboys-80493f78.png"
+    },
+    {
+      "slug": "kemps",
+      "name": "Kemps",
+      "country": "Jordan",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Kemps&action=edit&redlink=1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/jordan-52455c79.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "ken",
+      "name": "Ken",
+      "realName": "Argle Ken Corpuz Llesis",
+      "role": "",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Ken",
+      "teamSlug": "team-nemesis",
+      "teamName": "Team Nemesis",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": "/assets/esports/teams/team-nemesis-abcca762.png"
+    },
+    {
+      "slug": "kiritych",
+      "name": "Kiritych",
+      "realName": "Ilya Ulyanov",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Kiritych",
+      "teamSlug": "boomboys",
+      "teamName": "BoomBoys",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/boomboys-80493f78.png"
+    },
+    {
+      "slug": "kiseki",
+      "name": "Kiseki`",
+      "realName": "Dmitry Skutelnik",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Kiseki%60&action=edit&redlink=1",
+      "teamSlug": "team-spirit-academy",
+      "teamName": "Team Spirit Academy",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/team-spirit-academy-0b698477.png"
+    },
+    {
+      "slug": "kj",
+      "name": "KJ",
+      "realName": "Matheus Santos Jungles Diniz",
+      "role": "Captain",
+      "country": "Brazil",
+      "profileUrl": "https://liquipedia.net/dota2/KJ",
+      "teamSlug": "lgd-gaming",
+      "teamName": "LGD Gaming",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/brazil-5aa61298.png",
+      "teamLogo": "/assets/esports/teams/lgd-gaming-64655c66.png"
+    },
+    {
+      "slug": "kreker",
+      "name": "kreker",
+      "realName": "Kostiantyn Dolomakin",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Kreker",
+      "teamSlug": "team-lynx",
+      "teamName": "Team Lynx",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/team-lynx-e64adfa7.png"
+    },
+    {
+      "slug": "ksh",
+      "name": "Ksh",
+      "realName": "Kaung Sett Hein",
+      "role": "",
+      "country": "Myanmar",
+      "profileUrl": "https://liquipedia.net/dota2/Ksh",
+      "teamSlug": "yangon-galacticos",
+      "teamName": "Yangon Galacticos",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/myanmar-010c8212.png",
+      "teamLogo": "/assets/esports/teams/yangon-galacticos-fe9968df.png"
+    },
+    {
+      "slug": "kyford",
+      "name": "kyford",
+      "realName": "Danil Gorbachev",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Kyford&action=edit&redlink=1",
+      "teamSlug": "team-spirit-academy",
+      "teamName": "Team Spirit Academy",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/team-spirit-academy-0b698477.png"
+    },
+    {
+      "slug": "laise",
+      "name": "laise",
+      "realName": "Vladyslav Lais",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Laise",
+      "teamSlug": "inner-circle-x-insanity",
+      "teamName": "Inner Circle x Insanity",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/inner-circle-x-insanity-6516d013.png"
+    },
+    {
+      "slug": "lalatronii",
+      "name": "lalatronii",
+      "realName": "Juan Cabrera Rosales",
+      "role": "",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/Lalatronii",
+      "teamSlug": "infamous-gaming",
+      "teamName": "Infamous Gaming",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/infamous-gaming-3fb850d5.png"
+    },
+    {
+      "slug": "lanm",
+      "name": "LaNm",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/LaNm",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "larl",
+      "name": "Larl",
+      "realName": "Denis Sigitov",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Larl",
+      "teamSlug": "team-spirit",
+      "teamName": "Team Spirit",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/team-spirit-ab12d6d1.png"
+    },
+    {
+      "slug": "lelis",
+      "name": "Lelis",
+      "country": "Brazil",
+      "profileUrl": "https://liquipedia.net/dota2/Lelis",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/brazil-5aa61298.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "longdd",
+      "name": "LongDD",
+      "realName": "Huang Xiang",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/LongDD",
+      "teamSlug": "old-boys",
+      "teamName": "Old Boys",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/old-boys-3d084783.png"
+    },
+    {
+      "slug": "lorenof",
+      "name": "lorenof",
+      "realName": "Artem Melnick",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Lorenof",
+      "teamSlug": "nigma-galaxy",
+      "teamName": "Nigma Galaxy",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/nigma-galaxy-cb2467ad.png"
+    },
+    {
+      "slug": "lou",
+      "name": "Lou",
+      "realName": "Lou Zhen",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Lou",
+      "teamSlug": "yakult-brothers",
+      "teamName": "Yakult Brothers",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/yakult-brothers-cd404e64.png"
+    },
+    {
+      "slug": "luis-luis-angel-ruben",
+      "name": "Luis",
+      "realName": "Luis Angel Ruben Evanan Echevarria",
+      "role": "Captain",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/Luis_(Luis_Angel_Ruben)",
+      "teamSlug": "cdub-esports",
+      "teamName": "CDUB Esports",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/cdub-esports-4f7b0df4.png"
+    },
+    {
+      "slug": "lumi-re",
+      "name": "Lumière",
+      "realName": "Edward Anthony Guillen Valencia",
+      "role": "",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/Lumi%C3%A8re",
+      "teamSlug": "hokori",
+      "teamName": "Hokori",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/hokori-f0aa85e4.png"
+    },
+    {
+      "slug": "lumpy",
+      "name": "Lumpy",
+      "realName": "Luis Angel Vilarreal Yausin",
+      "role": "",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/Lumpy",
+      "teamSlug": "hokori",
+      "teamName": "Hokori",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/hokori-f0aa85e4.png"
+    },
+    {
+      "slug": "mac",
+      "name": "Mac",
+      "realName": "Mc Nicholson Villanueva",
+      "role": "",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Mac",
+      "teamSlug": "ivory",
+      "teamName": "Ivory",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": "/assets/esports/teams/ivory-1f7c3fca.png"
+    },
+    {
+      "slug": "malady",
+      "name": "Malady",
+      "realName": "Arman Orazbayev",
+      "role": "",
+      "country": "Kazakhstan",
+      "profileUrl": "https://liquipedia.net/dota2/Malady",
+      "teamSlug": "team-yandex",
+      "teamName": "Team Yandex",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png",
+      "teamLogo": "/assets/esports/teams/team-yandex-e09ec9e2.png"
+    },
+    {
+      "slug": "malik",
+      "name": "Malik",
+      "realName": "Abdimalik Sailau",
+      "role": "",
+      "country": "Kazakhstan",
+      "profileUrl": "https://liquipedia.net/dota2/Malik",
+      "teamSlug": "rune-eaters",
+      "teamName": "Rune Eaters",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png",
+      "teamLogo": "/assets/esports/teams/rune-eaters-9c1ea13a.png"
+    },
+    {
+      "slug": "malr1ne",
+      "name": "Malr1ne",
+      "realName": "Stanislav Potorak",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Malr1ne",
+      "teamSlug": "team-falcons",
+      "teamName": "Team Falcons",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/team-falcons-ffc4fafd.png"
+    },
+    {
+      "slug": "maps",
+      "name": "Maps",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Maps",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "mellojul",
+      "name": "mellojul",
+      "realName": "Maksym Pnov",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Mellojul",
+      "teamSlug": "team-lynx",
+      "teamName": "Team Lynx",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/team-lynx-e64adfa7.png"
+    },
+    {
+      "slug": "mettpum",
+      "name": "MeTTpuM",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/MeTTpuM",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "micke",
+      "name": "miCKe",
+      "realName": "Michael Vu",
+      "role": "",
+      "country": "Sweden",
+      "profileUrl": "https://liquipedia.net/dota2/MiCKe",
+      "teamSlug": "team-liquid",
+      "teamName": "Team Liquid",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/sweden-7f3632ee.png",
+      "teamLogo": "/assets/esports/teams/team-liquid-6cf5f613.png"
+    },
+    {
+      "slug": "midone",
+      "name": "MidOne",
+      "realName": "Yeik Nai Zheng",
+      "role": "",
+      "country": "Malaysia",
+      "profileUrl": "https://liquipedia.net/dota2/MidOne",
+      "teamSlug": "mouz",
+      "teamName": "MOUZ",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/malaysia-fbaa6886.png",
+      "teamLogo": "/assets/esports/teams/mouz-6ad278c6.png"
+    },
+    {
+      "slug": "miero",
+      "name": "MieRo`",
+      "realName": "Matvey Vasyunin",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/MieRo",
+      "teamSlug": "boomboys",
+      "teamName": "BoomBoys",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/boomboys-80493f78.png"
+    },
+    {
+      "slug": "mikey",
+      "name": "Mikey",
+      "realName": "Kasra Mesbah",
+      "role": "",
+      "country": "Iran",
+      "profileUrl": "https://liquipedia.net/dota2/Mikey",
+      "teamSlug": "winter-bear",
+      "teamName": "Winter Bear",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/iran-13691138.png",
+      "teamLogo": "/assets/esports/teams/winter-bear-d6f73de6.png"
+    },
+    {
+      "slug": "mikoto",
+      "name": "Mikoto",
+      "realName": "Rafli Fathur Rahman",
+      "role": "",
+      "country": "Indonesia",
+      "profileUrl": "https://liquipedia.net/dota2/Mikoto",
+      "teamSlug": "aurora-gaming",
+      "teamName": "Aurora Gaming",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/indonesia-90350932.png",
+      "teamLogo": "/assets/esports/teams/aurora-gaming-192e499e.png"
+    },
+    {
+      "slug": "mind-control",
+      "name": "MinD_ContRoL",
+      "country": "Bulgaria",
+      "profileUrl": "https://liquipedia.net/dota2/MinD_ContRoL",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/bulgaria-ab228a6f.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "miposhka",
+      "name": "Miposhka",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Miposhka",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "mira",
+      "name": "Mira",
+      "realName": "Myroslav Kolpakov",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Mira",
+      "teamSlug": "aurora-gaming",
+      "teamName": "Aurora Gaming",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/aurora-gaming-192e499e.png"
+    },
+    {
+      "slug": "mirage",
+      "name": "Mirage`",
+      "realName": "Miras Mutanov",
+      "role": "",
+      "country": "Kazakhstan",
+      "profileUrl": "https://liquipedia.net/dota2/Mirage%60",
+      "teamSlug": "huligani",
+      "teamName": "HULIGANI",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png",
+      "teamLogo": "/assets/esports/teams/huligani-442db089.png"
+    },
+    {
+      "slug": "momo",
+      "name": "MOMO",
+      "realName": "ArKar Moe Myint Hein",
+      "role": "",
+      "country": "Myanmar",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=MOMO&action=edit&redlink=1",
+      "teamSlug": "yangon-galacticos",
+      "teamName": "Yangon Galacticos",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/myanmar-010c8212.png",
+      "teamLogo": "/assets/esports/teams/yangon-galacticos-fe9968df.png"
+    },
+    {
+      "slug": "mooz",
+      "name": "MoOz",
+      "realName": "Joel Eduardo Mori Ozambela",
+      "role": "",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/MoOz",
+      "teamSlug": "zero-tenacity",
+      "teamName": "Zero Tenacity",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/zero-tenacity-2273a5f0.png"
+    },
+    {
+      "slug": "most-want3d",
+      "name": "most_want3d",
+      "country": "Kazakhstan",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Most_want3d&action=edit&redlink=1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "mu",
+      "name": "Mu",
+      "realName": "Zhang Pan",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Mu",
+      "teamSlug": "old-boys",
+      "teamName": "Old Boys",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/old-boys-3d084783.png"
+    },
+    {
+      "slug": "narman",
+      "name": "NARMAN",
+      "realName": "Ravdan Narmandakh",
+      "role": "",
+      "country": "Mongolia",
+      "profileUrl": "https://liquipedia.net/dota2/NARMAN",
+      "teamSlug": "team-nemesis",
+      "teamName": "Team Nemesis",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/mongolia-f6adabf7.png",
+      "teamLogo": "/assets/esports/teams/team-nemesis-abcca762.png"
+    },
+    {
+      "slug": "natsumi",
+      "name": "Natsumi",
+      "realName": "John Anthony Vargas",
+      "role": "",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Natsumi-",
+      "teamSlug": "og",
+      "teamName": "OG",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": "/assets/esports/teams/og-fa6f4e63.png"
+    },
+    {
+      "slug": "nefrit",
+      "name": "nefrit",
+      "realName": "Dmitry Tarasich",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Nefrit",
+      "teamSlug": "zero-tenacity",
+      "teamName": "Zero Tenacity",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/zero-tenacity-2273a5f0.png"
+    },
+    {
+      "slug": "nicky-cool",
+      "name": "Nicky`Cool",
+      "realName": "Nikita Ostakhov",
+      "role": "",
+      "country": "Kazakhstan",
+      "profileUrl": "https://liquipedia.net/dota2/Nicky%60Cool",
+      "teamSlug": "power-rangers",
+      "teamName": "Power Rangers",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png",
+      "teamLogo": "/assets/esports/teams/power-rangers-bf1ec7ef.png"
+    },
+    {
+      "slug": "nightfall",
+      "name": "Nightfall",
+      "realName": "Egor Grigorenko",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Nightfall",
+      "teamSlug": "aurora-gaming",
+      "teamName": "Aurora Gaming",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/aurora-gaming-192e499e.png"
+    },
+    {
+      "slug": "niku",
+      "name": "Niku",
+      "realName": "Artem Bachkur",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Niku",
+      "teamSlug": "natus-vincere",
+      "teamName": "Natus Vincere",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/natus-vincere-e35f6f92.png"
+    },
+    {
+      "slug": "nisha",
+      "name": "Nisha",
+      "realName": "Michał Jankowski",
+      "role": "",
+      "country": "Poland",
+      "profileUrl": "https://liquipedia.net/dota2/Nisha",
+      "teamSlug": "team-liquid",
+      "teamName": "Team Liquid",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/poland-18feaf9d.png",
+      "teamLogo": "/assets/esports/teams/team-liquid-6cf5f613.png"
+    },
+    {
+      "slug": "niu",
+      "name": "niu",
+      "realName": "Li Kongbo",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Niu",
+      "teamSlug": "team-resilience",
+      "teamName": "Team Resilience",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/team-resilience-08fd4a06.png"
+    },
+    {
+      "slug": "noone",
+      "name": "No[o]ne-",
+      "realName": "Volodymyr Minenko",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Noone",
+      "teamSlug": "team-vision",
+      "teamName": "TEAM VISION",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/team-vision-9d22cb3b.png"
+    },
+    {
+      "slug": "nofear",
+      "name": "Nofear",
+      "country": "Non-representing",
+      "profileUrl": "https://liquipedia.net/dota2/NoFear",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/non-representing-c9eb49d0.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "not-me",
+      "name": "not me",
+      "realName": "Alexey Kosmynin",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Not_me",
+      "teamSlug": "team-spirit",
+      "teamName": "Team Spirit",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/team-spirit-ab12d6d1.png"
+    },
+    {
+      "slug": "nothingtosay",
+      "name": "NothingToSay",
+      "realName": "Cheng Jin Xiang",
+      "role": "",
+      "country": "Malaysia",
+      "profileUrl": "https://liquipedia.net/dota2/NothingToSay",
+      "teamSlug": "xtreme-gaming",
+      "teamName": "Xtreme Gaming",
+      "region": "China",
+      "flag": "/assets/esports/flags/malaysia-fbaa6886.png",
+      "teamLogo": "/assets/esports/teams/xtreme-gaming-d35d94eb.png"
+    },
+    {
+      "slug": "noticed",
+      "name": "Noticed",
+      "realName": "Evgeniy Ignatenko",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Noticed",
+      "teamSlug": "team-vision",
+      "teamName": "TEAM VISION",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/team-vision-9d22cb3b.png"
+    },
+    {
+      "slug": "nyao",
+      "name": "Nyao",
+      "country": "Indonesia",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Nyao&action=edit&redlink=1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/indonesia-90350932.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "omar",
+      "name": "OmaR",
+      "realName": "Omar Moughrabi",
+      "role": "",
+      "country": "Lebanon",
+      "profileUrl": "https://liquipedia.net/dota2/OmaR",
+      "teamSlug": "nigma-galaxy",
+      "teamName": "Nigma Galaxy",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/lebanon-a26f94be.png",
+      "teamLogo": "/assets/esports/teams/nigma-galaxy-cb2467ad.png"
+    },
+    {
+      "slug": "oscar",
+      "name": "Oscar",
+      "realName": "Oscar Jimenez",
+      "role": "",
+      "country": "Bolivia",
+      "profileUrl": "https://liquipedia.net/dota2/Oscar",
+      "teamSlug": "amaru-gaming",
+      "teamName": "Amaru Gaming",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/bolivia-3b001eb1.png",
+      "teamLogo": "/assets/esports/teams/amaru-gaming-0f1fbee8.png"
+    },
+    {
+      "slug": "otto",
+      "name": "OTTO",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=OTTO&action=edit&redlink=1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "panda",
+      "name": "Panda",
+      "realName": "Jose Padilla",
+      "role": "",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/Panda",
+      "teamSlug": "amaru-gaming",
+      "teamName": "Amaru Gaming",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/amaru-gaming-0f1fbee8.png"
+    },
+    {
+      "slug": "panto",
+      "name": "panto",
+      "realName": "Nikita Balaganin",
+      "role": "",
+      "country": "Belarus",
+      "profileUrl": "https://liquipedia.net/dota2/Panto",
+      "teamSlug": "mouz",
+      "teamName": "MOUZ",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/belarus-55273be2.png",
+      "teamLogo": "/assets/esports/teams/mouz-6ad278c6.png"
+    },
+    {
+      "slug": "pipi",
+      "name": "PiPi",
+      "realName": "Jean Pierre Alonso Arroyo Valente",
+      "role": "",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/PiPi",
+      "teamSlug": "amaru-gaming",
+      "teamName": "Amaru Gaming",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/amaru-gaming-0f1fbee8.png"
+    },
+    {
+      "slug": "planet",
+      "name": "planet",
+      "realName": "Lin Hao",
+      "role": "Captain",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Planet",
+      "teamSlug": "team-resilience",
+      "teamName": "Team Resilience",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/team-resilience-08fd4a06.png"
+    },
+    {
+      "slug": "pma",
+      "name": "pma",
+      "realName": "Yurii Prots",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Pma",
+      "teamSlug": "natus-vincere",
+      "teamName": "Natus Vincere",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/natus-vincere-e35f6f92.png"
+    },
+    {
+      "slug": "ponlo",
+      "name": "ponlo",
+      "country": "Singapore",
+      "profileUrl": "https://liquipedia.net/dota2/Ponlo",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/singapore-2f6af472.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "pure-russian-player",
+      "name": "Pure",
+      "realName": "Ivan Moskalenko",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Pure_(Russian_player)",
+      "teamSlug": "iron-wing",
+      "teamName": "Iron Wing",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/iron-wing-7c2c5c3f.png"
+    },
+    {
+      "slug": "qbfy",
+      "name": "QBFY",
+      "realName": "Vitaliy Ivanov",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/QBFY",
+      "teamSlug": "team-lynx",
+      "teamName": "Team Lynx",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/team-lynx-e64adfa7.png"
+    },
+    {
+      "slug": "queezy",
+      "name": "queezy",
+      "realName": "Aleksandr Lipin",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Queezy",
+      "teamSlug": "level-up",
+      "teamName": "Level UP",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/level-up-7de16a3a.png"
+    },
+    {
+      "slug": "rain-russian-player",
+      "name": "Rain",
+      "realName": "Alexander Nekrasov",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Rain_(Russian_player)&action=edit&redlink=1",
+      "teamSlug": "yellow-submarine",
+      "teamName": "Yellow Submarine",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/yellow-submarine-38c7a84c.png"
+    },
+    {
+      "slug": "raregods",
+      "name": "raregods",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Raregods&action=edit&redlink=1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "raven",
+      "name": "Raven",
+      "realName": "Marc Polo Luis Fausto",
+      "role": "",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Raven",
+      "teamSlug": "og",
+      "teamName": "OG",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": "/assets/esports/teams/og-fa6f4e63.png"
+    },
+    {
+      "slug": "rcy",
+      "name": "RCY",
+      "realName": "Francis Fundemera",
+      "role": "",
+      "country": "United States",
+      "profileUrl": "https://liquipedia.net/dota2/RCY",
+      "teamSlug": "gamerlegion",
+      "teamName": "GamerLegion",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/united-states-4c74097c.png",
+      "teamLogo": "/assets/esports/teams/gamerlegion-20d871de.png"
+    },
+    {
+      "slug": "rein",
+      "name": "Rein",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Rein",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "respect",
+      "name": "RESPECT",
+      "realName": "Egor Procurat",
+      "role": "",
+      "country": "Belarus",
+      "profileUrl": "https://liquipedia.net/dota2/RESPECT",
+      "teamSlug": "huligani",
+      "teamName": "HULIGANI",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/belarus-55273be2.png",
+      "teamLogo": "/assets/esports/teams/huligani-442db089.png"
+    },
+    {
+      "slug": "riddys",
+      "name": "Riddys",
+      "realName": "Stanislav Mitroshkyn",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Riddys",
+      "teamSlug": "natus-vincere",
+      "teamName": "Natus Vincere",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/natus-vincere-e35f6f92.png"
+    },
+    {
+      "slug": "rubikon155",
+      "name": "rubikon155",
+      "country": "Moldova",
+      "profileUrl": "https://liquipedia.net/dota2/Rubikon155",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/moldova-f23c6455.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "rue",
+      "name": "rue",
+      "realName": "Alexandr Filin",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Rue",
+      "teamSlug": "team-spirit",
+      "teamName": "Team Spirit",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/team-spirit-ab12d6d1.png"
+    },
+    {
+      "slug": "rupido",
+      "name": "Rupido",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Rupido",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "ryabinka",
+      "name": "ryabinka",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Ryabinka&action=edit&redlink=1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "saberlight",
+      "name": "SaberLight",
+      "realName": "Jonáš Volek",
+      "role": "",
+      "country": "Czechia",
+      "profileUrl": "https://liquipedia.net/dota2/SabeRLight-",
+      "teamSlug": "virtus-pro",
+      "teamName": "Virtus.pro",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/czechia-0c07ce6a.png",
+      "teamLogo": "/assets/esports/teams/virtus-pro-6c9d0a9f.png"
+    },
+    {
+      "slug": "saksa",
+      "name": "Saksa",
+      "realName": "Martin Sazdov",
+      "role": "",
+      "country": "North Macedonia",
+      "profileUrl": "https://liquipedia.net/dota2/Saksa",
+      "teamSlug": "team-yandex",
+      "teamName": "Team Yandex",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/north-macedonia-13ae0c3d.png",
+      "teamLogo": "/assets/esports/teams/team-yandex-e09ec9e2.png"
+    },
+    {
+      "slug": "salamat1",
+      "name": "salamat1",
+      "country": "Kazakhstan",
+      "profileUrl": "https://liquipedia.net/dota2/Salamat1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "sansheng",
+      "name": "SanSheng",
+      "realName": "Wang Zhaohui",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/SanSheng",
+      "teamSlug": "old-boys",
+      "teamName": "Old Boys",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/old-boys-3d084783.png"
+    },
+    {
+      "slug": "satanic-russian-player",
+      "name": "Satanic",
+      "realName": "Alan Gallyamov",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Satanic_(Russian_player)",
+      "teamSlug": "team-vision",
+      "teamName": "TEAM VISION",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/team-vision-9d22cb3b.png"
+    },
+    {
+      "slug": "save",
+      "name": "Save-",
+      "realName": "Vitalie Melnic",
+      "role": "Captain",
+      "country": "Moldova",
+      "profileUrl": "https://liquipedia.net/dota2/Save-",
+      "teamSlug": "boomboys",
+      "teamName": "BoomBoys",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/moldova-f23c6455.png",
+      "teamLogo": "/assets/esports/teams/boomboys-80493f78.png"
+    },
+    {
+      "slug": "sayuw",
+      "name": "sayuw",
+      "realName": "Oleg Kalenbet",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Sayuw",
+      "teamSlug": "huligani",
+      "teamName": "HULIGANI",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/huligani-442db089.png"
+    },
+    {
+      "slug": "scofield",
+      "name": "Scofield",
+      "realName": "Elvis Joel De la Cruz Peña",
+      "role": "",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/Scofield",
+      "teamSlug": "playtime",
+      "teamName": "PlayTime",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/ptime-e131645e.png"
+    },
+    {
+      "slug": "se",
+      "name": "Se",
+      "realName": "Tugstur Dashzevge",
+      "role": "",
+      "country": "Mongolia",
+      "profileUrl": "https://liquipedia.net/dota2/Se",
+      "teamSlug": "inner-circle-x-insanity",
+      "teamName": "Inner Circle x Insanity",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/mongolia-f6adabf7.png",
+      "teamLogo": "/assets/esports/teams/inner-circle-x-insanity-6516d013.png"
+    },
+    {
+      "slug": "seimei",
+      "name": "seimei",
+      "country": "Mongolia",
+      "profileUrl": "https://liquipedia.net/dota2/Seimei",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/mongolia-f6adabf7.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "selfhate",
+      "name": "selfhate",
+      "realName": "Nikita Ozhiganov",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Selfhate",
+      "teamSlug": "nemiga-gaming",
+      "teamName": "Nemiga Gaming",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/nemiga-gaming-4c9c5db2.png"
+    },
+    {
+      "slug": "serenada",
+      "name": "Serenada",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Serenada",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "setsu",
+      "name": "Setsu",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Setsu",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "shanks",
+      "name": "Shanks",
+      "realName": "Mark Jubert Redira",
+      "role": "",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Shanks",
+      "teamSlug": "execration",
+      "teamName": "Execration",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": "/assets/esports/teams/execration-42c84324.png"
+    },
+    {
+      "slug": "shigetsu",
+      "name": "shigetsu",
+      "realName": "Maxim Popadinec",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Shigetsu",
+      "teamSlug": "yellow-submarine",
+      "teamName": "Yellow Submarine",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/yellow-submarine-38c7a84c.png"
+    },
+    {
+      "slug": "shiro",
+      "name": "shiro",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Shiro",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "skem",
+      "name": "skem",
+      "realName": "Rolen Andrei Gabriel Ong",
+      "role": "Captain",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Skem",
+      "teamSlug": "og",
+      "teamName": "OG",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": "/assets/esports/teams/og-fa6f4e63.png"
+    },
+    {
+      "slug": "skill-lay",
+      "name": "Skill Lay",
+      "realName": "Thiha Kyaw Swar",
+      "role": "",
+      "country": "Myanmar",
+      "profileUrl": "https://liquipedia.net/dota2/Skill_Lay",
+      "teamSlug": "yangon-galacticos",
+      "teamName": "Yangon Galacticos",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/myanmar-010c8212.png",
+      "teamLogo": "/assets/esports/teams/yangon-galacticos-fe9968df.png"
+    },
+    {
+      "slug": "skiter",
+      "name": "skiter",
+      "realName": "Oliver Lepko",
+      "role": "",
+      "country": "Slovakia",
+      "profileUrl": "https://liquipedia.net/dota2/Skiter",
+      "teamSlug": "team-falcons",
+      "teamName": "Team Falcons",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/slovakia-cf668776.png",
+      "teamLogo": "/assets/esports/teams/team-falcons-ffc4fafd.png"
+    },
+    {
+      "slug": "sl4d1n",
+      "name": "sl4d1n-",
+      "realName": "Alexis Cepeda Sitl Sitl",
+      "role": "",
+      "country": "Ecuador",
+      "profileUrl": "https://liquipedia.net/dota2/Sl4d1n-",
+      "teamSlug": "infamous-gaming",
+      "teamName": "Infamous Gaming",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/ecuador-cd382e15.png",
+      "teamLogo": "/assets/esports/teams/infamous-gaming-3fb850d5.png"
+    },
+    {
+      "slug": "sneyking",
+      "name": "Sneyking",
+      "realName": "Wu Jingjun",
+      "role": "",
+      "country": "United States",
+      "profileUrl": "https://liquipedia.net/dota2/Sneyking",
+      "teamSlug": "team-falcons",
+      "teamName": "Team Falcons",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/united-states-4c74097c.png",
+      "teamLogo": "/assets/esports/teams/team-falcons-ffc4fafd.png"
+    },
+    {
+      "slug": "speeed",
+      "name": "Speeed",
+      "realName": "Paul Bocchicchio",
+      "role": "",
+      "country": "United States",
+      "profileUrl": "https://liquipedia.net/dota2/Speeed",
+      "teamSlug": "gamerlegion",
+      "teamName": "GamerLegion",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/united-states-4c74097c.png",
+      "teamLogo": "/assets/esports/teams/gamerlegion-20d871de.png"
+    },
+    {
+      "slug": "squad1x",
+      "name": "squad1x",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Squad1x",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "steelborco",
+      "name": "steelborco",
+      "country": "Kazakhstan",
+      "profileUrl": "https://liquipedia.net/dota2/Steelborco",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "stoic",
+      "name": "Stoic",
+      "realName": "Abdullah Fatih Koparan",
+      "role": "",
+      "country": "Turkey",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Stoic&action=edit&redlink=1",
+      "teamSlug": "winter-bear",
+      "teamName": "Winter Bear",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/turkey-c1c8242d.png",
+      "teamLogo": "/assets/esports/teams/winter-bear-d6f73de6.png"
+    },
+    {
+      "slug": "stojkov",
+      "name": "Stojkov",
+      "realName": "Igor Stojkov",
+      "role": "",
+      "country": "North Macedonia",
+      "profileUrl": "https://liquipedia.net/dota2/Stojkov",
+      "teamSlug": "inner-circle-x-insanity",
+      "teamName": "Inner Circle x Insanity",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/north-macedonia-13ae0c3d.png",
+      "teamLogo": "/assets/esports/teams/inner-circle-x-insanity-6516d013.png"
+    },
+    {
+      "slug": "sumail",
+      "name": "SumaiL",
+      "realName": "Sumail Hassan",
+      "role": "",
+      "country": "Pakistan",
+      "profileUrl": "https://liquipedia.net/dota2/SumaiL",
+      "teamSlug": "nigma-galaxy",
+      "teamName": "Nigma Galaxy",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/pakistan-2d42571c.png",
+      "teamLogo": "/assets/esports/teams/nigma-galaxy-cb2467ad.png"
+    },
+    {
+      "slug": "swedenstrong",
+      "name": "swedenstrong",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Swedenstrong",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "ta2000",
+      "name": "TA2000",
+      "realName": "Aybek Tokayev",
+      "role": "",
+      "country": "Kazakhstan",
+      "profileUrl": "https://liquipedia.net/dota2/TA2000",
+      "teamSlug": "power-rangers",
+      "teamName": "Power Rangers",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png",
+      "teamLogo": "/assets/esports/teams/power-rangers-bf1ec7ef.png"
+    },
+    {
+      "slug": "tailung",
+      "name": "TaiLung",
+      "realName": "Santiago Olivos Agüero Gustavo",
+      "role": "",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/TaiLung",
+      "teamSlug": "lgd-gaming",
+      "teamName": "LGD Gaming",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/lgd-gaming-64655c66.png"
+    },
+    {
+      "slug": "takecaremia",
+      "name": "TakeCareMia",
+      "realName": "Jordan Huaman",
+      "role": "",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=TakeCareMia&action=edit&redlink=1",
+      "teamSlug": "infamous-gaming",
+      "teamName": "Infamous Gaming",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/infamous-gaming-3fb850d5.png"
+    },
+    {
+      "slug": "takizawa",
+      "name": "takizawa",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=Takizawa&action=edit&redlink=1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "teehee",
+      "name": "Teehee",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Teehee",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "thiolicor",
+      "name": "Thiolicor",
+      "realName": "Thiago Cordeiro",
+      "role": "",
+      "country": "Brazil",
+      "profileUrl": "https://liquipedia.net/dota2/Thiolicor",
+      "teamSlug": "lgd-gaming",
+      "teamName": "LGD Gaming",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/brazil-5aa61298.png",
+      "teamLogo": "/assets/esports/teams/lgd-gaming-64655c66.png"
+    },
+    {
+      "slug": "timado",
+      "name": "Timado",
+      "realName": "Enzo Gianoli",
+      "role": "",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/Timado",
+      "teamSlug": "virtus-pro",
+      "teamName": "Virtus.pro",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/virtus-pro-6c9d0a9f.png"
+    },
+    {
+      "slug": "tims",
+      "name": "TIMS",
+      "realName": "Timothy Randrup",
+      "role": "",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/TIMS",
+      "teamSlug": "og",
+      "teamName": "OG",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": "/assets/esports/teams/og-fa6f4e63.png"
+    },
+    {
+      "slug": "tino",
+      "name": "Tino",
+      "realName": "Justine Ryan Evangelista Grimaldo",
+      "role": "",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Tino",
+      "teamSlug": "execration",
+      "teamName": "Execration",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": "/assets/esports/teams/execration-42c84324.png"
+    },
+    {
+      "slug": "tofu",
+      "name": "tOfu",
+      "realName": "Erik Engel",
+      "role": "Captain",
+      "country": "Germany",
+      "profileUrl": "https://liquipedia.net/dota2/TOfu",
+      "teamSlug": "team-liquid",
+      "teamName": "Team Liquid",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/germany-05b4afb5.png",
+      "teamLogo": "/assets/esports/teams/team-liquid-6cf5f613.png"
+    },
+    {
+      "slug": "topson",
+      "name": "Topson",
+      "realName": "Topias Miikka Taavitsainen",
+      "role": "",
+      "country": "Finland",
+      "profileUrl": "https://liquipedia.net/dota2/Topson",
+      "teamSlug": "lgd-gaming",
+      "teamName": "LGD Gaming",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/finland-c1c211ab.png",
+      "teamLogo": "/assets/esports/teams/lgd-gaming-64655c66.png"
+    },
+    {
+      "slug": "v1olent",
+      "name": "v1olent`",
+      "country": "Kazakhstan",
+      "profileUrl": "https://liquipedia.net/dota2/V1olent",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "vanilll",
+      "name": "VaniLLl",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=VaniLLl&action=edit&redlink=1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "varizh",
+      "name": "Varizh",
+      "country": "Indonesia",
+      "profileUrl": "https://liquipedia.net/dota2/Varizh",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/indonesia-90350932.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "vazya",
+      "name": "Vazya",
+      "realName": "Ivan German",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Vazya",
+      "teamSlug": "huligani",
+      "teamName": "HULIGANI",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/huligani-442db089.png"
+    },
+    {
+      "slug": "vintage",
+      "name": "Vintage",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/Vintage",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "vitaly",
+      "name": "Vitaly",
+      "realName": "Pablo Cesar Angulo Roman",
+      "role": "",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/Vitaly",
+      "teamSlug": "hokori",
+      "teamName": "Hokori",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/hokori-f0aa85e4.png"
+    },
+    {
+      "slug": "vladikthehtiviy",
+      "name": "VladikTheHtiviy",
+      "realName": "Andrii Dovhal",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=VladikTheHtiviy&action=edit&redlink=1",
+      "teamSlug": "team-lynx",
+      "teamName": "Team Lynx",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/team-lynx-e64adfa7.png"
+    },
+    {
+      "slug": "vordj",
+      "name": "VoRDJ",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=VoRDJ&action=edit&redlink=1",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "watson",
+      "name": "watson",
+      "realName": "Alimzhan Islambekov",
+      "role": "",
+      "country": "Kazakhstan",
+      "profileUrl": "https://liquipedia.net/dota2/Watson",
+      "teamSlug": "team-yandex",
+      "teamName": "Team Yandex",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png",
+      "teamLogo": "/assets/esports/teams/team-yandex-e09ec9e2.png"
+    },
+    {
+      "slug": "waveformn",
+      "name": "waveformn",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Waveformn",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "whitemon",
+      "name": "Whitemon",
+      "realName": "Matthew Filemon",
+      "role": "",
+      "country": "Indonesia",
+      "profileUrl": "https://liquipedia.net/dota2/Whitemon",
+      "teamSlug": "iron-wing",
+      "teamName": "Iron Wing",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/indonesia-90350932.png",
+      "teamLogo": "/assets/esports/teams/iron-wing-7c2c5c3f.png"
+    },
+    {
+      "slug": "wisper",
+      "name": "Wisper",
+      "realName": "Adrián Céspedes Dobles",
+      "role": "",
+      "country": "Bolivia",
+      "profileUrl": "https://liquipedia.net/dota2/Wisper",
+      "teamSlug": "lgd-gaming",
+      "teamName": "LGD Gaming",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/bolivia-3b001eb1.png",
+      "teamLogo": "/assets/esports/teams/lgd-gaming-64655c66.png"
+    },
+    {
+      "slug": "wits",
+      "name": "Wits",
+      "realName": "Máximo Orozco Alza",
+      "role": "",
+      "country": "Peru",
+      "profileUrl": "https://liquipedia.net/dota2/Wits",
+      "teamSlug": "playtime",
+      "teamName": "PlayTime",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/peru-7dec9e6d.png",
+      "teamLogo": "/assets/esports/teams/ptime-e131645e.png"
+    },
+    {
+      "slug": "woe",
+      "name": "WoE",
+      "realName": "Nikolai Ruban",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/WoE",
+      "teamSlug": "level-up",
+      "teamName": "Level UP",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/level-up-7de16a3a.png"
+    },
+    {
+      "slug": "worick",
+      "name": "Worick",
+      "realName": "Vitaliy Brezgin",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Worick",
+      "teamSlug": "zero-tenacity",
+      "teamName": "Zero Tenacity",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/zero-tenacity-2273a5f0.png"
+    },
+    {
+      "slug": "ws",
+      "name": "Ws",
+      "realName": "Chung Wei Shen",
+      "role": "",
+      "country": "Malaysia",
+      "profileUrl": "https://liquipedia.net/dota2/Ws",
+      "teamSlug": "aurora-gaming",
+      "teamName": "Aurora Gaming",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/malaysia-fbaa6886.png",
+      "teamLogo": "/assets/esports/teams/aurora-gaming-192e499e.png"
+    },
+    {
+      "slug": "xakoda",
+      "name": "Xakoda",
+      "realName": "Egor Lipartiia",
+      "role": "Captain",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Xakoda",
+      "teamSlug": "yellow-submarine",
+      "teamName": "Yellow Submarine",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/yellow-submarine-38c7a84c.png"
+    },
+    {
+      "slug": "xiao8",
+      "name": "xiao8",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Xiao8",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "xinq",
+      "name": "XinQ",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/XinQ",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "xm",
+      "name": "Xm",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Xm",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "xnova",
+      "name": "xNova",
+      "realName": "Yap Jian Wei",
+      "role": "",
+      "country": "Malaysia",
+      "profileUrl": "https://liquipedia.net/dota2/XNova",
+      "teamSlug": "xtreme-gaming",
+      "teamName": "Xtreme Gaming",
+      "region": "China",
+      "flag": "/assets/esports/flags/malaysia-fbaa6886.png",
+      "teamLogo": "/assets/esports/teams/xtreme-gaming-d35d94eb.png"
+    },
+    {
+      "slug": "xxs",
+      "name": "Xxs",
+      "realName": "Lin Jing",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Xxs",
+      "teamSlug": "xtreme-gaming",
+      "teamName": "Xtreme Gaming",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/xtreme-gaming-d35d94eb.png"
+    },
+    {
+      "slug": "y",
+      "name": "y`",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Y%60",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "yamich",
+      "name": "yamich",
+      "realName": "Daniyal Lazebnyy",
+      "role": "",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/Yamich",
+      "teamSlug": "mouz",
+      "teamName": "MOUZ",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": "/assets/esports/teams/mouz-6ad278c6.png"
+    },
+    {
+      "slug": "yamsun",
+      "name": "Yamsun",
+      "country": "United States",
+      "profileUrl": "https://liquipedia.net/dota2/Yamsun",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/united-states-4c74097c.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "yao",
+      "name": "Yao",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Yao",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "yatoro",
+      "name": "Yatoro",
+      "realName": "Illya Mulyarchuk",
+      "role": "",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Yatoro",
+      "teamSlug": "team-spirit",
+      "teamName": "Team Spirit",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": "/assets/esports/teams/team-spirit-ab12d6d1.png"
+    },
+    {
+      "slug": "yopaj",
+      "name": "Yopaj-",
+      "realName": "Erin Jasper Ferrer",
+      "role": "",
+      "country": "Philippines",
+      "profileUrl": "https://liquipedia.net/dota2/Yopaj",
+      "teamSlug": "og",
+      "teamName": "OG",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/philippines-44e5d0bf.png",
+      "teamLogo": "/assets/esports/teams/og-fa6f4e63.png"
+    },
+    {
+      "slug": "young-g",
+      "name": "young G",
+      "realName": "Nikita Bochko",
+      "role": "",
+      "country": "Belarus",
+      "profileUrl": "https://liquipedia.net/dota2/Young_G",
+      "teamSlug": "nemiga-gaming",
+      "teamName": "Nemiga Gaming",
+      "region": "Europe",
+      "flag": "/assets/esports/flags/belarus-55273be2.png",
+      "teamLogo": "/assets/esports/teams/nemiga-gaming-4c9c5db2.png"
+    },
+    {
+      "slug": "young-ph",
+      "name": "Young PH",
+      "realName": "Min Khant Maung",
+      "role": "",
+      "country": "Myanmar",
+      "profileUrl": "https://liquipedia.net/dota2/Young_PH",
+      "teamSlug": "yangon-galacticos",
+      "teamName": "Yangon Galacticos",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/myanmar-010c8212.png",
+      "teamLogo": "/assets/esports/teams/yangon-galacticos-fe9968df.png"
+    },
+    {
+      "slug": "yowaai",
+      "name": "yowaai",
+      "country": "Ukraine",
+      "profileUrl": "https://liquipedia.net/dota2/Yowaai",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/ukraine-06dd6bae.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "yuma",
+      "name": "Yuma",
+      "realName": "Yuma Langlet",
+      "role": "",
+      "country": "Nicaragua",
+      "profileUrl": "https://liquipedia.net/dota2/Yuma",
+      "teamSlug": "lgd-gaming",
+      "teamName": "LGD Gaming",
+      "region": "Americas",
+      "flag": "/assets/esports/flags/nicaragua-6332641c.png",
+      "teamLogo": "/assets/esports/teams/lgd-gaming-64655c66.png"
+    },
+    {
+      "slug": "yyf",
+      "name": "YYF",
+      "realName": "Jiang Cen",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/YYF",
+      "teamSlug": "old-boys",
+      "teamName": "Old Boys",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/old-boys-3d084783.png"
+    },
+    {
+      "slug": "zawrain",
+      "name": "ZawRain",
+      "realName": "Zawrain Sai Aung",
+      "role": "",
+      "country": "Myanmar",
+      "profileUrl": "https://liquipedia.net/dota2/index.php?title=ZawRain&action=edit&redlink=1",
+      "teamSlug": "yangon-galacticos",
+      "teamName": "Yangon Galacticos",
+      "region": "Southeast Asia",
+      "flag": "/assets/esports/flags/myanmar-010c8212.png",
+      "teamLogo": "/assets/esports/teams/yangon-galacticos-fe9968df.png"
+    },
+    {
+      "slug": "zeal",
+      "name": "zeal",
+      "country": "Malaysia",
+      "profileUrl": "https://liquipedia.net/dota2/Zeal",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/malaysia-fbaa6886.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "zhou",
+      "name": "Zhou",
+      "realName": "Chen Yao",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Zhou",
+      "teamSlug": "old-boys",
+      "teamName": "Old Boys",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/old-boys-3d084783.png"
+    },
+    {
+      "slug": "zsmj",
+      "name": "ZSMJ",
+      "realName": "Gong Jian",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/ZSMJ",
+      "teamSlug": "old-boys",
+      "teamName": "Old Boys",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/old-boys-3d084783.png"
+    },
+    {
+      "slug": "zzq",
+      "name": "zzq",
+      "realName": "Zhang Ziqiang",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/Zzq",
+      "teamSlug": "team-resilience",
+      "teamName": "Team Resilience",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/team-resilience-08fd4a06.png"
+    },
+    {
+      "slug": "1786e1e384c7",
+      "name": "мистер мораль",
+      "country": "Russia",
+      "profileUrl": "https://liquipedia.net/dota2/%D0%9C%D0%B8%D1%81%D1%82%D0%B5%D1%80_%D0%BC%D0%BE%D1%80%D0%B0%D0%BB%D1%8C",
+      "realName": "",
+      "role": "",
+      "teamSlug": "",
+      "teamName": "",
+      "region": "",
+      "flag": "/assets/esports/flags/russia-4943bc71.png",
+      "teamLogo": ""
+    },
+    {
+      "slug": "43bb27c2a954",
+      "name": "天命",
+      "realName": "Jiang An",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/%E5%A4%A9%E5%91%BD",
+      "teamSlug": "yakult-brothers",
+      "teamName": "Yakult Brothers",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/yakult-brothers-cd404e64.png"
+    },
+    {
+      "slug": "4a7a16b111b7",
+      "name": "项羽",
+      "realName": "Li Longwu",
+      "role": "",
+      "country": "China",
+      "profileUrl": "https://liquipedia.net/dota2/%E9%A1%B9%E7%BE%BD",
+      "teamSlug": "yakult-brothers",
+      "teamName": "Yakult Brothers",
+      "region": "China",
+      "flag": "/assets/esports/flags/china-755a8026.png",
+      "teamLogo": "/assets/esports/teams/yakult-brothers-cd404e64.png"
+    }
+  ],
+  "transfers": [
+    {
+      "id": "2026-08-24-bulba-0",
+      "date": "2026-08-24",
+      "players": [
+        {
+          "slug": "bulba",
+          "name": "BuLba",
+          "country": "United States",
+          "profileUrl": "https://liquipedia.net/dota2/BuLba",
+          "flag": "/assets/esports/flags/united-states-4c74097c.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "virtus-pro",
+          "name": "Virtus.pro",
+          "sourceUrl": "https://liquipedia.net/dota2/Virtus.pro",
+          "logo": "/assets/esports/teams/virtus-pro-6c9d0a9f.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [
+        "Coach"
+      ],
+      "toStatus": [],
+      "referenceUrl": "https://t.me/virtuspro_dota/1775"
+    },
+    {
+      "id": "2026-08-24-timado-abed-saberlight-hellscream-fly-1",
+      "date": "2026-08-24",
+      "players": [
+        {
+          "slug": "timado",
+          "name": "Timado",
+          "country": "Peru",
+          "profileUrl": "https://liquipedia.net/dota2/Timado",
+          "flag": "/assets/esports/flags/peru-7dec9e6d.png"
+        },
+        {
+          "slug": "abed",
+          "name": "Abed",
+          "country": "Philippines",
+          "profileUrl": "https://liquipedia.net/dota2/Abed",
+          "flag": "/assets/esports/flags/philippines-44e5d0bf.png"
+        },
+        {
+          "slug": "saberlight",
+          "name": "SaberLight",
+          "country": "Czechia",
+          "profileUrl": "https://liquipedia.net/dota2/SabeRLight-",
+          "flag": "/assets/esports/flags/czechia-0c07ce6a.png"
+        },
+        {
+          "slug": "hellscream",
+          "name": "Hellscream",
+          "country": "Belarus",
+          "profileUrl": "https://liquipedia.net/dota2/Hellscream",
+          "flag": "/assets/esports/flags/belarus-55273be2.png"
+        },
+        {
+          "slug": "fly",
+          "name": "Fly",
+          "country": "Israel",
+          "profileUrl": "https://liquipedia.net/dota2/Fly",
+          "flag": "/assets/esports/flags/israel-2a3e847d.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "virtus-pro",
+          "name": "Virtus.pro",
+          "sourceUrl": "https://liquipedia.net/dota2/Virtus.pro",
+          "logo": "/assets/esports/teams/virtus-pro-6c9d0a9f.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://t.me/virtuspro_dota/1775"
+    },
+    {
+      "id": "2026-08-24-momo-skill-lay-zawrain-2",
+      "date": "2026-08-24",
+      "players": [
+        {
+          "slug": "momo",
+          "name": "MOMO",
+          "country": "Myanmar",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=MOMO&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/myanmar-010c8212.png"
+        },
+        {
+          "slug": "skill-lay",
+          "name": "Skill Lay",
+          "country": "Myanmar",
+          "profileUrl": "https://liquipedia.net/dota2/Skill_Lay",
+          "flag": "/assets/esports/flags/myanmar-010c8212.png"
+        },
+        {
+          "slug": "zawrain",
+          "name": "ZawRain",
+          "country": "Myanmar",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=ZawRain&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/myanmar-010c8212.png"
+        }
+      ],
+      "from": [],
+      "to": [
+        {
+          "slug": "yangon-galacticos",
+          "name": "Yangon Galacticos",
+          "sourceUrl": "https://liquipedia.net/dota2/Yangon_Galacticos",
+          "logo": "/assets/esports/teams/yangon-galacticos-fe9968df.png"
+        }
+      ],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://www.facebook.com/100063619334299/posts/1674191534711475"
+    },
+    {
+      "id": "2026-08-23-aui-2000-3",
+      "date": "2026-08-23",
+      "players": [
+        {
+          "slug": "aui-2000",
+          "name": "Aui_2000",
+          "country": "Canada",
+          "profileUrl": "https://liquipedia.net/dota2/Aui_2000",
+          "flag": "/assets/esports/flags/canada-b65341cf.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "team-falcons",
+          "name": "Team Falcons",
+          "sourceUrl": "https://liquipedia.net/dota2/Team_Falcons",
+          "logo": "/assets/esports/teams/team-falcons-ffc4fafd.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [
+        "Coach"
+      ],
+      "toStatus": [],
+      "referenceUrl": "https://esports.ru/dota-2/news/aui-2000-rasskazal-o-planah-zavershit-kareru-v-dota-2/"
+    },
+    {
+      "id": "2026-08-23-steelborco-4",
+      "date": "2026-08-23",
+      "players": [
+        {
+          "slug": "steelborco",
+          "name": "steelborco",
+          "country": "Kazakhstan",
+          "profileUrl": "https://liquipedia.net/dota2/Steelborco",
+          "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "carstensz-esports",
+          "name": "Carstensz Esports",
+          "sourceUrl": "https://liquipedia.net/dota2/Carstensz_Esports",
+          "logo": "/assets/esports/teams/carstensz-esports-1c61391a.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [
+        "Coach"
+      ],
+      "toStatus": [],
+      "referenceUrl": "https://www.instagram.com/p/DcYKapXiD7R/?img_index=2"
+    },
+    {
+      "id": "2026-08-23-salamat1-seimei-ace12-5",
+      "date": "2026-08-23",
+      "players": [
+        {
+          "slug": "salamat1",
+          "name": "salamat1",
+          "country": "Kazakhstan",
+          "profileUrl": "https://liquipedia.net/dota2/Salamat1",
+          "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png"
+        },
+        {
+          "slug": "seimei",
+          "name": "seimei",
+          "country": "Mongolia",
+          "profileUrl": "https://liquipedia.net/dota2/Seimei",
+          "flag": "/assets/esports/flags/mongolia-f6adabf7.png"
+        },
+        {
+          "slug": "ace12",
+          "name": "Ace12",
+          "country": "Mongolia",
+          "profileUrl": "https://liquipedia.net/dota2/Ace12",
+          "flag": "/assets/esports/flags/mongolia-f6adabf7.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "carstensz-esports",
+          "name": "Carstensz Esports",
+          "sourceUrl": "https://liquipedia.net/dota2/Carstensz_Esports",
+          "logo": "/assets/esports/teams/carstensz-esports-1c61391a.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://www.instagram.com/p/DcYKapXiD7R/?img_index=2"
+    },
+    {
+      "id": "2026-08-19-nyao-6",
+      "date": "2026-08-19",
+      "players": [
+        {
+          "slug": "nyao",
+          "name": "Nyao",
+          "country": "Indonesia",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=Nyao&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/indonesia-90350932.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "rekonix",
+          "name": "REKONIX",
+          "sourceUrl": "https://liquipedia.net/dota2/REKONIX",
+          "logo": "/assets/esports/teams/rekonix-f5626873.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [
+        "Manager"
+      ],
+      "toStatus": [],
+      "referenceUrl": "https://x.com/rekonixofficial/status/2090062459885531244"
+    },
+    {
+      "id": "2026-08-19-casual-7",
+      "date": "2026-08-19",
+      "players": [
+        {
+          "slug": "casual",
+          "name": "casual",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=Casual&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "rekonix",
+          "name": "REKONIX",
+          "sourceUrl": "https://liquipedia.net/dota2/REKONIX",
+          "logo": "/assets/esports/teams/rekonix-f5626873.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [
+        "Analyst"
+      ],
+      "toStatus": [],
+      "referenceUrl": "https://x.com/rekonixofficial/status/2090062459885531244"
+    },
+    {
+      "id": "2026-08-19-mind-control-8",
+      "date": "2026-08-19",
+      "players": [
+        {
+          "slug": "mind-control",
+          "name": "MinD_ContRoL",
+          "country": "Bulgaria",
+          "profileUrl": "https://liquipedia.net/dota2/MinD_ContRoL",
+          "flag": "/assets/esports/flags/bulgaria-ab228a6f.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "rekonix",
+          "name": "REKONIX",
+          "sourceUrl": "https://liquipedia.net/dota2/REKONIX",
+          "logo": "/assets/esports/teams/rekonix-f5626873.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [
+        "Coach"
+      ],
+      "toStatus": [],
+      "referenceUrl": "https://x.com/rekonixofficial/status/2090062459885531244"
+    },
+    {
+      "id": "2026-08-19-jikroy-inyourdream-fbz-dalul-varizh-9",
+      "date": "2026-08-19",
+      "players": [
+        {
+          "slug": "jikroy",
+          "name": "Jikroy",
+          "country": "Indonesia",
+          "profileUrl": "https://liquipedia.net/dota2/Jikroy",
+          "flag": "/assets/esports/flags/indonesia-90350932.png"
+        },
+        {
+          "slug": "inyourdream",
+          "name": "inYourdreaM",
+          "country": "Indonesia",
+          "profileUrl": "https://liquipedia.net/dota2/InYourdreaM",
+          "flag": "/assets/esports/flags/indonesia-90350932.png"
+        },
+        {
+          "slug": "fbz",
+          "name": "Fbz",
+          "country": "Indonesia",
+          "profileUrl": "https://liquipedia.net/dota2/Fbz",
+          "flag": "/assets/esports/flags/indonesia-90350932.png"
+        },
+        {
+          "slug": "dalul",
+          "name": "dalul",
+          "country": "Indonesia",
+          "profileUrl": "https://liquipedia.net/dota2/Dalul",
+          "flag": "/assets/esports/flags/indonesia-90350932.png"
+        },
+        {
+          "slug": "varizh",
+          "name": "Varizh",
+          "country": "Indonesia",
+          "profileUrl": "https://liquipedia.net/dota2/Varizh",
+          "flag": "/assets/esports/flags/indonesia-90350932.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "rekonix",
+          "name": "REKONIX",
+          "sourceUrl": "https://liquipedia.net/dota2/REKONIX",
+          "logo": "/assets/esports/teams/rekonix-f5626873.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://x.com/rekonixofficial/status/2090062459885531244"
+    },
+    {
+      "id": "2026-08-16-yao-10",
+      "date": "2026-08-16",
+      "players": [
+        {
+          "slug": "yao",
+          "name": "Yao",
+          "country": "China",
+          "profileUrl": "https://liquipedia.net/dota2/Yao",
+          "flag": "/assets/esports/flags/china-755a8026.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "vici-gaming",
+          "name": "Vici Gaming",
+          "sourceUrl": "https://liquipedia.net/dota2/Vici_Gaming",
+          "logo": "/assets/esports/teams/vici-gaming-9dee1da5.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [
+        "Coach"
+      ],
+      "toStatus": [],
+      "referenceUrl": "https://weibo.com/1751065087/RdDPavbmc"
+    },
+    {
+      "id": "2026-08-16-xinq-11",
+      "date": "2026-08-16",
+      "players": [
+        {
+          "slug": "xinq",
+          "name": "XinQ",
+          "country": "China",
+          "profileUrl": "https://liquipedia.net/dota2/XinQ",
+          "flag": "/assets/esports/flags/china-755a8026.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "vici-gaming",
+          "name": "Vici Gaming",
+          "sourceUrl": "https://liquipedia.net/dota2/Vici_Gaming",
+          "logo": "/assets/esports/teams/vici-gaming-9dee1da5.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [
+        "Sub"
+      ],
+      "toStatus": [],
+      "referenceUrl": "https://weibo.com/1751065087/RdDPavbmc"
+    },
+    {
+      "id": "2026-08-16-shiro-xm-faith-bian-y-12",
+      "date": "2026-08-16",
+      "players": [
+        {
+          "slug": "shiro",
+          "name": "shiro",
+          "country": "China",
+          "profileUrl": "https://liquipedia.net/dota2/Shiro",
+          "flag": "/assets/esports/flags/china-755a8026.png"
+        },
+        {
+          "slug": "xm",
+          "name": "Xm",
+          "country": "China",
+          "profileUrl": "https://liquipedia.net/dota2/Xm",
+          "flag": "/assets/esports/flags/china-755a8026.png"
+        },
+        {
+          "slug": "faith-bian",
+          "name": "Bach",
+          "country": "China",
+          "profileUrl": "https://liquipedia.net/dota2/Faith_bian",
+          "flag": "/assets/esports/flags/china-755a8026.png"
+        },
+        {
+          "slug": "y",
+          "name": "y`",
+          "country": "China",
+          "profileUrl": "https://liquipedia.net/dota2/Y%60",
+          "flag": "/assets/esports/flags/china-755a8026.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "vici-gaming",
+          "name": "Vici Gaming",
+          "sourceUrl": "https://liquipedia.net/dota2/Vici_Gaming",
+          "logo": "/assets/esports/teams/vici-gaming-9dee1da5.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://weibo.com/1751065087/RdDPavbmc"
+    },
+    {
+      "id": "2026-08-13-flokk1n-conjure-x-creepachyo-ryabinka-13",
+      "date": "2026-08-13",
+      "players": [
+        {
+          "slug": "flokk1n",
+          "name": "Flokk1n",
+          "country": "Ukraine",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=Flokk1n&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/ukraine-06dd6bae.png"
+        },
+        {
+          "slug": "conjure-x",
+          "name": "conjure.x",
+          "country": "Kazakhstan",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=Conjure.x&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png"
+        },
+        {
+          "slug": "creepachyo",
+          "name": "Creepachyo",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=Creepachyo&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        },
+        {
+          "slug": "ryabinka",
+          "name": "ryabinka",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=Ryabinka&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        }
+      ],
+      "from": [],
+      "to": [
+        {
+          "slug": "dogsent",
+          "name": "DOGSENT",
+          "sourceUrl": "https://liquipedia.net/dota2/DOGSENT",
+          "logo": "/assets/esports/teams/dogsent-67b980c2.png"
+        }
+      ],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://x.com/D0GSENT/status/2087989697666498910"
+    },
+    {
+      "id": "2026-08-13-most-want3d-14",
+      "date": "2026-08-13",
+      "players": [
+        {
+          "slug": "most-want3d",
+          "name": "most_want3d",
+          "country": "Kazakhstan",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=Most_want3d&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png"
+        }
+      ],
+      "from": [],
+      "to": [
+        {
+          "slug": "dogsent",
+          "name": "DOGSENT",
+          "sourceUrl": "https://liquipedia.net/dota2/DOGSENT",
+          "logo": "/assets/esports/teams/dogsent-67b980c2.png"
+        }
+      ],
+      "fromStatus": [],
+      "toStatus": [
+        "Coach"
+      ],
+      "referenceUrl": "https://x.com/D0GSENT/status/2087989697666498910"
+    },
+    {
+      "id": "2026-08-13-kai-godkid-vordj-15",
+      "date": "2026-08-13",
+      "players": [
+        {
+          "slug": "kai",
+          "name": "Kai",
+          "country": "Ukraine",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=Kai&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/ukraine-06dd6bae.png"
+        },
+        {
+          "slug": "godkid",
+          "name": "GodKid-",
+          "country": "North Macedonia",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=GodKid-&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/north-macedonia-13ae0c3d.png"
+        },
+        {
+          "slug": "vordj",
+          "name": "VoRDJ",
+          "country": "Ukraine",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=VoRDJ&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/ukraine-06dd6bae.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "dogsent",
+          "name": "DOGSENT",
+          "sourceUrl": "https://liquipedia.net/dota2/DOGSENT",
+          "logo": "/assets/esports/teams/dogsent-67b980c2.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://x.com/D0GSENT/status/2087989697666498910"
+    },
+    {
+      "id": "2026-08-13-otto-16",
+      "date": "2026-08-13",
+      "players": [
+        {
+          "slug": "otto",
+          "name": "OTTO",
+          "country": "Ukraine",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=OTTO&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/ukraine-06dd6bae.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "dogsent",
+          "name": "DOGSENT",
+          "sourceUrl": "https://liquipedia.net/dota2/DOGSENT",
+          "logo": "/assets/esports/teams/dogsent-67b980c2.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [
+        "Inactive"
+      ],
+      "toStatus": [],
+      "referenceUrl": "https://x.com/D0GSENT/status/2087989697666498910"
+    },
+    {
+      "id": "2026-08-13-kemps-17",
+      "date": "2026-08-13",
+      "players": [
+        {
+          "slug": "kemps",
+          "name": "Kemps",
+          "country": "Jordan",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=Kemps&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/jordan-52455c79.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "dogsent",
+          "name": "DOGSENT",
+          "sourceUrl": "https://liquipedia.net/dota2/DOGSENT",
+          "logo": "/assets/esports/teams/dogsent-67b980c2.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [
+        "Coach"
+      ],
+      "toStatus": [],
+      "referenceUrl": "https://x.com/D0GSENT/status/2087989697666498910"
+    },
+    {
+      "id": "2026-08-13-ken-18",
+      "date": "2026-08-13",
+      "players": [
+        {
+          "slug": "ken",
+          "name": "Ken",
+          "country": "Philippines",
+          "profileUrl": "https://liquipedia.net/dota2/Ken",
+          "flag": "/assets/esports/flags/philippines-44e5d0bf.png"
+        }
+      ],
+      "from": [],
+      "to": [
+        {
+          "slug": "team-nemesis",
+          "name": "Team Nemesis",
+          "sourceUrl": "https://liquipedia.net/dota2/Team_Nemesis",
+          "logo": "/assets/esports/teams/team-nemesis-abcca762.png"
+        }
+      ],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://x.com/nmss_gg/status/2087842213866983789"
+    },
+    {
+      "id": "2026-08-13-jackky-jhocam-narman-19",
+      "date": "2026-08-13",
+      "players": [
+        {
+          "slug": "jackky",
+          "name": "JaCkky",
+          "country": "Laos",
+          "profileUrl": "https://liquipedia.net/dota2/JaCkky",
+          "flag": "/assets/esports/flags/laos-252c9c3a.png"
+        },
+        {
+          "slug": "jhocam",
+          "name": "Jhocam",
+          "country": "Indonesia",
+          "profileUrl": "https://liquipedia.net/dota2/Jhocam",
+          "flag": "/assets/esports/flags/indonesia-90350932.png"
+        },
+        {
+          "slug": "narman",
+          "name": "NARMAN",
+          "country": "Mongolia",
+          "profileUrl": "https://liquipedia.net/dota2/NARMAN",
+          "flag": "/assets/esports/flags/mongolia-f6adabf7.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "glyph",
+          "name": "GLYPH",
+          "sourceUrl": "https://liquipedia.net/dota2/GLYPH",
+          "logo": "/assets/esports/teams/glyph-c7c6e834.png"
+        }
+      ],
+      "to": [
+        {
+          "slug": "team-nemesis",
+          "name": "Team Nemesis",
+          "sourceUrl": "https://liquipedia.net/dota2/Team_Nemesis",
+          "logo": "/assets/esports/teams/team-nemesis-abcca762.png"
+        }
+      ],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://x.com/nmss_gg/status/2087842213866983789"
+    },
+    {
+      "id": "2026-08-13-arthur-20",
+      "date": "2026-08-13",
+      "players": [
+        {
+          "slug": "arthur",
+          "name": "Arthur",
+          "country": "Malaysia",
+          "profileUrl": "https://liquipedia.net/dota2/Arthur",
+          "flag": "/assets/esports/flags/malaysia-fbaa6886.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "glyph",
+          "name": "GLYPH",
+          "sourceUrl": "https://liquipedia.net/dota2/GLYPH",
+          "logo": "/assets/esports/teams/glyph-c7c6e834.png"
+        }
+      ],
+      "to": [
+        {
+          "slug": "team-nemesis",
+          "name": "Team Nemesis",
+          "sourceUrl": "https://liquipedia.net/dota2/Team_Nemesis",
+          "logo": "/assets/esports/teams/team-nemesis-abcca762.png"
+        }
+      ],
+      "fromStatus": [
+        "Coach"
+      ],
+      "toStatus": [
+        "Coach"
+      ],
+      "referenceUrl": "https://x.com/nmss_gg/status/2087842213866983789"
+    },
+    {
+      "id": "2026-08-13-zeal-21",
+      "date": "2026-08-13",
+      "players": [
+        {
+          "slug": "zeal",
+          "name": "zeal",
+          "country": "Malaysia",
+          "profileUrl": "https://liquipedia.net/dota2/Zeal",
+          "flag": "/assets/esports/flags/malaysia-fbaa6886.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "glyph",
+          "name": "GLYPH",
+          "sourceUrl": "https://liquipedia.net/dota2/GLYPH",
+          "logo": "/assets/esports/teams/glyph-c7c6e834.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://x.com/Zea_al/status/2087871371292602513"
+    },
+    {
+      "id": "2026-08-10-topson-22",
+      "date": "2026-08-10",
+      "players": [
+        {
+          "slug": "topson",
+          "name": "Topson",
+          "country": "Finland",
+          "profileUrl": "https://liquipedia.net/dota2/Topson",
+          "flag": "/assets/esports/flags/finland-c1c211ab.png"
+        }
+      ],
+      "from": [],
+      "to": [
+        {
+          "slug": "lgd-gaming",
+          "name": "LGD Gaming",
+          "sourceUrl": "https://liquipedia.net/dota2/LGD_Gaming",
+          "logo": "/assets/esports/teams/lgd-gaming-64655c66.png"
+        }
+      ],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://x.com/LGDgaming/status/2086517256058814731"
+    },
+    {
+      "id": "2026-07-30-lanm-23",
+      "date": "2026-07-30",
+      "players": [
+        {
+          "slug": "lanm",
+          "name": "LaNm",
+          "country": "China",
+          "profileUrl": "https://liquipedia.net/dota2/LaNm",
+          "flag": "/assets/esports/flags/china-755a8026.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "cloud-rising",
+          "name": "Cloud Rising",
+          "sourceUrl": "https://liquipedia.net/dota2/Cloud_Rising",
+          "logo": "/assets/esports/teams/cloud-rising-768f2fcf.png"
+        }
+      ],
+      "to": [
+        {
+          "slug": "xtreme-gaming",
+          "name": "Xtreme Gaming",
+          "sourceUrl": "https://liquipedia.net/dota2/Xtreme_Gaming",
+          "logo": "/assets/esports/teams/xtreme-gaming-d35d94eb.png"
+        },
+        {
+          "slug": "cloud-rising",
+          "name": "Cloud Rising",
+          "sourceUrl": "https://liquipedia.net/dota2/Cloud_Rising",
+          "logo": "/assets/esports/teams/cloud-rising-768f2fcf.png"
+        }
+      ],
+      "fromStatus": [
+        "General Manager"
+      ],
+      "toStatus": [
+        "Head Coach/General Manager"
+      ],
+      "referenceUrl": "https://weibo.com/7720945580/Rb4ElFSFj"
+    },
+    {
+      "id": "2026-07-30-maps-24",
+      "date": "2026-07-30",
+      "players": [
+        {
+          "slug": "maps",
+          "name": "Maps",
+          "country": "China",
+          "profileUrl": "https://liquipedia.net/dota2/Maps",
+          "flag": "/assets/esports/flags/china-755a8026.png"
+        }
+      ],
+      "from": [],
+      "to": [
+        {
+          "slug": "xtreme-gaming",
+          "name": "Xtreme Gaming",
+          "sourceUrl": "https://liquipedia.net/dota2/Xtreme_Gaming",
+          "logo": "/assets/esports/teams/xtreme-gaming-d35d94eb.png"
+        }
+      ],
+      "fromStatus": [],
+      "toStatus": [
+        "Assistant Coach"
+      ],
+      "referenceUrl": "https://weibo.com/7720945580/Rb4ElFSFj"
+    },
+    {
+      "id": "2026-07-30-xiao8-25",
+      "date": "2026-07-30",
+      "players": [
+        {
+          "slug": "xiao8",
+          "name": "xiao8",
+          "country": "China",
+          "profileUrl": "https://liquipedia.net/dota2/Xiao8",
+          "flag": "/assets/esports/flags/china-755a8026.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "xtreme-gaming",
+          "name": "Xtreme Gaming",
+          "sourceUrl": "https://liquipedia.net/dota2/Xtreme_Gaming",
+          "logo": "/assets/esports/teams/xtreme-gaming-d35d94eb.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [
+        "Coach"
+      ],
+      "toStatus": [],
+      "referenceUrl": "https://weibo.com/7720945580/Rb4ElFSFj"
+    },
+    {
+      "id": "2026-07-22-rupido-dric-teehee-26",
+      "date": "2026-07-22",
+      "players": [
+        {
+          "slug": "rupido",
+          "name": "Rupido",
+          "country": "Philippines",
+          "profileUrl": "https://liquipedia.net/dota2/Rupido",
+          "flag": "/assets/esports/flags/philippines-44e5d0bf.png"
+        },
+        {
+          "slug": "dric",
+          "name": "Dric~",
+          "country": "Philippines",
+          "profileUrl": "https://liquipedia.net/dota2/Dric~",
+          "flag": "/assets/esports/flags/philippines-44e5d0bf.png"
+        },
+        {
+          "slug": "teehee",
+          "name": "Teehee",
+          "country": "Philippines",
+          "profileUrl": "https://liquipedia.net/dota2/Teehee",
+          "flag": "/assets/esports/flags/philippines-44e5d0bf.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "yangon-galacticos",
+          "name": "Yangon Galacticos",
+          "sourceUrl": "https://liquipedia.net/dota2/Yangon_Galacticos",
+          "logo": "/assets/esports/teams/yangon-galacticos-fe9968df.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://www.facebook.com/100063619334299/posts/1642199191244043"
+    },
+    {
+      "id": "2026-07-22-guesswho-27",
+      "date": "2026-07-22",
+      "players": [
+        {
+          "slug": "guesswho",
+          "name": "GuessWho",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/GuessWho",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "vp-prodigy",
+          "name": "VP.Prodigy",
+          "sourceUrl": "https://liquipedia.net/dota2/VP.Prodigy",
+          "logo": "/assets/esports/teams/vp-prodigy-60a79867.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [
+        "Coach"
+      ],
+      "toStatus": [],
+      "referenceUrl": "https://t.me/virtuspro_dota/1767"
+    },
+    {
+      "id": "2026-07-22-cutie-takizawa-raregods-janter-28",
+      "date": "2026-07-22",
+      "players": [
+        {
+          "slug": "cutie",
+          "name": "cutie",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=Cutie&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        },
+        {
+          "slug": "takizawa",
+          "name": "takizawa",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=Takizawa&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        },
+        {
+          "slug": "raregods",
+          "name": "raregods",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=Raregods&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        },
+        {
+          "slug": "janter",
+          "name": "JANTER",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/JANTER",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "vp-prodigy",
+          "name": "VP.Prodigy",
+          "sourceUrl": "https://liquipedia.net/dota2/VP.Prodigy",
+          "logo": "/assets/esports/teams/vp-prodigy-60a79867.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://t.me/virtuspro_dota/1767"
+    },
+    {
+      "id": "2026-07-22-serenada-29",
+      "date": "2026-07-22",
+      "players": [
+        {
+          "slug": "serenada",
+          "name": "Serenada",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/Serenada",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "vp-prodigy",
+          "name": "VP.Prodigy",
+          "sourceUrl": "https://liquipedia.net/dota2/VP.Prodigy",
+          "logo": "/assets/esports/teams/vp-prodigy-60a79867.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [
+        "Inactive"
+      ],
+      "toStatus": [],
+      "referenceUrl": "https://t.me/virtuspro_dota/1767"
+    },
+    {
+      "id": "2026-07-22-ponlo-30",
+      "date": "2026-07-22",
+      "players": [
+        {
+          "slug": "ponlo",
+          "name": "ponlo",
+          "country": "Singapore",
+          "profileUrl": "https://liquipedia.net/dota2/Ponlo",
+          "flag": "/assets/esports/flags/singapore-2f6af472.png"
+        }
+      ],
+      "from": [],
+      "to": [
+        {
+          "slug": "ilbirs-esports",
+          "name": "Ilbirs eSports",
+          "sourceUrl": "https://liquipedia.net/dota2/Ilbirs_eSports",
+          "logo": "/assets/esports/teams/ilbirs-esports-6db79405.png"
+        }
+      ],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://t.me/ilbirs_esports/1015"
+    },
+    {
+      "id": "2026-07-19-fortniteman-ponlo-31",
+      "date": "2026-07-19",
+      "players": [
+        {
+          "slug": "fortniteman",
+          "name": "fortniteMan",
+          "country": "Ukraine",
+          "profileUrl": "https://liquipedia.net/dota2/FortniteMan",
+          "flag": "/assets/esports/flags/ukraine-06dd6bae.png"
+        },
+        {
+          "slug": "ponlo",
+          "name": "ponlo",
+          "country": "Singapore",
+          "profileUrl": "https://liquipedia.net/dota2/Ponlo",
+          "flag": "/assets/esports/flags/singapore-2f6af472.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "ilbirs-esports",
+          "name": "Ilbirs eSports",
+          "sourceUrl": "https://liquipedia.net/dota2/Ilbirs_eSports",
+          "logo": "/assets/esports/teams/ilbirs-esports-6db79405.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://x.com/IlbirsEsports/status/2078817504860774435"
+    },
+    {
+      "id": "2026-07-17-dreamocel-ahyad-32",
+      "date": "2026-07-17",
+      "players": [
+        {
+          "slug": "dreamocel",
+          "name": "Dreamocel",
+          "country": "Indonesia",
+          "profileUrl": "https://liquipedia.net/dota2/Dreamocel",
+          "flag": "/assets/esports/flags/indonesia-90350932.png"
+        },
+        {
+          "slug": "ahyad",
+          "name": "Ahyad",
+          "country": "Malaysia",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=Ahyad&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/malaysia-fbaa6886.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "carstensz-esports",
+          "name": "Carstensz Esports",
+          "sourceUrl": "https://liquipedia.net/dota2/Carstensz_Esports",
+          "logo": "/assets/esports/teams/carstensz-esports-1c61391a.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://www.instagram.com/carstenszesports/p/Da5GyoMD6U0/"
+    },
+    {
+      "id": "2026-07-16-vintage-33",
+      "date": "2026-07-16",
+      "players": [
+        {
+          "slug": "vintage",
+          "name": "Vintage",
+          "country": "Peru",
+          "profileUrl": "https://liquipedia.net/dota2/Vintage",
+          "flag": "/assets/esports/flags/peru-7dec9e6d.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "ptime",
+          "name": "PTime",
+          "sourceUrl": "https://liquipedia.net/dota2/PTime",
+          "logo": "/assets/esports/teams/ptime-e131645e.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [
+        "Sporting Director"
+      ],
+      "toStatus": [],
+      "referenceUrl": "https://www.facebook.com/61587580225453/posts/122124720279252674/"
+    },
+    {
+      "id": "2026-07-16-darkmago-frank-34",
+      "date": "2026-07-16",
+      "players": [
+        {
+          "slug": "darkmago",
+          "name": "DarkMago",
+          "country": "Peru",
+          "profileUrl": "https://liquipedia.net/dota2/DarkMago",
+          "flag": "/assets/esports/flags/peru-7dec9e6d.png"
+        },
+        {
+          "slug": "frank",
+          "name": "Frank",
+          "country": "Peru",
+          "profileUrl": "https://liquipedia.net/dota2/Frank",
+          "flag": "/assets/esports/flags/peru-7dec9e6d.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "ptime",
+          "name": "PTime",
+          "sourceUrl": "https://liquipedia.net/dota2/PTime",
+          "logo": "/assets/esports/teams/ptime-e131645e.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://www.facebook.com/61587580225453/posts/122124720279252674/"
+    },
+    {
+      "id": "2026-07-16-astini-35",
+      "date": "2026-07-16",
+      "players": [
+        {
+          "slug": "astini",
+          "name": "Astini",
+          "country": "Brazil",
+          "profileUrl": "https://liquipedia.net/dota2/Astini",
+          "flag": "/assets/esports/flags/brazil-5aa61298.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "team-nemesis",
+          "name": "Team Nemesis",
+          "sourceUrl": "https://liquipedia.net/dota2/Team_Nemesis",
+          "logo": "/assets/esports/teams/team-nemesis-abcca762.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [
+        "Coach"
+      ],
+      "toStatus": [],
+      "referenceUrl": "https://x.com/nmss_gg/status/2077747543492919357"
+    },
+    {
+      "id": "2026-07-16-rubikon155-4nalog-lelis-yamsun-36",
+      "date": "2026-07-16",
+      "players": [
+        {
+          "slug": "rubikon155",
+          "name": "rubikon155",
+          "country": "Moldova",
+          "profileUrl": "https://liquipedia.net/dota2/Rubikon155",
+          "flag": "/assets/esports/flags/moldova-f23c6455.png"
+        },
+        {
+          "slug": "4nalog",
+          "name": "4nalog",
+          "country": "Brazil",
+          "profileUrl": "https://liquipedia.net/dota2/4nalog",
+          "flag": "/assets/esports/flags/brazil-5aa61298.png"
+        },
+        {
+          "slug": "lelis",
+          "name": "Lelis",
+          "country": "Brazil",
+          "profileUrl": "https://liquipedia.net/dota2/Lelis",
+          "flag": "/assets/esports/flags/brazil-5aa61298.png"
+        },
+        {
+          "slug": "yamsun",
+          "name": "Yamsun",
+          "country": "United States",
+          "profileUrl": "https://liquipedia.net/dota2/Yamsun",
+          "flag": "/assets/esports/flags/united-states-4c74097c.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "team-nemesis",
+          "name": "Team Nemesis",
+          "sourceUrl": "https://liquipedia.net/dota2/Team_Nemesis",
+          "logo": "/assets/esports/teams/team-nemesis-abcca762.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://x.com/nmss_gg/status/2077747543492919357"
+    },
+    {
+      "id": "2026-07-14-illidan-37",
+      "date": "2026-07-14",
+      "players": [
+        {
+          "slug": "illidan",
+          "name": "Illidan",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/Illidan",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "yellow-submarine",
+          "name": "Yellow Submarine",
+          "sourceUrl": "https://liquipedia.net/dota2/Yellow_Submarine",
+          "logo": "/assets/esports/teams/yellow-submarine-38c7a84c.png"
+        }
+      ],
+      "to": [
+        {
+          "slug": "team-spirit-academy",
+          "name": "Team Spirit Academy",
+          "sourceUrl": "https://liquipedia.net/dota2/Team_Spirit_Academy",
+          "logo": "/assets/esports/teams/team-spirit-academy-0b698477.png"
+        }
+      ],
+      "fromStatus": [
+        "Coach"
+      ],
+      "toStatus": [
+        "Coach"
+      ],
+      "referenceUrl": "https://dota2.ru/news/65498-illidan-i-mettpum-pomenalis-komandami-v-strukture-team-spirit/"
+    },
+    {
+      "id": "2026-07-14-mettpum-38",
+      "date": "2026-07-14",
+      "players": [
+        {
+          "slug": "mettpum",
+          "name": "MeTTpuM",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/MeTTpuM",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "team-spirit-academy",
+          "name": "Team Spirit Academy",
+          "sourceUrl": "https://liquipedia.net/dota2/Team_Spirit_Academy",
+          "logo": "/assets/esports/teams/team-spirit-academy-0b698477.png"
+        }
+      ],
+      "to": [
+        {
+          "slug": "yellow-submarine",
+          "name": "Yellow Submarine",
+          "sourceUrl": "https://liquipedia.net/dota2/Yellow_Submarine",
+          "logo": "/assets/esports/teams/yellow-submarine-38c7a84c.png"
+        }
+      ],
+      "fromStatus": [
+        "Coach"
+      ],
+      "toStatus": [
+        "Coach"
+      ],
+      "referenceUrl": "https://dota2.ru/news/65498-illidan-i-mettpum-pomenalis-komandami-v-strukture-team-spirit/"
+    },
+    {
+      "id": "2026-07-08-squad1x-1786e1e384c7-swedenstrong-rein-39",
+      "date": "2026-07-08",
+      "players": [
+        {
+          "slug": "squad1x",
+          "name": "squad1x",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/Squad1x",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        },
+        {
+          "slug": "1786e1e384c7",
+          "name": "мистер мораль",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/%D0%9C%D0%B8%D1%81%D1%82%D0%B5%D1%80_%D0%BC%D0%BE%D1%80%D0%B0%D0%BB%D1%8C",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        },
+        {
+          "slug": "swedenstrong",
+          "name": "swedenstrong",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/Swedenstrong",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        },
+        {
+          "slug": "rein",
+          "name": "Rein",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/Rein",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "enjoy",
+          "name": "Enjoy",
+          "sourceUrl": "https://liquipedia.net/dota2/Enjoy",
+          "logo": "/assets/esports/teams/enjoy-5c5196fd.png"
+        }
+      ],
+      "to": [
+        {
+          "slug": "enjoy",
+          "name": "Enjoy",
+          "sourceUrl": "https://liquipedia.net/dota2/Enjoy",
+          "logo": "/assets/esports/teams/enjoy-5c5196fd.png"
+        }
+      ],
+      "fromStatus": [],
+      "toStatus": [
+        "Inactive"
+      ],
+      "referenceUrl": "https://t.me/enjoy_esports/103"
+    },
+    {
+      "id": "2026-07-08-v1olent-40",
+      "date": "2026-07-08",
+      "players": [
+        {
+          "slug": "v1olent",
+          "name": "v1olent`",
+          "country": "Kazakhstan",
+          "profileUrl": "https://liquipedia.net/dota2/V1olent",
+          "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "enjoy",
+          "name": "Enjoy",
+          "sourceUrl": "https://liquipedia.net/dota2/Enjoy",
+          "logo": "/assets/esports/teams/enjoy-5c5196fd.png"
+        },
+        {
+          "slug": "l1-team",
+          "name": "L1 TEAM",
+          "sourceUrl": "https://liquipedia.net/dota2/L1_TEAM",
+          "logo": "/assets/esports/teams/l1-team-85ba4568.png"
+        }
+      ],
+      "to": [
+        {
+          "slug": "l1-team",
+          "name": "L1 TEAM",
+          "sourceUrl": "https://liquipedia.net/dota2/L1_TEAM",
+          "logo": "/assets/esports/teams/l1-team-85ba4568.png"
+        }
+      ],
+      "fromStatus": [
+        "Loan/Inactive"
+      ],
+      "toStatus": [
+        "Inactive"
+      ],
+      "referenceUrl": "https://t.me/enjoy_esports/103"
+    },
+    {
+      "id": "2026-07-06-nofear-41",
+      "date": "2026-07-06",
+      "players": [
+        {
+          "slug": "nofear",
+          "name": "Nofear",
+          "country": "Non-representing",
+          "profileUrl": "https://liquipedia.net/dota2/NoFear",
+          "flag": "/assets/esports/flags/non-representing-c9eb49d0.png"
+        }
+      ],
+      "from": [],
+      "to": [
+        {
+          "slug": "re-arise",
+          "name": "RE Arise",
+          "sourceUrl": "https://liquipedia.net/dota2/RE_Arise",
+          "logo": "/assets/esports/teams/re-arise-ef944eec.png"
+        }
+      ],
+      "fromStatus": [],
+      "toStatus": [
+        "Coach"
+      ],
+      "referenceUrl": "https://t.me/runeeaters/108"
+    },
+    {
+      "id": "2026-07-06-yowaai-ethereal-kazakhstani-player-ankou-ani-san-waveformn-42",
+      "date": "2026-07-06",
+      "players": [
+        {
+          "slug": "yowaai",
+          "name": "yowaai",
+          "country": "Ukraine",
+          "profileUrl": "https://liquipedia.net/dota2/Yowaai",
+          "flag": "/assets/esports/flags/ukraine-06dd6bae.png"
+        },
+        {
+          "slug": "ethereal-kazakhstani-player",
+          "name": "Ethereal",
+          "country": "Kazakhstan",
+          "profileUrl": "https://liquipedia.net/dota2/Ethereal_(Kazakhstani_player)",
+          "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png"
+        },
+        {
+          "slug": "ankou",
+          "name": "Ankou",
+          "country": "Estonia",
+          "profileUrl": "https://liquipedia.net/dota2/Ankou",
+          "flag": "/assets/esports/flags/estonia-f6069512.png"
+        },
+        {
+          "slug": "ani-san",
+          "name": "ani-san",
+          "country": "Kazakhstan",
+          "profileUrl": "https://liquipedia.net/dota2/Ani-san",
+          "flag": "/assets/esports/flags/kazakhstan-d04c1f0e.png"
+        },
+        {
+          "slug": "waveformn",
+          "name": "waveformn",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/Waveformn",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        }
+      ],
+      "from": [],
+      "to": [
+        {
+          "slug": "re-arise",
+          "name": "RE Arise",
+          "sourceUrl": "https://liquipedia.net/dota2/RE_Arise",
+          "logo": "/assets/esports/teams/re-arise-ef944eec.png"
+        }
+      ],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://t.me/runeeaters/108"
+    },
+    {
+      "id": "2026-07-03-emo-43",
+      "date": "2026-07-03",
+      "players": [
+        {
+          "slug": "emo",
+          "name": "Emo",
+          "country": "China",
+          "profileUrl": "https://liquipedia.net/dota2/Emo",
+          "flag": "/assets/esports/flags/china-755a8026.png"
+        }
+      ],
+      "from": [],
+      "to": [
+        {
+          "slug": "yakult-brothers",
+          "name": "Yakult Brothers",
+          "sourceUrl": "https://liquipedia.net/dota2/Yakult_Brothers",
+          "logo": "/assets/esports/teams/yakult-brothers-cd404e64.png"
+        }
+      ],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://weibo.com/1790051304/R6ZXj6qp6"
+    },
+    {
+      "id": "2026-07-03-setsu-44",
+      "date": "2026-07-03",
+      "players": [
+        {
+          "slug": "setsu",
+          "name": "Setsu",
+          "country": "China",
+          "profileUrl": "https://liquipedia.net/dota2/Setsu",
+          "flag": "/assets/esports/flags/china-755a8026.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "yakult-brothers",
+          "name": "Yakult Brothers",
+          "sourceUrl": "https://liquipedia.net/dota2/Yakult_Brothers",
+          "logo": "/assets/esports/teams/yakult-brothers-cd404e64.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://weibo.com/1790051304/R6ZXj6qp6"
+    },
+    {
+      "id": "2026-06-29-emo-45",
+      "date": "2026-06-29",
+      "players": [
+        {
+          "slug": "emo",
+          "name": "Emo",
+          "country": "China",
+          "profileUrl": "https://liquipedia.net/dota2/Emo",
+          "flag": "/assets/esports/flags/china-755a8026.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "glyph",
+          "name": "GLYPH",
+          "sourceUrl": "https://liquipedia.net/dota2/GLYPH",
+          "logo": "/assets/esports/teams/glyph-c7c6e834.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://x.com/glyphdota/status/2071403837857153141"
+    },
+    {
+      "id": "2026-06-27-casual-46",
+      "date": "2026-06-27",
+      "players": [
+        {
+          "slug": "casual",
+          "name": "casual",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=Casual&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        }
+      ],
+      "from": [],
+      "to": [
+        {
+          "slug": "rekonix",
+          "name": "REKONIX",
+          "sourceUrl": "https://liquipedia.net/dota2/REKONIX",
+          "logo": "/assets/esports/teams/rekonix-f5626873.png"
+        }
+      ],
+      "fromStatus": [],
+      "toStatus": [
+        "Analyst"
+      ],
+      "referenceUrl": "https://x.com/rekonixofficial/status/2070871864394625342"
+    },
+    {
+      "id": "2026-06-22-7jesu-47",
+      "date": "2026-06-22",
+      "players": [
+        {
+          "slug": "7jesu",
+          "name": "7jesu",
+          "country": "Ukraine",
+          "profileUrl": "https://liquipedia.net/dota2/7jesu",
+          "flag": "/assets/esports/flags/ukraine-06dd6bae.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "team-lynx",
+          "name": "Team Lynx",
+          "sourceUrl": "https://liquipedia.net/dota2/Team_Lynx",
+          "logo": "/assets/esports/teams/team-lynx-e64adfa7.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://t.me/teamlynxua/1307"
+    },
+    {
+      "id": "2026-06-22-vanilll-48",
+      "date": "2026-06-22",
+      "players": [
+        {
+          "slug": "vanilll",
+          "name": "VaniLLl",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/index.php?title=VaniLLl&action=edit&redlink=1",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "ilbirs-esports",
+          "name": "Ilbirs eSports",
+          "sourceUrl": "https://liquipedia.net/dota2/Ilbirs_eSports",
+          "logo": "/assets/esports/teams/ilbirs-esports-6db79405.png"
+        }
+      ],
+      "to": [],
+      "fromStatus": [],
+      "toStatus": [],
+      "referenceUrl": "https://t.me/ilbirs_esports/852"
+    },
+    {
+      "id": "2026-06-20-miposhka-49",
+      "date": "2026-06-20",
+      "players": [
+        {
+          "slug": "miposhka",
+          "name": "Miposhka",
+          "country": "Russia",
+          "profileUrl": "https://liquipedia.net/dota2/Miposhka",
+          "flag": "/assets/esports/flags/russia-4943bc71.png"
+        }
+      ],
+      "from": [
+        {
+          "slug": "team-spirit",
+          "name": "Team Spirit",
+          "sourceUrl": "https://liquipedia.net/dota2/Team_Spirit",
+          "logo": "/assets/esports/teams/team-spirit-ab12d6d1.png"
+        }
+      ],
+      "to": [
+        {
+          "slug": "team-spirit",
+          "name": "Team Spirit",
+          "sourceUrl": "https://liquipedia.net/dota2/Team_Spirit",
+          "logo": "/assets/esports/teams/team-spirit-ab12d6d1.png"
+        }
+      ],
+      "fromStatus": [
+        "Inactive"
+      ],
+      "toStatus": [
+        "Coach"
+      ],
+      "referenceUrl": "https://x.com/TSpirit_Dota2/status/2068340669697974384"
+    }
+  ]
+}

@@ -9,8 +9,11 @@ type SearchEntry = { kind: string; title: string; subtitle: string; href: string
 const nav = [
   { href: '/', label: '英雄' },
   { href: '/items', label: '物品' },
-  { href: '/patches', label: '版本日志' },
-  { href: '/sources', label: '数据与许可' },
+  { href: '/patches', label: '版本' },
+  { href: '/players', label: '选手' },
+  { href: '/teams', label: '战队' },
+  { href: '/transfers', label: '转会' },
+  { href: '/sources', label: '来源', optional: true },
 ];
 
 export function SiteHeader({ latestPatch, entries }: { latestPatch: string; entries: SearchEntry[] }) {
@@ -57,12 +60,12 @@ export function SiteHeader({ latestPatch, entries }: { latestPatch: string; entr
         </Link>
 
         <nav className="primary-nav" aria-label="主导航">
-          {nav.map((item) => <Link className={isActive(item.href) ? 'is-active' : ''} href={item.href} key={item.href}>{item.label}</Link>)}
+          {nav.map((item) => <Link className={`${isActive(item.href) ? 'is-active ' : ''}${item.optional ? 'nav-optional' : ''}`.trim()} href={item.href} key={item.href}>{item.label}</Link>)}
         </nav>
 
         <button className="global-search-button" type="button" onClick={() => setOpen(true)} aria-label="打开全站搜索">
           <span className="search-icon" aria-hidden="true">⌕</span>
-          <span>搜索英雄、技能、物品或版本</span>
+          <span>搜索英雄、物品、选手、战队或版本</span>
           <kbd>Ctrl K</kbd>
         </button>
         <span className="header-patch">PATCH {latestPatch}</span>
@@ -73,7 +76,7 @@ export function SiteHeader({ latestPatch, entries }: { latestPatch: string; entr
           <section className="search-dialog" role="dialog" aria-modal="true" aria-label="全站搜索" onMouseDown={(event) => event.stopPropagation()}>
             <div className="search-input-row">
               <span aria-hidden="true">⌕</span>
-              <input ref={inputRef} value={query} onChange={(event) => setQuery(event.target.value)} placeholder="输入中文名、英文名或版本号…" />
+              <input ref={inputRef} value={query} onChange={(event) => setQuery(event.target.value)} placeholder="输入英雄、物品、选手、战队或版本…" />
               <button type="button" onClick={() => setOpen(false)} aria-label="关闭搜索">ESC</button>
             </div>
             <div className="search-results">

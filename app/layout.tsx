@@ -10,11 +10,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: { default: 'DOTA 2 中文 WIKI', template: '%s｜DOTA 2 中文 WIKI' },
-  description: 'DOTA 2 全英雄、技能、物品与版本改动的中文检索资料库。',
+  description: 'DOTA 2 全英雄、技能、物品、版本改动与职业生态的中文检索资料库。',
   icons: { icon: 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/global/dota2_logo_symbol.png' },
   openGraph: {
     title: 'DOTA 2 中文 WIKI',
-    description: '127 位英雄、全量物品与逐版本中文改动日志。',
+    description: '128 位英雄与英雄单位、全量物品、逐版本中文改动日志与职业生态资料。',
     type: 'website',
     locale: 'zh_CN',
     images: [{ url: '/og.png', width: 1200, height: 630, alt: 'DOTA 2 中文 WIKI' }],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'DOTA 2 中文 WIKI',
-    description: '127 位英雄、全量物品与逐版本中文改动日志。',
+    description: '128 位英雄与英雄单位、全量物品、逐版本中文改动日志与职业生态资料。',
     images: ['/og.png'],
   },
 };

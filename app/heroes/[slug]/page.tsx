@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { formatDate, formatValues, heroBySlug, heroes, type Ability, type Note } from '../../../lib/data';
 import { AbilityImage } from '../../../components/ability-image';
+import { AttributeIcon } from '../../../components/attribute-icon';
 
 export function generateStaticParams() {
   return heroes.map((hero) => ({ slug: hero.slug }));
@@ -55,7 +56,7 @@ function AbilityChip({ ability, compact = false }: { ability: Ability; compact?:
   const anchor = ability.type === 2 ? `talent-${ability.id}` : `ability-${ability.id}`;
   return (
     <a className={`ability-chip${compact ? ' compact' : ''}`} href={`#${anchor}`}>
-      <AbilityImage src={ability.image} alt="" isInnate={ability.isInnate} />
+      <AbilityImage src={ability.image} alt="" isInnate={ability.isInnate && ability.useSharedInnateIcon !== false} />
       <span>{ability.name}</span>
     </a>
   );
@@ -78,7 +79,7 @@ function ChangeNote({ note, abilities = [], extra }: { note: Note | { text: stri
 function AbilityCard({ ability }: { ability: Ability }) {
   return (
     <article className={`ability-card${ability.isInnate ? ' is-innate' : ''}`} id={`ability-${ability.id}`}>
-      <a className="ability-card-icon" href={`#ability-${ability.id}`} aria-label={`定位到${ability.name}`}><AbilityImage src={ability.image} alt={`${ability.name}图标`} isInnate={ability.isInnate} /></a>
+      <a className="ability-card-icon" href={`#ability-${ability.id}`} aria-label={`定位到${ability.name}`}><AbilityImage src={ability.image} alt={`${ability.name}图标`} isInnate={ability.isInnate && ability.useSharedInnateIcon !== false} /></a>
       <div className="ability-copy">
         <div className="ability-title"><h3>{ability.name}</h3>{ability.isInnate && <span>先天技能</span>}<small>{ability.slug}</small></div>
         <p>{ability.description}</p>
@@ -102,7 +103,7 @@ function AbilityCard({ ability }: { ability: Ability }) {
 function TalentCell({ talent, abilities }: { talent: Ability; abilities: Ability[] }) {
   const name = displayTalentName(talent);
   const target = abilities.find((ability) => name.includes(ability.name));
-  const content = <>{target ? <AbilityImage src={target.image} alt="" isInnate={target.isInnate} /> : <b className="talent-glyph" aria-hidden="true">✦</b>}<span>{name}</span></>;
+  const content = <>{target ? <AbilityImage src={target.image} alt="" isInnate={target.isInnate && target.useSharedInnateIcon !== false} /> : <b className="talent-glyph" aria-hidden="true">✦</b>}<span>{name}</span></>;
   return target
     ? <a className="talent-cell" id={`talent-${talent.id}`} href={`#ability-${target.id}`}>{content}</a>
     : <div className="talent-cell" id={`talent-${talent.id}`}>{content}</div>;
@@ -117,6 +118,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const hero = heroBySlug.get(slug);
   if (!hero) notFound();
+  const relatedUnit = hero.slug === 'lone_druid' ? heroes.find((entry) => entry.slug === 'spirit_bear') : null;
   const attributeStats: Array<[string, string, number[]]> = [
     ['力', '力量', hero.stats.strength as number[]], ['敏', '敏捷', hero.stats.agility as number[]], ['智', '智力', hero.stats.intelligence as number[]],
   ];
@@ -151,11 +153,13 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
     <article className="detail-page hero-detail-page">
       <nav className="breadcrumbs" aria-label="面包屑"><Link href="/">英雄</Link><span>/</span><strong>{hero.name}</strong></nav>
       <header className="hero-detail-hero">
-        <div className="hero-detail-art"><img src={hero.image} alt={`${hero.name}肖像`} /><span className={`attribute-badge attr-${hero.primaryAttribute}`}>{hero.primaryAttribute.slice(0, 1)}</span></div>
+        <div className="hero-detail-art"><img src={hero.image} alt={`${hero.name}肖像`} /><span className={`attribute-badge attr-${hero.primaryAttribute}`}><AttributeIcon attribute={hero.primaryAttribute} /></span></div>
         <div className="hero-title-copy">
           <p>{hero.nameEnglish}</p>
-          <h1>{hero.name}</h1>
+          <div className="hero-title-line"><AttributeIcon attribute={hero.primaryAttribute} /><h1>{hero.name}</h1></div>
           <div className="role-row">{hero.roles.map((role) => <span key={role.name}>{role.name} · {role.level}</span>)}</div>
+          {hero.relatedHero && <Link className="hero-relation" href={`/heroes/${hero.relatedHero.slug}`}>归属于 {hero.relatedHero.name} · {hero.relatedHero.relationship} →</Link>}
+          {relatedUnit && <Link className="hero-relation" href={`/heroes/${relatedUnit.slug}`}>关联英雄单位 · {relatedUnit.name} →</Link>}
           <blockquote>{hero.hype}</blockquote>
         </div>
         <div className="hero-attributes">

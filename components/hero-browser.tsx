@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useMemo, useState, useSyncExternalStore } from 'react';
+import { AttributeIcon } from './attribute-icon';
 
 type HeroSummary = {
   id: number;
@@ -113,7 +114,7 @@ export function HeroBrowser({ heroes, latestPatch }: { heroes: HeroSummary[]; la
             <Link className="hero-card" href={`/heroes/${hero.slug}`} key={hero.id}>
               <div className="hero-art">
                 <img src={hero.image} alt={`${hero.name}英雄肖像`} />
-                <span className={`attribute-badge attr-${hero.attribute}`}>{hero.attribute.slice(0, 1)}</span>
+                <span className={`attribute-badge attr-${hero.attribute}`}><AttributeIcon attribute={hero.attribute} /></span>
                 <span className="history-count">{hero.historyCount} 个版本节点</span>
               </div>
               <div className="hero-card-info">
