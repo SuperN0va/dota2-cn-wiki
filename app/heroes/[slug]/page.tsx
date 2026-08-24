@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { formatDate, formatValues, heroBySlug, heroes, type Ability, type Note } from '../../../lib/data';
+import { AbilityImage } from '../../../components/ability-image';
 
 export function generateStaticParams() {
   return heroes.map((hero) => ({ slug: hero.slug }));
@@ -54,7 +55,7 @@ function AbilityChip({ ability, compact = false }: { ability: Ability; compact?:
   const anchor = ability.type === 2 ? `talent-${ability.id}` : `ability-${ability.id}`;
   return (
     <a className={`ability-chip${compact ? ' compact' : ''}`} href={`#${anchor}`}>
-      <img src={ability.image} alt="" />
+      <AbilityImage src={ability.image} alt="" isInnate={ability.isInnate} />
       <span>{ability.name}</span>
     </a>
   );
@@ -77,7 +78,7 @@ function ChangeNote({ note, abilities = [], extra }: { note: Note | { text: stri
 function AbilityCard({ ability }: { ability: Ability }) {
   return (
     <article className={`ability-card${ability.isInnate ? ' is-innate' : ''}`} id={`ability-${ability.id}`}>
-      <a className="ability-card-icon" href={`#ability-${ability.id}`} aria-label={`定位到${ability.name}`}><img src={ability.image} alt={`${ability.name}图标`} /></a>
+      <a className="ability-card-icon" href={`#ability-${ability.id}`} aria-label={`定位到${ability.name}`}><AbilityImage src={ability.image} alt={`${ability.name}图标`} isInnate={ability.isInnate} /></a>
       <div className="ability-copy">
         <div className="ability-title"><h3>{ability.name}</h3>{ability.isInnate && <span>先天技能</span>}<small>{ability.slug}</small></div>
         <p>{ability.description}</p>
@@ -101,7 +102,7 @@ function AbilityCard({ ability }: { ability: Ability }) {
 function TalentCell({ talent, abilities }: { talent: Ability; abilities: Ability[] }) {
   const name = displayTalentName(talent);
   const target = abilities.find((ability) => name.includes(ability.name));
-  const content = <>{target ? <img src={target.image} alt="" /> : <b className="talent-glyph" aria-hidden="true">✦</b>}<span>{name}</span></>;
+  const content = <>{target ? <AbilityImage src={target.image} alt="" isInnate={target.isInnate} /> : <b className="talent-glyph" aria-hidden="true">✦</b>}<span>{name}</span></>;
   return target
     ? <a className="talent-cell" id={`talent-${talent.id}`} href={`#ability-${target.id}`}>{content}</a>
     : <div className="talent-cell" id={`talent-${talent.id}`}>{content}</div>;
@@ -122,6 +123,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
   const abilitiesById = new Map([...hero.abilities, ...hero.talents].map((ability) => [ability.id, ability]));
   const innateAbilities = hero.abilities.filter((ability) => ability.isInnate);
   const regularAbilities = hero.abilities.filter((ability) => !ability.isInnate);
+  const indexedAbilities = [...innateAbilities, ...regularAbilities];
   const upgrades = hero.abilities.flatMap((ability) => [
     ability.scepter ? { kind: '神杖', className: 'scepter', ability, text: ability.scepter } : null,
     ability.shard ? { kind: '魔晶', className: 'shard', ability, text: ability.shard } : null,
@@ -162,7 +164,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
         <div className="detail-main">
           <section className="detail-section" id="abilities">
             <header><p className="eyebrow accent">Abilities & innate</p><h2>技能与先天能力</h2><p>点击技能目录或版本记录中的技能名称，可直接定位到当前技能详情。</p></header>
-            <nav className="ability-index" aria-label="技能目录">{hero.abilities.map((ability) => <AbilityChip ability={ability} key={ability.id} />)}</nav>
+            <nav className="ability-index" aria-label="技能目录">{indexedAbilities.map((ability) => <AbilityChip ability={ability} key={ability.id} />)}</nav>
             {!!innateAbilities.length && <div className="ability-group"><div className="ability-group-heading"><span>Innate</span><h3>先天技能</h3></div>{innateAbilities.map((ability) => <AbilityCard ability={ability} key={ability.id} />)}</div>}
             <div className="ability-group"><div className="ability-group-heading"><span>Abilities</span><h3>英雄技能</h3></div>{regularAbilities.map((ability) => <AbilityCard ability={ability} key={ability.id} />)}</div>
           </section>

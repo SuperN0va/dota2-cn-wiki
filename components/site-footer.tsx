@@ -15,7 +15,7 @@ export function SiteFooter({ generatedAt }: { generatedAt: string }) {
       </div>
       <small>数据快照：{new Intl.DateTimeFormat('zh-CN', { dateStyle: 'long', timeStyle: 'short' }).format(new Date(generatedAt))}</small>
       <p className="footer-license">
-        7.08 前版本历史及注明的资料字段改编自 <a href="https://liquipedia.net/dota2/Main_Page" target="_blank" rel="noreferrer">Liquipedia Dota 2 Wiki</a>，相关衍生文本按 <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a> 共享。英雄、技能与物品图片来自 Valve 官方静态资源，Dota 2 及相关素材权利归 Valve Corporation 所有；Liquipedia 媒体不自动适用 CC BY-SA。
+        7.08 前版本历史及注明的资料字段改编自 <a href="https://liquipedia.net/dota2/Main_Page" target="_blank" rel="noreferrer">Liquipedia Dota 2 Wiki</a>，相关衍生文本按 <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a> 共享。英雄、技能与物品图片来自 Valve 官方静态资源；统一先天图标取自 <a href="https://liquipedia.net/commons/File:Innate_abilityicon_dota2_gameasset.png" target="_blank" rel="noreferrer">Liquipedia Commons</a> 的 Valve 游戏资源。Dota 2 及相关素材权利归 Valve Corporation 所有。
       </p>
     </footer>
   );
