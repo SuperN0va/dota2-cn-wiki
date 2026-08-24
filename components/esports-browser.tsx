@@ -98,6 +98,7 @@ export function PlayersBrowser({ players, teams, transfers, generatedAt }: { pla
   return (
     <article className="esports-page">
       <PageIntro eyebrow="Players" title="职业选手" copy="选手 ID 与姓名保持原文；国籍、当前战队和近期转会来自 Liquipedia 当前阵容快照。" stats={[["收录选手", players.length], ["当前阵容", players.filter((player) => player.teamSlug).length], ["国籍/地区", new Set(players.map((player) => player.country).filter(Boolean)).size]]} generatedAt={generatedAt} />
+      <Link className="friberg-promo" href="/friberg"><span>NEW · 单人模式</span><strong>用这些选手资料来玩一局 DOTA 2 弗一把</strong><b>8 次机会，开始猜测 →</b></Link>
       <div className="esports-toolbar">
         <label className="catalog-search"><span>⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索 ID、实名、国籍或战队" /></label>
         <select value={region} onChange={(event) => setRegion(event.target.value)} aria-label="按赛区筛选"><option value="">全部赛区</option>{regions.map((item) => <option value={item} key={item}>{regionLabels[item] || item}</option>)}</select>
@@ -191,7 +192,8 @@ export function TransfersBrowser({ transfers, teams, generatedAt }: { transfers:
   const [query, setQuery] = useState('');
   const [team, setTeam] = useState('');
   useEffect(() => {
-    setTeam(new URLSearchParams(window.location.search).get('team') || '');
+    const selectedTeam = new URLSearchParams(window.location.search).get('team') || '';
+    queueMicrotask(() => setTeam(selectedTeam));
   }, []);
   const filtered = useMemo(() => {
     const needle = query.trim().toLocaleLowerCase('en');

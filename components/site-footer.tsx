@@ -12,6 +12,7 @@ export function SiteFooter({ generatedAt }: { generatedAt: string }) {
         <a href="https://www.dota2.com.cn/news/gamepost/index.htm" target="_blank" rel="noreferrer">国服更新日志</a>
         <a href="https://liquipedia.net/dota2/Main_Page" target="_blank" rel="noreferrer">Liquipedia</a>
         <Link href="/players">职业选手</Link>
+        <Link href="/friberg">DOTA 2 弗一把</Link>
         <Link href="/transfers">近期转会</Link>
         <Link href="/sources">来源与许可</Link>
       </div>

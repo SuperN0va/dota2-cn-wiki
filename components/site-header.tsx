@@ -11,6 +11,7 @@ const nav = [
   { href: '/items', label: '物品' },
   { href: '/patches', label: '版本' },
   { href: '/players', label: '选手' },
+  { href: '/friberg', label: '弗一把' },
   { href: '/teams', label: '战队' },
   { href: '/transfers', label: '转会' },
   { href: '/sources', label: '来源', optional: true },

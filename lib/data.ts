@@ -235,6 +235,7 @@ export const itemSummaries = items.map((item) => ({
 }));
 
 export const searchEntries = [
+  { kind: '玩法', title: 'DOTA 2 弗一把', subtitle: '8 次机会猜出职业选手', href: '/friberg' },
   ...heroSummaries.map((hero) => ({ kind: '英雄', title: hero.name, subtitle: hero.nameEnglish, href: `/heroes/${hero.slug}`, image: hero.image })),
   ...itemSummaries.filter((item) => item.hasChineseName && !item.isRecipe).map((item) => ({ kind: '物品', title: item.name, subtitle: item.nameEnglish, href: `/items/${item.slug}`, image: item.image })),
   ...patchIndex.map((patch) => ({ kind: '版本', title: patch.name, subtitle: `${patch.heroChanges} 位英雄 · ${patch.itemChanges} 件物品`, href: `/patches/${patch.version}` })),
