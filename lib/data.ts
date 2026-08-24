@@ -126,6 +126,12 @@ export type EsportsPlayer = {
   teamName: string;
   teamLogo: string;
   region: string;
+  wikiRoles: string[];
+  primaryRole: string;
+  profileStatus: string;
+  identity: 'Player' | 'Coach' | 'Retired' | 'Inactive';
+  position: number;
+  tiAppearances: number;
 };
 
 export type EsportsTeam = {

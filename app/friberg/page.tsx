@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function FribergPage() {
-  return <PlayerGuessGame players={esports.players} teams={esports.teams} generatedAt={esports.generatedAt} />;
+  return <PlayerGuessGame players={esports.players} generatedAt={esports.generatedAt} />;
 }

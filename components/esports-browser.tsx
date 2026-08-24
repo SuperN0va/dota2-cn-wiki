@@ -33,6 +33,15 @@ function roleLabel(value: string) {
   return roleLabels[value] || value || '正式成员';
 }
 
+function playerIdentityLabel(player: EsportsPlayer) {
+  return { Player: '选手', Coach: '教练', Retired: '退役', Inactive: '非活跃' }[player.identity] || '选手';
+}
+
+function playerPositionLabel(player: EsportsPlayer) {
+  if (player.identity === 'Coach') return 'Coach';
+  return { 1: 'Carry · 1', 2: 'Solo Mid · 2', 3: 'Offlane · 3', 4: 'Support · 4', 5: 'Support · 5' }[player.position] || '待确认';
+}
+
 function regionLabel(region: string, subregion = '') {
   return subregionLabels[subregion] || regionLabels[region] || subregion || region || '地区待确认';
 }
@@ -97,7 +106,7 @@ export function PlayersBrowser({ players, teams, transfers, generatedAt }: { pla
 
   return (
     <article className="esports-page">
-      <PageIntro eyebrow="Players" title="职业选手" copy="选手 ID 与姓名保持原文；国籍、当前战队和近期转会来自 Liquipedia 当前阵容快照。" stats={[["收录选手", players.length], ["当前阵容", players.filter((player) => player.teamSlug).length], ["国籍/地区", new Set(players.map((player) => player.country).filter(Boolean)).size]]} generatedAt={generatedAt} />
+      <PageIntro eyebrow="Players" title="职业选手" copy="选手 ID 与战队名称保持原文；身份、当前司职位置、TI 参赛次数和转会记录来自 Liquipedia。" stats={[["收录选手", players.length], ["当前阵容", players.filter((player) => player.teamSlug).length], ["位置已核验", players.filter((player) => player.position >= 1 && player.position <= 5).length]]} generatedAt={generatedAt} />
       <Link className="friberg-promo" href="/friberg"><span>NEW · 单人模式</span><strong>用这些选手资料来玩一局 DOTA 2 弗一把</strong><b>8 次机会，开始猜测 →</b></Link>
       <div className="esports-toolbar">
         <label className="catalog-search"><span>⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索 ID、实名、国籍或战队" /></label>
@@ -120,7 +129,9 @@ export function PlayersBrowser({ players, teams, transfers, generatedAt }: { pla
               </header>
               <dl>
                 <div><dt>国籍</dt><dd>{player.country || '待确认'}</dd></div>
-                <div><dt>身份</dt><dd>{roleLabel(player.role)}</dd></div>
+                <div><dt>身份</dt><dd>{playerIdentityLabel(player)}</dd></div>
+                <div><dt>位置</dt><dd>{playerPositionLabel(player)}</dd></div>
+                <div><dt>TI</dt><dd>{player.tiAppearances} 次</dd></div>
               </dl>
               <div className="player-team-row">
                 {team ? <><TeamMark team={team} size="small" /><Link href={`/teams#team-${team.slug}`}><small>当前战队</small><strong>{team.name}</strong></Link></> : <><span className="team-mark is-small fallback">—</span><span><small>当前战队</small><strong>暂无公开归属</strong></span></>}

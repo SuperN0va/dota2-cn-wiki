@@ -10,7 +10,9 @@ const API_URL = 'https://liquipedia.net/dota2/api.php';
 const WIKI_ROOT = 'https://liquipedia.net';
 const USER_AGENT = 'Dota2CNWiki/0.1 (https://github.com/SuperN0va/dota2-cn-wiki; non-commercial community project)';
 const PARSE_INTERVAL_MS = 31_000;
+const QUERY_INTERVAL_MS = 2_100;
 const CACHE_TTL_MS = 6 * 60 * 60 * 1000;
+const PROFILE_CACHE_TTL_MS = 24 * 60 * 60 * 1000;
 const force = process.argv.includes('--force');
 const forceApi = process.argv.includes('--force-api');
 
@@ -60,6 +62,17 @@ function slugFromWikiPath(path = '') {
   }
   return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
     || createHash('sha1').update(path).digest('hex').slice(0, 12);
+}
+
+function wikiTitleFromUrl(value = '') {
+  if (!value) return '';
+  const url = new URL(value, WIKI_ROOT);
+  if (url.pathname.endsWith('/index.php')) return url.searchParams.get('title') || '';
+  return decodeURIComponent(url.pathname.replace(/^\/dota2\//, '')).replaceAll('_', ' ');
+}
+
+function normalizeWikiTitle(value = '') {
+  return decodeHtml(value).replaceAll('_', ' ').replace(/\s+/g, ' ').trim().toLocaleLowerCase('en');
 }
 
 function lastHeadingBefore(html, index) {
@@ -232,6 +245,122 @@ async function fetchParsedPage(page) {
   throw new Error(`Liquipedia ${page}: ${lastError?.message || 'unknown error'}`);
 }
 
+let lastQueryAt = 0;
+async function fetchWikitextPages(titles, cacheName) {
+  const uniqueTitles = [...new Set(titles.filter(Boolean))];
+  const cacheFile = join(HTML_CACHE_ROOT, `${cacheName}.json`);
+  if (!forceApi) {
+    try {
+      const cacheStat = await stat(cacheFile);
+      if (Date.now() - cacheStat.mtimeMs < PROFILE_CACHE_TTL_MS) {
+        const cached = new Map(Object.entries(JSON.parse(await readFile(cacheFile, 'utf8'))));
+        if (uniqueTitles.every((title) => cached.has(normalizeWikiTitle(title)))) {
+          console.log(`Using cached Liquipedia wikitext for ${cacheName}.`);
+          return cached;
+        }
+      }
+    } catch {}
+  }
+
+  const result = new Map();
+  for (let offset = 0; offset < uniqueTitles.length; offset += 45) {
+    const batch = uniqueTitles.slice(offset, offset + 45);
+    const wait = Math.max(0, QUERY_INTERVAL_MS - (Date.now() - lastQueryAt));
+    if (wait) await sleep(wait);
+    const params = new URLSearchParams({
+      action: 'query',
+      prop: 'revisions',
+      titles: batch.join('|'),
+      redirects: '1',
+      rvslots: 'main',
+      rvprop: 'content',
+      format: 'json',
+      formatversion: '2',
+    });
+    const response = await fetch(`${API_URL}?${params}`, { headers: { 'User-Agent': USER_AGENT, 'Accept-Encoding': 'gzip' } });
+    lastQueryAt = Date.now();
+    if (!response.ok) throw new Error(`Liquipedia wikitext ${cacheName}: HTTP ${response.status}`);
+    const payload = await response.json();
+    if (payload.error) throw new Error(payload.error.info || payload.error.code);
+    for (const page of payload.query?.pages || []) {
+      const content = page.revisions?.[0]?.slots?.main?.content || '';
+      result.set(normalizeWikiTitle(page.title), content);
+    }
+    for (const redirect of payload.query?.redirects || []) {
+      result.set(normalizeWikiTitle(redirect.from), result.get(normalizeWikiTitle(redirect.to)) || '');
+    }
+    for (const normalized of payload.query?.normalized || []) {
+      result.set(normalizeWikiTitle(normalized.from), result.get(normalizeWikiTitle(normalized.to)) || '');
+    }
+  }
+  await mkdir(HTML_CACHE_ROOT, { recursive: true });
+  await writeFile(cacheFile, JSON.stringify(Object.fromEntries(result)));
+  return result;
+}
+
+function templateParams(value = '') {
+  const named = new Map();
+  const positional = [];
+  for (const rawPart of value.split('|')) {
+    const part = rawPart.trim();
+    const separator = part.indexOf('=');
+    if (separator > 0) named.set(part.slice(0, separator).trim().toLowerCase(), part.slice(separator + 1).trim());
+    else if (part && !part.startsWith('{{')) positional.push(part);
+  }
+  return { named, positional };
+}
+
+function personSlug(value = '') {
+  const { named, positional } = templateParams(value);
+  const title = named.get('link') || named.get('id') || positional[0] || '';
+  return title ? slugFromWikiPath(`/dota2/${title.replace(/<[^>]+>/g, '').trim()}`) : '';
+}
+
+function parseActiveRosterPositions(content = '') {
+  const rosterSection = content.match(/==\s*(?:Players of [^\r\n=]+|Player Roster)\s*==([\s\S]*?)(?=\n==[^=]|$)/i)?.[1] || '';
+  const activeRoster = rosterSection.match(/===\s*(?:Active Roster|Active)\s*===([\s\S]*?)(?=\n===|$)/i)?.[1] || '';
+  const positions = new Map();
+  for (const match of activeRoster.matchAll(/\{\{Person\|([^\r\n]+?)(?:\}\}|$)/gi)) {
+    const params = templateParams(match[1]);
+    const position = Number.parseInt(params.named.get('position') || '', 10);
+    const slug = personSlug(match[1]);
+    if (slug && position >= 1 && position <= 5) positions.set(slug, position);
+  }
+  return positions;
+}
+
+function infoboxField(content = '', field) {
+  const value = content.match(new RegExp(`^\\|${field}\\s*=([^\\r\\n]*)`, 'mi'))?.[1] || '';
+  return value.replace(/<!--[\s\S]*?-->/g, '').trim();
+}
+
+function positionFromPrimaryRole(role = '') {
+  const normalized = role.toLowerCase().replaceAll('_', ' ').trim();
+  if (normalized === 'carry') return 1;
+  if (normalized === 'mid' || normalized === 'solo middle' || normalized === 'midlaner') return 2;
+  if (normalized === 'offlane' || normalized === 'offlaner') return 3;
+  return 0;
+}
+
+function identityFromProfile(status = '', primaryRole = '') {
+  const normalizedStatus = status.toLowerCase();
+  if (primaryRole.toLowerCase().includes('coach')) return 'Coach';
+  if (normalizedStatus.includes('retired')) return 'Retired';
+  if (normalizedStatus.includes('inactive')) return 'Inactive';
+  return 'Player';
+}
+
+function parseTiParticipants(content = '') {
+  const players = new Map();
+  for (const match of content.matchAll(/\{\{Person\|([^\r\n]+?)(?:\}\}|$)/gi)) {
+    const params = templateParams(match[1]);
+    const position = Number.parseInt(params.named.get('role') || '', 10);
+    const slug = personSlug(match[1]);
+    if (slug && position >= 1 && position <= 5) players.set(slug, position);
+  }
+  return players;
+}
+
 function safeAssetName(kind, id, sourceUrl) {
   const clean = id.toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-|-$/g, '') || 'asset';
   const sourcePath = new URL(sourceUrl).pathname;
@@ -315,6 +444,54 @@ async function main() {
         playersBySlug.set(player.slug, { ...player, realName: '', role: '', teamSlug: '', teamName: '', teamLogoSource: '', region: '' });
       }
     }
+  }
+
+  console.log('Syncing player roles, statuses and active roster positions…');
+  const playerProfilePages = await fetchWikitextPages(
+    [...playersBySlug.values()].map((player) => wikiTitleFromUrl(player.profileUrl)),
+    'player-profiles',
+  );
+  const teamProfilePages = await fetchWikitextPages(
+    teams.map((team) => wikiTitleFromUrl(team.sourceUrl)),
+    'team-profiles',
+  );
+  const activePositions = new Map();
+  for (const team of teams) {
+    const content = teamProfilePages.get(normalizeWikiTitle(wikiTitleFromUrl(team.sourceUrl))) || '';
+    for (const [slug, position] of parseActiveRosterPositions(content)) activePositions.set(slug, position);
+  }
+
+  console.log('Syncing The International participation history…');
+  const tiYears = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026];
+  const tiTitles = tiYears.map((year) => `The International/${year}`);
+  const tiPages = await fetchWikitextPages(tiTitles, 'the-international-participants');
+  const tiAppearances = new Map();
+  const latestTiPositions = new Map();
+  for (const title of tiTitles) {
+    const participants = parseTiParticipants(tiPages.get(normalizeWikiTitle(title)) || '');
+    for (const [slug, position] of participants) {
+      tiAppearances.set(slug, (tiAppearances.get(slug) || 0) + 1);
+      latestTiPositions.set(slug, position);
+    }
+  }
+
+  for (const player of playersBySlug.values()) {
+    const profile = playerProfilePages.get(normalizeWikiTitle(wikiTitleFromUrl(player.profileUrl))) || '';
+    const wikiRoles = infoboxField(profile, 'roles').split(',').map((role) => role.trim()).filter(Boolean);
+    const primaryRole = wikiRoles[0] || '';
+    const profileStatus = infoboxField(profile, 'status');
+    const rolePosition = positionFromPrimaryRole(primaryRole);
+    const supportPosition = primaryRole.toLowerCase() === 'support'
+      ? activePositions.get(player.slug) || latestTiPositions.get(player.slug) || 0
+      : 0;
+    Object.assign(player, {
+      wikiRoles,
+      primaryRole,
+      profileStatus,
+      identity: identityFromProfile(profileStatus, primaryRole),
+      position: rolePosition || supportPosition || activePositions.get(player.slug) || 0,
+      tiAppearances: tiAppearances.get(player.slug) || 0,
+    });
   }
 
   const allFlagSources = new Map();

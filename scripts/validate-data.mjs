@@ -78,6 +78,9 @@ check('职业选手覆盖', esports.players.filter((player) => player.teamSlug).
 check('选手与战队标识唯一', unique(esports.players.map((player) => player.slug)) && unique(esports.teams.map((team) => team.slug)), '选手与战队 slug 无重复');
 check('当前阵容关联完整', esports.teams.every((team) => team.roster.every((slug) => esports.players.some((player) => player.slug === slug))) && esports.players.every((player) => !player.teamSlug || esports.teams.some((team) => team.slug === player.teamSlug)), '选手与战队双向关联无断链');
 check('职业图片本地化', esports.teams.every((team) => team.logo.startsWith('/assets/esports/')) && esports.players.every((player) => player.flag.startsWith('/assets/esports/')), '战队 Logo 与国籍旗帜均为本地缓存');
+check('选手身份字段完整', esports.players.every((player) => ['Player', 'Coach', 'Retired', 'Inactive'].includes(player.identity)), '选手、教练、退役与非活跃状态均使用规范枚举');
+check('选手顶部司职已解析', esports.players.filter((player) => player.primaryRole).length >= 225 && esports.players.filter((player) => player.position >= 1 && player.position <= 5).length >= 210, `${esports.players.filter((player) => player.primaryRole).length} 名含顶部司职，${esports.players.filter((player) => player.position >= 1 && player.position <= 5).length} 名含 1—5 号位`);
+check('TI 参赛次数有效', esports.players.every((player) => Number.isInteger(player.tiAppearances) && player.tiAppearances >= 0) && esports.players.filter((player) => player.tiAppearances > 0).length >= 130, `${esports.players.filter((player) => player.tiAppearances > 0).length} 名选手含 TI 参赛记录`);
 check('近期转会完整', esports.transfers.length === 50 && esports.transfers.every((transfer) => transfer.date && transfer.players.length && transfer.referenceUrl), `${esports.transfers.length} 条记录均含日期、选手与来源`);
 check('来源可追溯', meta.sources?.length === 3 && meta.sources.every((source) => source.url), `${meta.sources?.length || 0} 个来源`);
 

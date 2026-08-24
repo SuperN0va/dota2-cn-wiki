@@ -230,8 +230,9 @@ kbd { background: #222628; border: 1px solid #303638; border-radius: 3px; color:
 .player-card > header p { color: #676c67; font-size: 8px; line-height: 1.4; margin: 4px 0 0; }
 .external-mark { color: #686d68; font-size: 13px; }
 .external-mark:hover { color: var(--red); }
-.player-card dl { border-bottom: 1px solid #282d2f; border-top: 1px solid #282d2f; display: grid; grid-template-columns: 1fr 1fr; margin: 15px 0; padding: 10px 0; }
-.player-card dl div + div { border-left: 1px solid #282d2f; padding-left: 12px; }
+.player-card dl { border-bottom: 1px solid #282d2f; border-top: 1px solid #282d2f; display: grid; gap: 9px 0; grid-template-columns: 1fr 1fr; margin: 15px 0; padding: 10px 0; }
+.player-card dl div:nth-child(even) { border-left: 1px solid #282d2f; padding-left: 12px; }
+.player-card dl div:nth-child(n+3) { border-top: 1px solid #23282a; padding-top: 9px; }
 .player-card dt { color: #5d625d; font-size: 8px; }
 .player-card dd { color: #a8aaa5; font-size: 9px; margin: 5px 0 0; }
 .player-team-row { align-items: center; display: flex; gap: 10px; min-height: 34px; }
@@ -607,7 +608,7 @@ a.talent-cell:hover { background: #171b1d; color: #e1ddd4; }
 .guess-empty-state p { color: #707570; font-size: 9px; line-height: 1.75; margin: 7px 0 0; }
 
 .guess-board { margin-top: 27px; }
-.guess-board-head, .guess-board-row { display: grid; gap: 6px; grid-template-columns: minmax(155px, 1.2fr) minmax(105px, .85fr) minmax(80px, .7fr) minmax(105px, .9fr) minmax(145px, 1.15fr) minmax(75px, .62fr) minmax(80px, .65fr); }
+.guess-board-head, .guess-board-row { display: grid; gap: 6px; grid-template-columns: minmax(155px, 1.2fr) minmax(105px, .82fr) minmax(145px, 1.12fr) minmax(85px, .65fr) minmax(95px, .72fr) minmax(135px, 1fr); }
 .guess-board-head { color: #696e69; font-size: 8px; letter-spacing: .07em; padding: 0 5px 9px; text-align: center; }
 .guess-board-head span:first-child { text-align: left; }
 .guess-board-row { animation: guess-row-in .35s forwards; animation-delay: var(--row-delay); margin-top: 6px; opacity: 0; transform: translateY(7px); }
@@ -629,6 +630,15 @@ a.talent-cell:hover { background: #171b1d; color: #e1ddd4; }
 .guess-cell-flag img { height: 100%; object-fit: cover; width: 100%; }
 .guess-cell-team { align-items: center; background: rgba(5,6,7,.38); display: flex; height: 29px; justify-content: center; overflow: hidden; padding: 3px; width: 34px; }
 .guess-cell-team img { height: 100%; object-fit: contain; width: 100%; }
+.guess-position-badge { align-items: center; background: #263039; border: 1px solid rgba(255,255,255,.28); border-radius: 50%; box-shadow: inset 0 0 14px rgba(0,0,0,.36); color: #e8eff3; display: inline-flex; height: 33px; justify-content: center; position: relative; width: 33px; }
+.guess-position-badge > b { font: 700 15px/1 Georgia, serif; }
+.guess-position-badge > small { align-items: center; background: #0e1112; border: 1px solid currentColor; border-radius: 50%; bottom: -4px; display: flex; font: 700 7px/1 ui-monospace, monospace; height: 14px; justify-content: center; position: absolute; right: -4px; width: 14px; }
+.guess-position-badge.is-pos-1 { background: #263d63; color: #73a9ff; }
+.guess-position-badge.is-pos-2 { background: #16424b; color: #4dd7e7; }
+.guess-position-badge.is-pos-3 { background: #593619; color: #ffac4b; }
+.guess-position-badge.is-pos-4 { background: #1f4a32; color: #63d392; }
+.guess-position-badge.is-pos-5 { background: #552725; color: #ef746b; }
+.guess-position-badge.is-pos-0 { background: #453b25; color: #e8c36c; }
 
 .guess-result { align-items: center; border: 1px solid; display: grid; gap: 17px; grid-template-columns: auto minmax(150px, .8fr) minmax(170px, 1fr) auto auto; margin-top: 24px; padding: 18px 20px; }
 .guess-result.is-won { background: linear-gradient(105deg, #11241c, #111615); border-color: #386951; }
@@ -660,7 +670,7 @@ a.talent-cell:hover { background: #171b1d; color: #e1ddd4; }
   .guess-stats span:nth-child(n) { border-left: 1px solid #3c3332; border-top: 0; }
   .guess-stats span:first-child { border-left: 0; }
   .guess-board { overflow-x: auto; padding-bottom: 5px; }
-  .guess-board-head, .guess-board-row { min-width: 970px; }
+  .guess-board-head, .guess-board-row { min-width: 875px; }
 }
 
 @media (max-width: 850px) {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T16:18:21.996Z",
+  "generatedAt": "2026-08-24T19:06:46.221Z",
   "passed": true,
   "checks": [
     {
@@ -181,6 +181,21 @@
       "name": "职业图片本地化",
       "pass": true,
       "detail": "战队 Logo 与国籍旗帜均为本地缓存"
+    },
+    {
+      "name": "选手身份字段完整",
+      "pass": true,
+      "detail": "选手、教练、退役与非活跃状态均使用规范枚举"
+    },
+    {
+      "name": "选手顶部司职已解析",
+      "pass": true,
+      "detail": "230 名含顶部司职，216 名含 1—5 号位"
+    },
+    {
+      "name": "TI 参赛次数有效",
+      "pass": true,
+      "detail": "138 名选手含 TI 参赛记录"
     },
     {
       "name": "近期转会完整",
