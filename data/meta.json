@@ -1,5 +1,6 @@
 {
-  "generatedAt": "2026-08-24T08:18:04.512Z",
+  "schemaVersion": 8,
+  "generatedAt": "2026-08-24T10:38:59.722Z",
   "latestPatch": "7.41e",
   "counts": {
     "heroes": 127,

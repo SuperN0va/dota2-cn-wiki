@@ -11,7 +11,7 @@ export default function SourcesPage() {
     <article className="sources-page">
       <header className="index-hero sources-hero">
         <div><p className="eyebrow accent">Provenance & licensing</p><h1>数据来源、同步与许可</h1></div>
-        <p>每条资料都来自可回溯的数据渠道。当前数值与中文文本以 Valve 为准，国服官网用于中文公告对照，Liquipedia 只补齐官方结构化归档之前的历史。</p>
+        <p>每条资料都来自可回溯的数据渠道。当前数值与中文文本以 Valve 为准，国服官网用于中文公告对照；Liquipedia 补齐早期历史和英雄模型元数据。</p>
         <div className="validation-badge"><span className={validation.passed ? 'status-dot' : 'status-dot failed'} /><strong>{validation.passed ? '本次数据验证全部通过' : '存在待处理的数据检查'}</strong></div>
       </header>
 
@@ -55,7 +55,7 @@ export default function SourcesPage() {
         <div>
           <p className="eyebrow accent">文本再利用</p>
           <h2>Liquipedia 历史补充</h2>
-          <p>7.08 以前的历史变更来自 Liquipedia Dota 2 Wiki，按 CC BY-SA 3.0 使用；每个详情页标明来源，并保留英文原文供核对。规则翻译只处理结构化常用句式，未能可靠翻译的文本会保留原文，不冒充 Valve 官方中文。</p>
+          <p>7.08 以前的历史变更及注明的模型元数据来自 Liquipedia Dota 2 Wiki，相关衍生文本按 CC BY-SA 3.0 使用；每个详情页标明来源，历史记录保留英文原文供核对。规则翻译只处理结构化常用句式，未能可靠翻译的文本会保留原文，不冒充 Valve 官方中文。</p>
           <a href="https://liquipedia.net/dota2/Help%3AReusing_and_remixing_Liquipedia_content" target="_blank" rel="noreferrer">查看 Liquipedia 再利用说明 ↗</a>
         </div>
       </section>

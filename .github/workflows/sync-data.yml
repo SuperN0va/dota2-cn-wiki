@@ -49,7 +49,8 @@ jobs:
             data/patches.json \
             data/patch-index.json \
             data/cn-news.json \
-            data/legacy.json; then
+            data/legacy.json \
+            data/liquipedia-profiles.json; then
             git restore data/meta.json data/validation-report.json
             echo "No data changes."
             exit 0

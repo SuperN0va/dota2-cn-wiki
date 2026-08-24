@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T08:18:16.801Z",
+  "generatedAt": "2026-08-24T10:39:05.201Z",
   "passed": true,
   "checks": [
     {
@@ -23,6 +23,86 @@
       "detail": "均使用 HTTPS"
     },
     {
+      "name": "英雄详细属性完整",
+      "pass": true,
+      "detail": "战斗与视野字段均存在"
+    },
+    {
+      "name": "英雄先天技能完整",
+      "pass": true,
+      "detail": "每位英雄均有先天技能"
+    },
+    {
+      "name": "英雄天赋树完整",
+      "pass": true,
+      "detail": "每位英雄 8 项，数值占位符均已解析"
+    },
+    {
+      "name": "英雄技能文本已解析",
+      "pass": true,
+      "detail": "技能、先天、神杖与魔晶文本无数据占位符"
+    },
+    {
+      "name": "英雄模型来源完整",
+      "pass": true,
+      "detail": "每位英雄均关联 Liquipedia 修订版本"
+    },
+    {
+      "name": "英雄版本时间线完整",
+      "pass": true,
+      "detail": "每位英雄至少有一条历史记录"
+    },
+    {
+      "name": "英雄现代记录无空项",
+      "pass": true,
+      "detail": "无正文或结构信息的版本已剔除"
+    },
+    {
+      "name": "英雄版本无重复",
+      "pass": true,
+      "detail": "官方与早期历史无版本重叠"
+    },
+    {
+      "name": "英雄版本时间倒序",
+      "pass": true,
+      "detail": "Valve 官方记录按日期由新到旧"
+    },
+    {
+      "name": "早期版本顺序准确",
+      "pass": true,
+      "detail": "Liquipedia 早期记录按版本由新到旧"
+    },
+    {
+      "name": "历史来源分界准确",
+      "pass": true,
+      "detail": "7.08 起为官方中文，更早为 Liquipedia 补充"
+    },
+    {
+      "name": "历史结构字段完整",
+      "pass": true,
+      "detail": "每条官方英雄记录均完成语义对照"
+    },
+    {
+      "name": "历史结构正文可用",
+      "pass": true,
+      "detail": "结构记录无空文本或未解析模板"
+    },
+    {
+      "name": "历史修订来源完整",
+      "pass": true,
+      "detail": "每位英雄历史均关联 Liquipedia 修订版本"
+    },
+    {
+      "name": "现代历史结构无遗漏",
+      "pass": true,
+      "detail": "2933/2933 个版本结构已挂接"
+    },
+    {
+      "name": "历史状态分类覆盖",
+      "pass": true,
+      "detail": "added=1564，reworked=773，removed=2665，old=3282，new=3538，talents=7790"
+    },
+    {
       "name": "物品记录总数",
       "pass": true,
       "detail": "544 条"
@@ -31,6 +111,31 @@
       "name": "物品 ID 唯一",
       "pass": true,
       "detail": "无重复 ID"
+    },
+    {
+      "name": "官方物品记录无空项",
+      "pass": true,
+      "detail": "空物品记录已剔除"
+    },
+    {
+      "name": "物品版本无重复",
+      "pass": true,
+      "detail": "官方与早期历史无版本重叠"
+    },
+    {
+      "name": "物品版本时间倒序",
+      "pass": true,
+      "detail": "Valve 官方物品记录按日期由新到旧"
+    },
+    {
+      "name": "物品早期版本顺序准确",
+      "pass": true,
+      "detail": "Liquipedia 物品记录按版本由新到旧"
+    },
+    {
+      "name": "物品历史正文可用",
+      "pass": true,
+      "detail": "早期物品记录无空文本或未解析模板"
     },
     {
       "name": "官方版本覆盖",

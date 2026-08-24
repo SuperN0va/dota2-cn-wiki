@@ -32,9 +32,29 @@ export type HistoryEntry = {
   timestamp?: number;
   notes: Note[];
   abilities?: Array<{ id: number; name: string; notes: Note[] }>;
+  semanticNotes?: Note[];
+  semanticOnly?: boolean;
 };
 
 export type LegacyEntry = { version: string; notes: Array<{ text: string; original: string; indent: number }> };
+
+export type LiquipediaHeroProfile = {
+  controlVersion: string | null;
+  baseAttackSpeed: number | null;
+  attackPoint: number | null;
+  attackBackswing: number | null;
+  collisionSize: number | null;
+  boundRadius: number | null;
+  gibType: string | null;
+  releaseDate: string | null;
+  allstarsReleaseDate: string | null;
+  dotaVersion: string | null;
+  liquipediaHeroId: number | null;
+  talentValues: Array<string | null>;
+  sourceUrl: string;
+  revisionId: number;
+  updatedAt: string;
+};
 
 export type Hero = {
   id: number;
@@ -47,13 +67,14 @@ export type Hero = {
   primaryAttribute: string;
   complexity: number;
   roles: Array<{ name: string; level: number }>;
-  stats: Record<string, number | number[]>;
+  stats: Record<string, number | number[] | string>;
   abilities: Ability[];
   talents: Ability[];
   image: string;
   portrait: string;
   history: HistoryEntry[];
   legacyHistory: LegacyEntry[];
+  liquipediaProfile?: LiquipediaHeroProfile | null;
 };
 
 export type Item = {
@@ -95,6 +116,7 @@ export const patchIndex = patchIndexRaw as unknown as Array<{
   version: string; name: string; timestamp: number; generalSections: number; heroChanges: number; itemChanges: number;
 }>;
 export const meta = metaRaw as unknown as {
+  schemaVersion?: number;
   generatedAt: string;
   latestPatch: string;
   counts: { heroes: number; items: number; itemRecords: number; patches: number; cnNews: number; legacyPages: number };
