@@ -90,7 +90,7 @@ export function ItemBrowser({ items }: { items: ItemSummary[] }) {
             <Link className="item-card" href={`/items/${item.slug}`} key={item.id}>
               <div className="item-icon-wrap"><img src={item.image} alt={`${item.name}图标`} /></div>
               <div className="item-card-copy">
-                <small>{item.isEnhancement ? `附魔 · ${item.enhancementTier || '历史'}级` : item.neutralTier >= 0 ? `中立 ${item.neutralTier + 1} 级` : item.isRecipe ? '图纸' : item.nameEnglish || item.slug}</small>
+                <small className={`${item.isEnhancement ? 'item-tier-label is-enhancement' : item.neutralTier >= 0 ? `item-tier-label is-neutral is-tier-${item.neutralTier + 1}` : ''}`}>{item.isEnhancement ? `附魔 · ${item.enhancementTier || '历史'}级` : item.neutralTier >= 0 ? `中立物品 · ${item.neutralTier + 1}级` : item.isRecipe ? '图纸' : item.nameEnglish || item.slug}</small>
                 <h2>{item.name}</h2>
                 <p>{item.cost > 0 ? `${item.cost} 金` : '不可购买'}<span>{item.historyCount} 次改动</span></p>
               </div>

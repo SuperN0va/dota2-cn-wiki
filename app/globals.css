@@ -178,6 +178,13 @@ kbd { background: #222628; border: 1px solid #303638; border-radius: 3px; color:
 .item-icon-wrap { align-items: center; background: #080a0b; border: 1px solid #303537; display: flex; height: 58px; justify-content: center; overflow: hidden; width: 58px; }
 .item-icon-wrap img { height: 100%; object-fit: cover; width: 100%; }
 .item-card-copy small { color: #5e635f; font-size: 8px; }
+.item-card-copy .item-tier-label { border: 1px solid; display: inline-flex; font-size: 10px; font-weight: 700; letter-spacing: .04em; line-height: 1; padding: 5px 8px; }
+.item-tier-label.is-neutral { background: #20292a; border-color: #455456; color: #c5d0cd; }
+.item-tier-label.is-tier-2 { background: #1f3127; border-color: #3f684e; color: #a9d1b4; }
+.item-tier-label.is-tier-3 { background: #1e2c3b; border-color: #3b5d7e; color: #aecce8; }
+.item-tier-label.is-tier-4 { background: #30243c; border-color: #604779; color: #d1b5e7; }
+.item-tier-label.is-tier-5 { background: #3d2d1c; border-color: #7b5931; color: #e6c38e; }
+.item-tier-label.is-enhancement { background: #32241f; border-color: #74473a; color: #e2ad9c; }
 .item-card-copy h2 { font: 500 15px "STSong", serif; margin: 3px 0 7px; }
 .item-card-copy p { color: #8b8f8a; font-size: 9px; margin: 0; }
 .neutral-item-guide { background: linear-gradient(120deg, #12191a, #171416); border: 1px solid #31383a; margin-top: 20px; padding: 20px; }

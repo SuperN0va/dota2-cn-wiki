@@ -260,3 +260,26 @@ export function formatValues(values: number[] | undefined, percentage = false) {
   while (trimmed.length > 1 && trimmed.at(-1) === trimmed.at(-2)) trimmed.pop();
   return trimmed.map((value) => `${Number.isInteger(value) ? value : Number(value.toFixed(2))}${percentage ? '%' : ''}`).join(' / ');
 }
+
+const itemDescriptionFallbacks: Record<string, Record<string, string>> = {
+  ascetic_cap: { status_resistance: '40', slow_resistance: '40', duration: '5' },
+  tome_of_knowledge: { customval_team_tomes_used: '对局内动态统计' },
+};
+
+export function itemDescriptionValueNames(text: string | string[]) {
+  const joined = Array.isArray(text) ? text.join('\n') : text;
+  return new Set([...joined.matchAll(/%([A-Za-z0-9_]+)%/g)].map((match) => match[1].toLocaleLowerCase('en')));
+}
+
+export function formatItemText(item: Pick<Item, 'slug' | 'specialValues'>, text: string) {
+  if (!text) return '';
+  const values = new Map(item.specialValues.map((value) => [value.name.toLocaleLowerCase('en'), formatValues(value.values)]));
+  const fallbacks = itemDescriptionFallbacks[item.slug] || {};
+  return text
+    .replace(/%([A-Za-z0-9_]+)%/g, (token, name: string) => values.get(name.toLocaleLowerCase('en')) || fallbacks[name.toLocaleLowerCase('en')] || token)
+    .replaceAll('%%', '%');
+}
+
+export function formatItemDescription(item: Pick<Item, 'slug' | 'description' | 'specialValues'>) {
+  return formatItemText(item, item.description);
+}

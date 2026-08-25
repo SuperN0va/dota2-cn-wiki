@@ -69,6 +69,15 @@ check('物品版本无重复', items.every((item) => unique([...item.history, ..
 check('物品版本时间倒序', items.every((item) => item.history.every((entry, index, entries) => index === 0 || Number(entries[index - 1].timestamp) >= Number(entry.timestamp))), 'Valve 官方物品记录按日期由新到旧');
 check('物品早期版本顺序准确', items.every((item) => item.legacyHistory.every((entry, index, entries) => index === 0 || versionOrder(entries[index - 1].version) === null || versionOrder(entry.version) === null || versionOrder(entries[index - 1].version) >= versionOrder(entry.version))), 'Liquipedia 物品记录按版本由新到旧');
 check('物品历史正文可用', items.every((item) => item.legacyHistory.flatMap((entry) => entry.notes).every((note) => note.text?.trim() && !/\{\{|\}\}/.test(`${note.text} ${note.original || ''}`))), '早期物品记录无空文本或未解析模板');
+const itemDescriptionFallbacks = new Set(['ascetic_cap:status_resistance', 'ascetic_cap:slow_resistance', 'ascetic_cap:duration', 'tome_of_knowledge:customval_team_tomes_used']);
+const unresolvedItemValues = items.flatMap((item) => {
+  const valueNames = new Set(item.specialValues.map((value) => value.name.toLowerCase()));
+  return [...[item.description, ...item.notes].join('\n').matchAll(/%([A-Za-z0-9_]+)%/g)]
+    .map((match) => match[1].toLowerCase())
+    .filter((name) => !valueNames.has(name) && !itemDescriptionFallbacks.has(`${item.slug}:${name}`))
+    .map((name) => `${item.slug}:${name}`);
+});
+check('物品说明参数可解析', unresolvedItemValues.length === 0, unresolvedItemValues.length ? unresolvedItemValues.join('，') : '所有说明参数均可回填为玩家可读数值');
 check('官方版本覆盖', patches.length >= 100, `${patches.length} 个版本`);
 check('版本索引一致', patches.length === patchIndex.length, `${patches.length}/${patchIndex.length}`);
 check('最新版本一致', meta.latestPatch === patchIndex[0]?.version, meta.latestPatch);

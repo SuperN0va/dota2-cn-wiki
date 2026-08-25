@@ -73,7 +73,7 @@ function PageIntro({ eyebrow, title, copy, stats, generatedAt }: { eyebrow: stri
       <div>
         <p className="eyebrow accent">{eyebrow}</p>
         <h1>{title}</h1>
-        <p>{copy}</p>
+        {copy && <p>{copy}</p>}
       </div>
       <div className="esports-intro-meta">
         <div>{stats.map(([label, value]) => <span key={label}><strong>{value}</strong><small>{label}</small></span>)}</div>
@@ -167,7 +167,7 @@ export function TeamsBrowser({ players, teams, transfers, generatedAt }: { playe
 
   return (
     <article className="esports-page">
-      <PageIntro eyebrow="Teams" title="职业战队" copy="战队名称保持原文，阵容与地区按 Liquipedia 各赛区 Team Portal 汇总；点击选手可回到对应资料卡。" stats={[["当前战队", teams.filter((team) => team.roster.length).length], ["阵容成员", players.filter((player) => player.teamSlug).length], ["赛区", regions.length]]} generatedAt={generatedAt} />
+      <PageIntro eyebrow="Teams" title="职业战队" copy="" stats={[["当前战队", teams.filter((team) => team.roster.length).length], ["阵容成员", players.filter((player) => player.teamSlug).length], ["赛区", regions.length]]} generatedAt={generatedAt} />
       <div className="esports-toolbar">
         <label className="catalog-search"><span>⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索战队或阵容成员" /></label>
         <select value={region} onChange={(event) => setRegion(event.target.value)} aria-label="按赛区筛选"><option value="">全部赛区</option>{regions.map((item) => <option value={item} key={item}>{regionLabels[item] || item}</option>)}</select>
@@ -218,7 +218,7 @@ export function TransfersBrowser({ transfers, teams, generatedAt }: { transfers:
 
   return (
     <article className="esports-page">
-      <PageIntro eyebrow="Transfers" title="近期转会" copy="展示 Liquipedia 最近 50 条重要选手流动；缺少精确日期时，来源可能使用公告日或首次公开讨论日期。" stats={[["近期记录", transfers.length], ["涉及选手", new Set(transfers.flatMap((transfer) => transfer.players.map((player) => player.slug))).size], ["最新日期", transfers[0]?.date || '—']]} generatedAt={generatedAt} />
+      <PageIntro eyebrow="Transfers" title="近期转会" copy="" stats={[["近期记录", transfers.length], ["涉及选手", new Set(transfers.flatMap((transfer) => transfer.players.map((player) => player.slug))).size], ["最新日期", transfers[0]?.date || '—']]} generatedAt={generatedAt} />
       <div className="esports-toolbar">
         <label className="catalog-search"><span>⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索选手、国籍或战队" /></label>
         <select value={team} onChange={(event) => setTeam(event.target.value)} aria-label="按战队筛选"><option value="">全部战队</option>{teams.map((item) => <option value={item.slug} key={item.slug}>{item.name}</option>)}</select>
