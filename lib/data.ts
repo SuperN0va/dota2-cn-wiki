@@ -171,9 +171,20 @@ export type EsportsTransfer = {
   referenceUrl: string;
 };
 
-export const items = (itemsRaw as unknown as Item[]).map((item) => (
-  item.isRecipe ? { ...item, image: '/assets/item-recipe.png' } : item
-));
+const blinkPenaltyRemovedSlugs = new Set(['blink', 'overwhelming_blink', 'swift_blink', 'arcane_blink']);
+
+export const items = (itemsRaw as unknown as Item[]).map((item) => {
+  const normalizedItem = blinkPenaltyRemovedSlugs.has(item.slug)
+    ? {
+      ...item,
+      // Valve 7.39 removed over-distance blink penalties. The datafeed still
+      // exposes the former forced landing distance, but it is no longer a
+      // current player-facing stat and must remain visible only in history.
+      specialValues: item.specialValues.filter((value) => value.name.toLocaleLowerCase('en') !== 'blink_range_clamp'),
+    }
+    : item;
+  return normalizedItem.isRecipe ? { ...normalizedItem, image: '/assets/item-recipe.png' } : normalizedItem;
+});
 export const itemStructures = (itemStructuresRaw as unknown as { items: Record<string, ItemStructure> }).items;
 export const patches = patchesRaw as unknown as Patch[];
 const standardHeroes = heroesRaw as unknown as Hero[];
@@ -389,7 +400,7 @@ const valueLabelByName: Record<string, string> = {
   radius: '作用范围', aura_radius: '光环范围', cast_range_bonus: '施法距离加成', bonus_movement_speed: '移动速度',
   bonus_night_vision: '夜间视野', consumed_bonus: '吞噬后攻击速度', consumed_bonus_night_vision: '吞噬后夜间视野',
   bonus_attack_speed_pct: '基础攻击速度', bonus_spell_amp: '技能增强', bonus_spell_resist: '技能抗性', bonus_magic_resistance: '魔法抗性', bonus_magical_armor: '魔法抗性', bonus_movement: '移动速度',
-  blink_range: '闪烁距离', blink_damage_cooldown: '受伤禁用时间', blink_range_clamp: '最大闪烁距离',
+  blink_range: '闪烁距离', blink_damage_cooldown: '受伤禁用时间',
   maximum_distance: '最大距离', vision_radius: '视野范围', tp_cooldown: '回城卷轴冷却时间',
   bonus_chance: '触发几率', bonus_chance_damage: '额外魔法伤害', proc_chance: '触发几率', crit_chance: '暴击几率', crit_multiplier: '暴击伤害',
   evasion: '闪避', bonus_evasion: '闪避', magic_resist: '魔法抗性', status_resistance: '状态抗性',

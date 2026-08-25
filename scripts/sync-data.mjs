@@ -10,6 +10,7 @@ const LIQUIPEDIA_API = 'https://liquipedia.net/dota2/api.php';
 const LIQUIPEDIA_UA = 'MidianDotaKB/1.0 (https://openai.com/contact/; community knowledge project)';
 const DATA_SCHEMA_VERSION = 8;
 const LEGACY_PARSER_VERSION = 5;
+const BLINK_PENALTY_REMOVED_ITEMS = new Set(['blink', 'overwhelming_blink', 'swift_blink', 'arcane_blink']);
 const includeLiquipedia = !process.argv.includes('--no-liquipedia');
 const force = process.argv.includes('--force');
 
@@ -230,10 +231,12 @@ function normalizeItem(item, listItem) {
     isCurrent: Boolean(item?.is_item ?? true),
     cooldown: item?.cooldowns || [],
     manaCost: item?.mana_costs || [],
-    specialValues: (item?.special_values || []).map((value) => ({
-      name: value.name, label: stripHtml(value.heading_loc) || value.name,
-      values: value.values_float || [], isPercentage: Boolean(value.is_percentage),
-    })),
+    specialValues: (item?.special_values || [])
+      .filter((value) => !(BLINK_PENALTY_REMOVED_ITEMS.has(slug) && value.name.toLowerCase() === 'blink_range_clamp'))
+      .map((value) => ({
+        name: value.name, label: stripHtml(value.heading_loc) || value.name,
+        values: value.values_float || [], isPercentage: Boolean(value.is_percentage),
+      })),
     image: isRecipe ? '/assets/item-recipe.png' : `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/${slug}.png`,
     history: [],
     legacyHistory: [],

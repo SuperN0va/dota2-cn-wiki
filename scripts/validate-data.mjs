@@ -74,7 +74,7 @@ check(
   '图纸图标本地化',
   recipeItems.length > 0
     && recipeIcon?.subarray(1, 4).toString() === 'PNG'
-    && dataModuleSource.includes("item.isRecipe ? { ...item, image: '/assets/item-recipe.png' }")
+    && dataModuleSource.includes("normalizedItem.isRecipe ? { ...normalizedItem, image: '/assets/item-recipe.png' }")
     && syncSource.includes("image: isRecipe ? '/assets/item-recipe.png'"),
   `${recipeItems.length} 条图纸统一使用 Liquipedia 本地卷轴资源`,
 );
@@ -92,6 +92,20 @@ const unresolvedItemValues = items.flatMap((item) => {
     .map((name) => `${item.slug}:${name}`);
 });
 check('物品说明参数可解析', unresolvedItemValues.length === 0, unresolvedItemValues.length ? unresolvedItemValues.join('，') : '所有说明参数均可回填为玩家可读数值');
+const blinkItemIds = new Set([1, 600, 603, 604]);
+const patch739 = patches.find((patch) => patch.version === '7.39');
+const blinkPenaltyRemovalRecords = patch739?.items
+  .filter((item) => blinkItemIds.has(item.id))
+  .filter((item) => item.notes.some((note) => /不再拥有超出距离的惩罚/.test(note.text))) || [];
+check(
+  '闪烁超距惩罚字段已废弃',
+  blinkPenaltyRemovalRecords.length === 4
+    && dataModuleSource.includes("blinkPenaltyRemovedSlugs")
+    && dataModuleSource.includes("'blink_range_clamp'")
+    && syncSource.includes('BLINK_PENALTY_REMOVED_ITEMS')
+    && syncSource.includes("'blink_range_clamp'"),
+  `${blinkPenaltyRemovalRecords.length}/4 件闪烁物品保留 7.39 历史记录，现行资料不再展示 960/1120 的旧惩罚落点`,
+);
 const itemSlugs = new Set(items.map((item) => item.slug));
 const recipeStructures = Object.values(itemStructures.items).filter((item) => item.components.length);
 const abilityStructures = Object.values(itemStructures.items).filter((item) => item.abilities.length);
