@@ -157,7 +157,9 @@ export type EsportsTransfer = {
   referenceUrl: string;
 };
 
-export const items = itemsRaw as unknown as Item[];
+export const items = (itemsRaw as unknown as Item[]).map((item) => (
+  item.isRecipe ? { ...item, image: '/assets/item-recipe.png' } : item
+));
 export const patches = patchesRaw as unknown as Patch[];
 const standardHeroes = heroesRaw as unknown as Hero[];
 export const heroes = [...standardHeroes.filter((hero) => hero.id !== 1961), buildSpiritBear(patches)];

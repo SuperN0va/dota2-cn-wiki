@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T06:34:44.407Z",
+  "generatedAt": "2026-08-25T07:47:46.910Z",
   "passed": true,
   "checks": [
     {
@@ -111,6 +111,11 @@
       "name": "物品 ID 唯一",
       "pass": true,
       "detail": "无重复 ID"
+    },
+    {
+      "name": "图纸图标本地化",
+      "pass": true,
+      "detail": "129 条图纸统一使用 Liquipedia 本地卷轴资源"
     },
     {
       "name": "官方物品记录无空项",

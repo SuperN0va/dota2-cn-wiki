@@ -6,6 +6,11 @@ const load = async (name) => JSON.parse(await readFile(path.join(DATA, name), 'u
 const [heroes, items, patches, patchIndex, meta, legacy, esports] = await Promise.all([
   load('heroes.json'), load('items.json'), load('patches.json'), load('patch-index.json'), load('meta.json'), load('legacy.json'), load('esports.json'),
 ]);
+const [recipeIcon, dataModuleSource, syncSource] = await Promise.all([
+  readFile(path.join(process.cwd(), 'public', 'assets', 'item-recipe.png')).catch(() => null),
+  readFile(path.join(process.cwd(), 'lib', 'data.ts'), 'utf8'),
+  readFile(path.join(process.cwd(), 'scripts', 'sync-data.mjs'), 'utf8'),
+]);
 
 const checks = [];
 const check = (name, pass, detail) => checks.push({ name, pass: Boolean(pass), detail });
@@ -64,6 +69,15 @@ check('现代历史结构无遗漏', expectedModernSemantics === attachedModernS
 check('历史状态分类覆盖', Object.values(semanticCounts).every((count) => count > 0), Object.entries(semanticCounts).map(([key, count]) => `${key}=${count}`).join('，'));
 check('物品记录总数', items.length >= 500, `${items.length} 条`);
 check('物品 ID 唯一', unique(items.map((item) => item.id)), '无重复 ID');
+const recipeItems = items.filter((item) => item.isRecipe);
+check(
+  '图纸图标本地化',
+  recipeItems.length > 0
+    && recipeIcon?.subarray(1, 4).toString() === 'PNG'
+    && dataModuleSource.includes("item.isRecipe ? { ...item, image: '/assets/item-recipe.png' }")
+    && syncSource.includes("image: isRecipe ? '/assets/item-recipe.png'"),
+  `${recipeItems.length} 条图纸统一使用 Liquipedia 本地卷轴资源`,
+);
 check('官方物品记录无空项', items.every((item) => item.history.every((entry) => entry.notes.length)), '空物品记录已剔除');
 check('物品版本无重复', items.every((item) => unique([...item.history, ...item.legacyHistory].map((entry) => entry.version))), '官方与早期历史无版本重叠');
 check('物品版本时间倒序', items.every((item) => item.history.every((entry, index, entries) => index === 0 || Number(entries[index - 1].timestamp) >= Number(entry.timestamp))), 'Valve 官方物品记录按日期由新到旧');

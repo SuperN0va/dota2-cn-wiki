@@ -210,6 +210,7 @@ function normalizeHero(hero) {
 function normalizeItem(item, listItem) {
   const source = item || listItem;
   const slug = source.name.replace('item_', '');
+  const isRecipe = source.name.includes('recipe_');
   const unsignedNeutralTier = item?.item_neutral_tier;
   const neutralTier = unsignedNeutralTier === 4294967295 ? -1 : (unsignedNeutralTier ?? listItem.neutral_item_tier ?? -1);
   return {
@@ -224,7 +225,7 @@ function normalizeItem(item, listItem) {
     cost: item?.item_cost ?? 0,
     quality: item?.item_quality ?? 0,
     neutralTier,
-    isRecipe: source.name.includes('recipe_'),
+    isRecipe,
     isCurrent: Boolean(item?.is_item ?? true),
     cooldown: item?.cooldowns || [],
     manaCost: item?.mana_costs || [],
@@ -232,7 +233,7 @@ function normalizeItem(item, listItem) {
       name: value.name, label: stripHtml(value.heading_loc) || value.name,
       values: value.values_float || [], isPercentage: Boolean(value.is_percentage),
     })),
-    image: `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/${slug}.png`,
+    image: isRecipe ? '/assets/item-recipe.png' : `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/${slug}.png`,
     history: [],
     legacyHistory: [],
   };
