@@ -82,6 +82,11 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
             <span>ID {item.id}</span>
           </div>
           {description && <p className="item-description"><GameText text={description} /></p>}
+          {hasCurrentData && <dl className="item-primary-stats">
+            {!effects.length && item.cooldown.some(Boolean) && <div><dt>冷却时间</dt><dd>{formatValues(item.cooldown)} 秒</dd></div>}
+            {!effects.length && item.manaCost.some(Boolean) && <div><dt>魔法消耗</dt><dd>{formatValues(item.manaCost)}</dd></div>}
+            {currentValues.map((value) => <div key={value.name}><dt>{formatItemValueLabel(value)}</dt><dd>{formatValues(value.values, isItemValuePercentage(value))}</dd></div>)}
+          </dl>}
         </div>
         <div className="item-price"><small>当前价格</small><strong>{item.cost > 0 ? item.cost : '—'}</strong><span>{item.cost > 0 ? '金币' : '不可购买'}</span></div>
       </header>
@@ -112,15 +117,6 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
                   </div>
                 </article>;
               })}
-            </div>
-          </section>}
-
-          {hasCurrentData && <section className="detail-section item-current-data">
-            <header><p className="eyebrow accent">Current data</p><h2>当前属性</h2></header>
-            <div className="item-value-grid">
-              {!effects.length && item.cooldown.some(Boolean) && <div><span>冷却时间</span><strong>{formatValues(item.cooldown)} 秒</strong></div>}
-              {!effects.length && item.manaCost.some(Boolean) && <div><span>魔法消耗</span><strong>{formatValues(item.manaCost)}</strong></div>}
-              {currentValues.map((value) => <div key={value.name}><span>{formatItemValueLabel(value)}</span><strong>{formatValues(value.values, isItemValuePercentage(value))}</strong></div>)}
             </div>
           </section>}
 

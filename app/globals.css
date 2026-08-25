@@ -464,6 +464,10 @@ a.talent-cell:hover { background: #171b1d; color: #e1ddd4; }
 .large-item-icon { background: #080a0b; border: 1px solid #3a4042; box-shadow: 0 20px 35px rgba(0,0,0,.25); height: 126px; width: 126px; }
 .large-item-icon img { height: 100%; object-fit: cover; width: 100%; }
 .item-description { color: #d6d8d1; font-size: 16px; font-weight: 600; line-height: 1.9; margin: 20px 0 0 !important; max-width: 780px; white-space: pre-line; }
+.item-primary-stats { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; }
+.item-primary-stats > div { align-items: baseline; background: #1b2021; border: 1px solid #303638; display: flex; gap: 9px; min-width: 132px; padding: 9px 12px; }
+.item-primary-stats dt { color: #a6aaa4; font-size: 12px; font-weight: 650; }
+.item-primary-stats dd { color: #e4b75d; font-size: 15px; font-variant-numeric: tabular-nums; font-weight: 800; margin: 0 0 0 auto; }
 .item-price { border-left: 1px solid var(--line); min-width: 120px; padding-left: 28px; }
 .item-price small, .item-price strong, .item-price span { display: block; }
 .item-price small { color: #666b67; font-size: 8px; }
