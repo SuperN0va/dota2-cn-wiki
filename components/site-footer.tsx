@@ -18,7 +18,7 @@ export function SiteFooter({ generatedAt }: { generatedAt: string }) {
       </div>
       <small>数据快照：{new Intl.DateTimeFormat('zh-CN', { dateStyle: 'long', timeStyle: 'short' }).format(new Date(generatedAt))}</small>
       <p className="footer-license">
-        7.08 前版本历史、职业选手、战队与转会资料改编自 <a href="https://liquipedia.net/dota2/Main_Page" target="_blank" rel="noreferrer">Liquipedia Dota 2 Wiki</a>，相关衍生文本按 <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a> 共享。国籍旗帜、战队 Logo、统一先天图标、<a href="https://liquipedia.net/commons/File:Recipe_itemicon_dota2_gameasset.png" target="_blank" rel="noreferrer">图纸卷轴图标</a>及<a href="https://liquipedia.net/commons/File:Lone_Druid_Spirit_Bear_icon_dota2_gameasset.png" target="_blank" rel="noreferrer">熊灵肖像</a>通过 Liquipedia/Commons 获取；各媒体文件许可可能不同，详情以其原始文件页为准。Dota 2 及相关素材权利归 Valve Corporation 所有。
+        7.08 前版本历史、职业选手、战队与转会资料改编自 <a href="https://liquipedia.net/dota2/Main_Page" target="_blank" rel="noreferrer">Liquipedia Dota 2 Wiki</a>，相关衍生文本按 <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a> 共享。物品配方结构由 <a href="https://github.com/odota/dotaconstants" target="_blank" rel="noreferrer">dotaconstants</a>（MIT）从 Valve 游戏文件标准化。国籍旗帜、战队 Logo、统一先天图标、<a href="https://liquipedia.net/commons/File:Recipe_itemicon_dota2_gameasset.png" target="_blank" rel="noreferrer">图纸卷轴图标</a>及<a href="https://liquipedia.net/commons/File:Lone_Druid_Spirit_Bear_icon_dota2_gameasset.png" target="_blank" rel="noreferrer">熊灵肖像</a>通过 Liquipedia/Commons 获取；各媒体文件许可可能不同，详情以其原始文件页为准。Dota 2 及相关素材权利归 Valve Corporation 所有。
       </p>
     </footer>
   );

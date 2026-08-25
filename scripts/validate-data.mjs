@@ -3,8 +3,8 @@ import path from 'node:path';
 
 const DATA = path.join(process.cwd(), 'data');
 const load = async (name) => JSON.parse(await readFile(path.join(DATA, name), 'utf8'));
-const [heroes, items, patches, patchIndex, meta, legacy, esports] = await Promise.all([
-  load('heroes.json'), load('items.json'), load('patches.json'), load('patch-index.json'), load('meta.json'), load('legacy.json'), load('esports.json'),
+const [heroes, items, patches, patchIndex, meta, legacy, esports, itemStructures] = await Promise.all([
+  load('heroes.json'), load('items.json'), load('patches.json'), load('patch-index.json'), load('meta.json'), load('legacy.json'), load('esports.json'), load('item-structures.json'),
 ]);
 const [recipeIcon, dataModuleSource, syncSource] = await Promise.all([
   readFile(path.join(process.cwd(), 'public', 'assets', 'item-recipe.png')).catch(() => null),
@@ -92,6 +92,12 @@ const unresolvedItemValues = items.flatMap((item) => {
     .map((name) => `${item.slug}:${name}`);
 });
 check('物品说明参数可解析', unresolvedItemValues.length === 0, unresolvedItemValues.length ? unresolvedItemValues.join('，') : '所有说明参数均可回填为玩家可读数值');
+const itemSlugs = new Set(items.map((item) => item.slug));
+const recipeStructures = Object.values(itemStructures.items).filter((item) => item.components.length);
+const abilityStructures = Object.values(itemStructures.items).filter((item) => item.abilities.length);
+const missingRecipeComponents = [...new Set(recipeStructures.flatMap((item) => item.components).filter((slug) => !itemSlugs.has(slug)))];
+check('物品配方结构完整', recipeStructures.length >= 100 && missingRecipeComponents.length === 0, `${recipeStructures.length} 份配方，${missingRecipeComponents.length ? `缺少 ${missingRecipeComponents.join('、')}` : '所有组件均可点击关联'}`);
+check('物品效果类型完整', abilityStructures.length >= 250 && abilityStructures.every((item) => item.abilities.every((ability) => ability.type && ability.title)), `${abilityStructures.length} 件物品含主动、被动或使用效果结构`);
 check('官方版本覆盖', patches.length >= 100, `${patches.length} 个版本`);
 check('版本索引一致', patches.length === patchIndex.length, `${patches.length}/${patchIndex.length}`);
 check('最新版本一致', meta.latestPatch === patchIndex[0]?.version, meta.latestPatch);

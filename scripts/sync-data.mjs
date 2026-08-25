@@ -1,5 +1,6 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { buildItemStructures } from './item-structures.mjs';
 
 const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, 'data');
@@ -611,6 +612,7 @@ const [heroListResponse, itemListResponse, patchListResponse] = await Promise.al
   fetchJson(`${VALVE}/itemlist?language=${LANGUAGE}`),
   fetchJson(`${VALVE}/patchnoteslist?language=${LANGUAGE}`),
 ]);
+const itemStructures = await buildItemStructures();
 
 const heroList = heroListResponse.result.data.heroes;
 const itemList = itemListResponse.result.data.itemabilities;
@@ -823,6 +825,7 @@ const patchIndex = [...patches].reverse().map((patch) => ({
 await Promise.all([
   writeFile(path.join(DATA_DIR, 'heroes.json'), JSON.stringify(heroes)),
   writeFile(path.join(DATA_DIR, 'items.json'), JSON.stringify(items)),
+  writeFile(path.join(DATA_DIR, 'item-structures.json'), JSON.stringify(itemStructures)),
   writeFile(path.join(DATA_DIR, 'patches.json'), JSON.stringify(patches)),
   writeFile(path.join(DATA_DIR, 'patch-index.json'), JSON.stringify(patchIndex, null, 2)),
   writeFile(path.join(DATA_DIR, 'cn-news.json'), JSON.stringify(cnNews, null, 2)),

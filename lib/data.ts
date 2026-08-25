@@ -6,6 +6,7 @@ import metaRaw from '../data/meta.json';
 import cnNewsRaw from '../data/cn-news.json';
 import validationRaw from '../data/validation-report.json';
 import esportsRaw from '../data/esports.json';
+import itemStructuresRaw from '../data/item-structures.json';
 import { buildSpiritBear } from './special-heroes';
 
 export type Note = { text: string; indent: number; icon?: string | null; original?: string };
@@ -104,6 +105,19 @@ export type Item = {
   legacyHistory: LegacyEntry[];
 };
 
+export type ItemEffect = {
+  type: 'active' | 'passive' | 'use' | 'toggle' | 'upgrade' | 'effect';
+  typeLabel: string;
+  title: string;
+  description: string;
+  valueNames: string[];
+};
+
+type ItemStructure = {
+  components: string[];
+  abilities: Array<{ type: string; title: string; description: string }>;
+};
+
 export type Patch = {
   version: string;
   name: string;
@@ -160,6 +174,7 @@ export type EsportsTransfer = {
 export const items = (itemsRaw as unknown as Item[]).map((item) => (
   item.isRecipe ? { ...item, image: '/assets/item-recipe.png' } : item
 ));
+export const itemStructures = (itemStructuresRaw as unknown as { items: Record<string, ItemStructure> }).items;
 export const patches = patchesRaw as unknown as Patch[];
 const standardHeroes = heroesRaw as unknown as Hero[];
 export const heroes = [...standardHeroes.filter((hero) => hero.id !== 1961), buildSpiritBear(patches)];
@@ -284,4 +299,141 @@ export function formatItemText(item: Pick<Item, 'slug' | 'specialValues'>, text:
 
 export function formatItemDescription(item: Pick<Item, 'slug' | 'description' | 'specialValues'>) {
   return formatItemText(item, item.description);
+}
+
+const effectTypeLabels = {
+  active: '主动',
+  passive: '被动',
+  use: '使用',
+  toggle: '切换',
+  upgrade: '升级',
+  effect: '效果',
+} as const;
+
+function normalizeEffectType(value: string): ItemEffect['type'] {
+  const type = value.toLocaleLowerCase('en');
+  if (['active', 'passive', 'use', 'toggle', 'upgrade'].includes(type)) return type as ItemEffect['type'];
+  if (type === '主动') return 'active';
+  if (type === '被动') return 'passive';
+  if (type === '使用') return 'use';
+  if (['切换', '开关'].includes(type)) return 'toggle';
+  if (type === '升级') return 'upgrade';
+  return 'effect';
+}
+
+function splitChineseEffect(rest: string, typeLabel: string) {
+  const spaced = rest.match(/^([^\s，。；:：]{1,20})\s+(.+)$/);
+  if (spaced) return { title: spaced[1], description: spaced[2] };
+
+  const verb = /(提供|给予|使|造成|增加|获得|消耗|传送|发射|召唤|切换|放置|摧毁|创建|攻击|施放|激活|回复|恢复|降低|提升|抵挡|格挡|驱散)/.exec(rest);
+  if (verb?.index && verb.index <= 20) return { title: rest.slice(0, verb.index), description: rest.slice(verb.index) };
+  if (rest.length <= 16 && !/[。；，]/.test(rest)) return { title: rest, description: '' };
+  return { title: typeLabel, description: rest };
+}
+
+export function getItemEffects(item: Item): ItemEffect[] {
+  const structured = itemStructures[item.slug]?.abilities || [];
+  const paragraphs = item.description.split(/\n+/).map((paragraph) => paragraph.trim()).filter(Boolean);
+  const tagged = paragraphs.flatMap((paragraph) => {
+    const match = paragraph.match(/^(主动|被动|使用|切换|开关|升级|Active|Passive|Use|Toggle|Upgrade)\s*[：:]\s*(.+)$/i);
+    if (!match) return [];
+    const type = normalizeEffectType(match[1]);
+    const typeLabel = effectTypeLabels[type];
+    const split = splitChineseEffect(match[2].trim(), typeLabel);
+    return [{
+      type,
+      typeLabel,
+      title: split.title || typeLabel,
+      description: formatItemText(item, split.description),
+      raw: paragraph,
+    }];
+  });
+
+  const resolved = tagged.map((effect, index) => {
+    const matchingStructure = structured[index] || structured.find((ability) => normalizeEffectType(ability.type) === effect.type);
+    const placeholderNames = [...effect.raw.matchAll(/%([A-Za-z0-9_]+)%/g)].map((match) => match[1].toLocaleLowerCase('en'));
+    const referenceNumbers = new Set((matchingStructure?.description.match(/-?\d+(?:\.\d+)?/g) || []).map(Number));
+    const inferredNames = item.specialValues
+      .filter((value) => value.values.some((number) => referenceNumbers.has(Number(number))))
+      .map((value) => value.name.toLocaleLowerCase('en'));
+
+    return {
+      type: effect.type,
+      typeLabel: effect.typeLabel,
+      title: effect.title,
+      description: effect.description,
+      valueNames: [...new Set([...placeholderNames, ...inferredNames])],
+    };
+  });
+
+  const assigned = new Set(resolved.flatMap((effect) => effect.valueNames));
+  for (const value of item.specialValues) {
+    const name = value.name.toLocaleLowerCase('en');
+    if (assigned.has(name)) continue;
+    const label = formatItemValueLabel(value).replace(/加成|额外|增加|提升|降低|减少|[+\-]/g, '').trim();
+    if (label.length < 2 || /[A-Za-z_$]/.test(label)) continue;
+    const matchingEffects = resolved.filter((effect) => `${effect.title}${effect.description}`.includes(label));
+    const matchingEffect = matchingEffects.find((effect) => effect.type === 'passive')
+      || (!name.startsWith('bonus_') ? matchingEffects[0] : undefined);
+    if (matchingEffect) matchingEffect.valueNames.push(name);
+  }
+  return resolved;
+}
+
+const valueLabelByName: Record<string, string> = {
+  abilitycooldown: '冷却时间', abilitymanacost: '魔法消耗', abilitycastrange: '施法距离', abilitycastpoint: '施法前摇',
+  duration: '持续时间', slow_duration: '减速持续时间', buff_duration: '增益持续时间', debuff_duration: '负面效果持续时间',
+  bonus_damage: '攻击力', damage: '伤害', bonus_attack_speed: '攻击速度', attack_speed: '攻击速度',
+  bonus_strength: '力量', bonus_str: '力量', bonus_agility: '敏捷', bonus_intellect: '智力', bonus_all_stats: '全属性',
+  bonus_armor: '护甲', armor: '护甲', bonus_health: '生命值', bonus_mana: '魔法值', bonus_health_regen: '生命恢复', bonus_mana_regen: '魔法恢复',
+  radius: '作用范围', aura_radius: '光环范围', cast_range_bonus: '施法距离加成', bonus_movement_speed: '移动速度',
+  bonus_night_vision: '夜间视野', consumed_bonus: '吞噬后攻击速度', consumed_bonus_night_vision: '吞噬后夜间视野',
+  bonus_attack_speed_pct: '基础攻击速度', bonus_spell_amp: '技能增强', bonus_spell_resist: '技能抗性', bonus_magic_resistance: '魔法抗性', bonus_magical_armor: '魔法抗性', bonus_movement: '移动速度',
+  blink_range: '闪烁距离', blink_damage_cooldown: '受伤禁用时间', blink_range_clamp: '最大闪烁距离',
+  maximum_distance: '最大距离', vision_radius: '视野范围', tp_cooldown: '回城卷轴冷却时间',
+  bonus_chance: '触发几率', bonus_chance_damage: '额外魔法伤害', proc_chance: '触发几率', crit_chance: '暴击几率', crit_multiplier: '暴击伤害',
+  evasion: '闪避', bonus_evasion: '闪避', magic_resist: '魔法抗性', status_resistance: '状态抗性',
+};
+
+export function formatItemValueLabel(value: Item['specialValues'][number]) {
+  const key = value.name.toLocaleLowerCase('en');
+  const mapped = valueLabelByName[key];
+  if (mapped) return mapped;
+  if (value.label && value.label !== value.name && !/[A-Za-z_$]/.test(value.label)) return value.label.replace(/^\+/, '').trim();
+  const tokenLabels: Record<string, string> = {
+    active: '主动', all: '全', amp: '增强', armor: '护甲', attack: '攻击', barrier: '屏障', block: '格挡',
+    cast: '施法', chance: '几率', charge: '充能', charges: '充能', cooldown: '冷却', crit: '暴击', damage: '伤害',
+    debuff: '负面效果', distance: '距离', duration: '持续时间', evasion: '闪避', health: '生命', hp: '生命',
+    lifesteal: '吸血', magic: '魔法', magical: '魔法', mana: '魔法', max: '最大', movement: '移动', movespeed: '移动速度',
+    outgoing: '造成', pct: '百分比', percent: '百分比', proc: '触发', projectile: '弹道', radius: '范围', range: '距离',
+    regen: '恢复', replenish: '补充', resist: '抗性', resistance: '抗性', restore: '恢复', slow: '减速', soul: '灵魂',
+    speed: '速度', spell: '技能', status: '状态', stun: '眩晕', summon: '召唤', tooltip: '', vision: '视野',
+  };
+  const parts = key.split('_');
+  const isBonus = parts[0] === 'bonus';
+  const translated = parts.filter((part) => part !== 'bonus').map((part) => tokenLabels[part]).filter(Boolean);
+  return translated.length === parts.filter((part) => part !== 'bonus' && part !== 'tooltip').length
+    ? `${translated.join('')}${isBonus ? '加成' : ''}`
+    : '效果数值';
+}
+
+export function isItemValuePercentage(value: Item['specialValues'][number]) {
+  const name = value.name.toLocaleLowerCase('en');
+  return value.isPercentage || (!/(damage|amount|duration|radius|range)/.test(name) && /(^|_)(chance|percent|percentage|pct)($|_)/.test(name));
+}
+
+export function getItemRecipeComponents(item: Item) {
+  const slugs = [...(itemStructures[item.slug]?.components || [])];
+  const recipe = itemBySlug.get(`recipe_${item.slug}`);
+  if (recipe && recipe.cost > 0 && !slugs.includes(recipe.slug)) slugs.push(recipe.slug);
+  return slugs.map((slug) => itemBySlug.get(slug)).filter((component): component is Item => Boolean(component));
+}
+
+export function getItemBuildsInto(item: Item) {
+  const sourceSlug = item.isRecipe ? item.slug.replace(/^recipe_/, '') : item.slug;
+  if (item.isRecipe) {
+    const result = itemBySlug.get(sourceSlug);
+    return result ? [result] : [];
+  }
+  return items.filter((candidate) => itemStructures[candidate.slug]?.components?.includes(sourceSlug));
 }

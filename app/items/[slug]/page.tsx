@@ -1,8 +1,38 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { formatDate, formatItemDescription, formatItemText, formatValues, itemBySlug, itemDescriptionValueNames, items } from '../../../lib/data';
+import {
+  formatDate, formatItemDescription, formatItemText, formatItemValueLabel, formatValues,
+  getItemBuildsInto, getItemEffects, getItemRecipeComponents, itemBySlug, itemDescriptionValueNames, items,
+  isItemValuePercentage,
+  type Item,
+} from '../../../lib/data';
 import { GameText } from '../../../components/game-text';
+
+const effectGlyphs = { active: '▶', passive: '◎', use: '◆', toggle: '↔', upgrade: '↑', effect: '✦' };
+
+function groupComponents(components: Item[]) {
+  const grouped = new Map<string, { item: Item; count: number }>();
+  for (const component of components) {
+    const current = grouped.get(component.slug);
+    if (current) current.count += 1;
+    else grouped.set(component.slug, { item: component, count: 1 });
+  }
+  return [...grouped.values()];
+}
+
+function RecipeBranch({ item, count = 1, root = false, trail = [] }: { item: Item; count?: number; root?: boolean; trail?: string[] }) {
+  const isCycle = trail.includes(item.slug);
+  const components = isCycle ? [] : groupComponents(getItemRecipeComponents(item));
+  return <li className={root ? 'recipe-root' : ''}>
+    <Link className="recipe-node" href={`/items/${item.slug}`}>
+      <img src={item.image} alt={`${item.name}图标`} />
+      <span><strong>{item.name}</strong><small>{item.cost > 0 ? `${item.cost} 金币` : item.isRecipe ? '免费图纸' : '不可购买'}</small></span>
+      {count > 1 && <b>×{count}</b>}
+    </Link>
+    {components.length > 0 && <ul>{components.map((component) => <RecipeBranch item={component.item} count={component.count} trail={[...trail, item.slug]} key={component.item.slug} />)}</ul>}
+  </li>;
+}
 
 export function generateStaticParams() {
   return items.map((item) => ({ slug: item.slug }));
@@ -26,13 +56,18 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
   const item = itemBySlug.get(slug);
   if (!item) notFound();
   const description = formatItemDescription(item);
+  const effects = getItemEffects(item);
+  const effectValueNames = new Set(effects.flatMap((effect) => effect.valueNames));
+  const recipeComponents = getItemRecipeComponents(item);
+  const buildsInto = getItemBuildsInto(item);
   const descriptionValues = itemDescriptionValueNames([item.description, ...item.notes]);
   const currentValues = item.specialValues.filter((value) =>
     value.values.some((number) => number !== 0)
     && !descriptionValues.has(value.name.toLocaleLowerCase('en'))
+    && !effectValueNames.has(value.name.toLocaleLowerCase('en'))
     && !['abilitycooldown', 'abilitymanacost'].includes(value.name.toLocaleLowerCase('en')),
   );
-  const hasCurrentData = item.cooldown.some(Boolean) || item.manaCost.some(Boolean) || currentValues.length > 0;
+  const hasCurrentData = currentValues.length > 0 || (!effects.length && (item.cooldown.some(Boolean) || item.manaCost.some(Boolean)));
 
   return (
     <article className="detail-page item-detail-page">
@@ -53,12 +88,39 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
 
       <div className="detail-grid">
         <div className="detail-main">
+          {(recipeComponents.length > 0 || buildsInto.length > 0) && <section className="detail-section item-recipe-section">
+            <header><p className="eyebrow accent">Recipe</p><h2>{recipeComponents.length > 0 ? '合成配方' : '可合成物品'}</h2></header>
+            {recipeComponents.length > 0 && <div className="recipe-tree"><ul><RecipeBranch item={item} root /></ul></div>}
+            {buildsInto.length > 0 && <div className="builds-into"><strong>还能合成</strong><div>{buildsInto.map((result) => <Link href={`/items/${result.slug}`} key={result.slug}><img src={result.image} alt="" /><span>{result.name}<small>{result.cost > 0 ? `${result.cost} 金币` : '不可购买'}</small></span><b>→</b></Link>)}</div></div>}
+          </section>}
+
+          {effects.length > 0 && <section className="detail-section item-effects-section">
+            <header><p className="eyebrow accent">Abilities</p><h2>物品效果</h2></header>
+            <div className="item-effect-list">
+              {effects.map((effect, index) => {
+                const values = item.specialValues.filter((value) => effect.valueNames.includes(value.name.toLocaleLowerCase('en')) && value.values.some((number) => number !== 0));
+                return <article className={`item-effect-card is-${effect.type}`} id={`effect-${index + 1}`} key={`${effect.type}:${effect.title}:${index}`}>
+                  <div className="item-effect-icon"><img src={item.image} alt={`${effect.title}图标`} /><span aria-label={effect.typeLabel}>{effectGlyphs[effect.type]}</span></div>
+                  <div className="item-effect-copy">
+                    <header><span>{effect.typeLabel}</span><h3>{effect.title}</h3></header>
+                    {effect.description && <p><GameText text={effect.description} /></p>}
+                    <div className="effect-resource-row">
+                      {effect.type !== 'passive' && item.cooldown.some(Boolean) && <span>冷却 <strong>{formatValues(item.cooldown)} 秒</strong></span>}
+                      {effect.type !== 'passive' && item.manaCost.some(Boolean) && <span>魔耗 <strong>{formatValues(item.manaCost)}</strong></span>}
+                    </div>
+                    {values.length > 0 && <dl>{values.map((value) => <div key={value.name}><dt>{formatItemValueLabel(value)}</dt><dd>{formatValues(value.values, isItemValuePercentage(value))}</dd></div>)}</dl>}
+                  </div>
+                </article>;
+              })}
+            </div>
+          </section>}
+
           {hasCurrentData && <section className="detail-section item-current-data">
             <header><p className="eyebrow accent">Current data</p><h2>当前属性</h2></header>
             <div className="item-value-grid">
-              {item.cooldown.some(Boolean) && <div><span>冷却时间</span><strong>{formatValues(item.cooldown)} 秒</strong></div>}
-              {item.manaCost.some(Boolean) && <div><span>魔法消耗</span><strong>{formatValues(item.manaCost)}</strong></div>}
-              {currentValues.map((value) => <div key={value.name}><span>{value.label}</span><strong>{formatValues(value.values, value.isPercentage)}</strong></div>)}
+              {!effects.length && item.cooldown.some(Boolean) && <div><span>冷却时间</span><strong>{formatValues(item.cooldown)} 秒</strong></div>}
+              {!effects.length && item.manaCost.some(Boolean) && <div><span>魔法消耗</span><strong>{formatValues(item.manaCost)}</strong></div>}
+              {currentValues.map((value) => <div key={value.name}><span>{formatItemValueLabel(value)}</span><strong>{formatValues(value.values, isItemValuePercentage(value))}</strong></div>)}
             </div>
           </section>}
 

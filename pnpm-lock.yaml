@@ -30,6 +30,9 @@ importers:
       '@types/react-dom':
         specifier: 19.2.3
         version: 19.2.3(@types/react@19.2.14)
+      dotaconstants:
+        specifier: ^10.8.0
+        version: 10.8.0
       eslint:
         specifier: 9.39.4
         version: 9.39.4(jiti@2.7.0)(supports-color@10.2.2)
@@ -935,6 +938,9 @@ packages:
   doctrine@2.1.0:
     resolution: {integrity: sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==}
     engines: {node: '>=0.10.0'}
+
+  dotaconstants@10.8.0:
+    resolution: {integrity: sha512-4imDHLtqBg4abJ2Q/t2Kac/rM5kB5mCBF1lXaUDFtmoJ+TDku8TZ+R8ilU5l7xWpLZBEEYAe+u40CWxku9iFWA==}
 
   dunder-proto@1.0.1:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
@@ -2828,6 +2834,8 @@ snapshots:
   doctrine@2.1.0:
     dependencies:
       esutils: 2.0.3
+
+  dotaconstants@10.8.0: {}
 
   dunder-proto@1.0.1:
     dependencies:
