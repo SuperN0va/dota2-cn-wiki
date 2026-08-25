@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import { AbilityImage } from './ability-image';
 import { AttributeIcon } from './attribute-icon';
+import { GameText } from './game-text';
 import type { Note } from '../lib/data';
 
 type EntityChange = {
@@ -36,7 +37,7 @@ const tabs = [
 
 function NoteList({ notes }: { notes: Note[] }) {
   const visibleNotes = notes.filter((note) => note.text.trim());
-  return <ul className="change-notes">{visibleNotes.map((note, index) => <li style={{ marginLeft: `${Math.max(0, note.indent - 1) * 18}px` }} key={`${note.text}:${index}`}>{note.text}</li>)}</ul>;
+  return <ul className="change-notes">{visibleNotes.map((note, index) => <li style={{ marginLeft: `${Math.max(0, note.indent - 1) * 18}px` }} key={`${note.text}:${index}`}><GameText text={note.text} /></li>)}</ul>;
 }
 
 function hasChanges(entry: EntityChange): boolean {

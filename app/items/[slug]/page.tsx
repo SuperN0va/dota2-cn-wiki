@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { formatDate, formatItemDescription, formatItemText, formatValues, itemBySlug, itemDescriptionValueNames, items } from '../../../lib/data';
+import { GameText } from '../../../components/game-text';
 
 export function generateStaticParams() {
   return items.map((item) => ({ slug: item.slug }));
@@ -45,7 +46,7 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
             <span>{item.neutralTier >= 0 ? `中立 ${item.neutralTier + 1} 级` : item.isRecipe ? '图纸' : '商店物品'}</span>
             <span>ID {item.id}</span>
           </div>
-          {description && <p className="item-description">{description}</p>}
+          {description && <p className="item-description"><GameText text={description} /></p>}
         </div>
         <div className="item-price"><small>当前价格</small><strong>{item.cost > 0 ? item.cost : '—'}</strong><span>{item.cost > 0 ? '金币' : '不可购买'}</span></div>
       </header>
@@ -67,13 +68,13 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
               {item.history.map((entry, index) => (
                 <details className="history-entry" key={entry.version} open={index < 6}>
                   <summary><span>{entry.version}</span><div><strong>{entry.version} 版本</strong><small>{entry.timestamp ? formatDate(entry.timestamp) : ''} · Valve 官方中文</small></div><em>{entry.notes.length} 项</em></summary>
-                  <div className="history-content"><ul>{entry.notes.map((note, noteIndex) => <li style={{ marginLeft: `${(note.indent - 1) * 18}px` }} key={noteIndex}>{note.text}</li>)}</ul></div>
+                  <div className="history-content"><ul>{entry.notes.map((note, noteIndex) => <li style={{ marginLeft: `${(note.indent - 1) * 18}px` }} key={noteIndex}><GameText text={note.text} /></li>)}</ul></div>
                 </details>
               ))}
               {item.legacyHistory.map((entry) => (
                 <details className="history-entry legacy" key={`legacy-${entry.version}`}>
                   <summary><span>{entry.version}</span><div><strong>{entry.version} 版本</strong><small>Liquipedia 历史补充 · CC BY-SA 3.0</small></div><em>{entry.notes.length} 项</em></summary>
-                  <div className="history-content"><ul>{entry.notes.map((note, noteIndex) => <li key={noteIndex}>{note.text}<details className="original-note"><summary>查看英文原文</summary><p>{note.original}</p></details></li>)}</ul></div>
+                  <div className="history-content"><ul>{entry.notes.map((note, noteIndex) => <li key={noteIndex}><GameText text={note.text} /><details className="original-note"><summary>查看英文原文</summary><p>{note.original}</p></details></li>)}</ul></div>
                 </details>
               ))}
               {!item.history.length && !item.legacyHistory.length && <div className="catalog-empty">暂未找到该记录对应的版本改动。</div>}
@@ -82,7 +83,7 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
         </div>
 
         <aside className="detail-aside">
-          {item.notes.length > 0 && <section className="bio-card"><p className="eyebrow">使用说明</p><ul>{item.notes.map((note) => { const formattedNote = formatItemText(item, note); return <li key={formattedNote}>{formattedNote}</li>; })}</ul></section>}
+          {item.notes.length > 0 && <section className="bio-card"><p className="eyebrow">使用说明</p><ul>{item.notes.map((note) => { const formattedNote = formatItemText(item, note); return <li key={formattedNote}><GameText text={formattedNote} /></li>; })}</ul></section>}
           {item.lore && <section className="bio-card"><p className="eyebrow">物品背景</p><p>{item.lore}</p></section>}
         </aside>
       </div>

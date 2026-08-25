@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
+import { GameText } from './game-text';
 
 type ItemSummary = {
   id: number;
@@ -78,10 +79,10 @@ export function ItemBrowser({ items }: { items: ItemSummary[] }) {
             <div className="neutral-rule-grid">
               <article><strong>宝物</strong><p>决定物品的主动或被动技能。每个层级打造时选择一件；高层级可保留上一件宝物。</p></article>
               <article><strong>附魔</strong><p>提供常驻属性与数值加成；可用层级与英雄主属性会影响候选项，同名附魔在更高层级可能提供更强数值。</p></article>
-              <article><strong>打造</strong><p>清理野怪营地获得魔石。1–5级依次开放于5、15、25、35、60分钟，快速模式时间减半。</p></article>
+              <article><strong>打造</strong><p>清理野怪营地获得魔石。<GameText text="1–5级依次开放于5、15、25、35、60分钟" />，快速模式时间减半。</p></article>
               <article><strong>装备</strong><p>每名英雄只能装备一件中立物品，固定占用中立物品栏；打造新物品会替换上一层级结果。</p></article>
             </div>
-            <footer><span>1级各显示4个宝物与附魔候选；2–5级各显示5个。</span><a href="https://liquipedia.net/dota2/Neutral_Items" target="_blank" rel="noreferrer">核对完整规则 ↗</a></footer>
+            <footer><span><GameText text="1级各显示4个宝物与附魔候选；2–5级各显示5个。" /></span><a href="https://liquipedia.net/dota2/Neutral_Items" target="_blank" rel="noreferrer">核对完整规则 ↗</a></footer>
           </section>
         )}
         <div className="catalog-meta"><span><strong>{filtered.length}</strong> 条记录</span><span>{group === 'enhancement' ? '当前可用附魔' : 'Valve Datafeed 全量快照'}</span></div>

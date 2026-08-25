@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { formatDate, formatValues, heroBySlug, heroes, type Ability, type Note } from '../../../lib/data';
 import { AbilityImage } from '../../../components/ability-image';
 import { AttributeIcon } from '../../../components/attribute-icon';
+import { GameText } from '../../../components/game-text';
 
 export function generateStaticParams() {
   return heroes.map((hero) => ({ slug: hero.slug }));
@@ -69,7 +70,7 @@ function ChangeNote({ note, abilities = [], extra }: { note: Note | { text: stri
       <span className="change-note-line">
         {changeKinds(note).map((kind) => <b className={`change-badge is-${kind}`} key={kind}>{changeLabels[kind]}</b>)}
         {matches.map((ability) => <AbilityChip ability={ability} compact key={ability.id} />)}
-        <span>{note.text}</span>
+        <span><GameText text={note.text} /></span>
       </span>
       {extra}
     </li>
@@ -82,18 +83,18 @@ function AbilityCard({ ability }: { ability: Ability }) {
       <a className="ability-card-icon" href={`#ability-${ability.id}`} aria-label={`定位到${ability.name}`}><AbilityImage src={ability.image} alt={`${ability.name}图标`} isInnate={ability.isInnate && ability.useSharedInnateIcon !== false} /></a>
       <div className="ability-copy">
         <div className="ability-title"><h3>{ability.name}</h3>{ability.isInnate && <span>先天技能</span>}<small>{ability.slug}</small></div>
-        <p>{ability.description}</p>
+        <p><GameText text={ability.description} /></p>
         <div className="ability-values">
-          {ability.cooldown.some(Boolean) && <span><em>冷却</em>{formatValues(ability.cooldown)} 秒</span>}
-          {ability.manaCost.some(Boolean) && <span><em>魔耗</em>{formatValues(ability.manaCost)}</span>}
-          {ability.castRange.some(Boolean) && <span><em>施法距离</em>{formatValues(ability.castRange)}</span>}
-          {ability.damage.some(Boolean) && <span><em>伤害</em>{formatValues(ability.damage)}</span>}
+          {ability.cooldown.some(Boolean) && <span><em>冷却</em><GameText text={`${formatValues(ability.cooldown)} 秒`} /></span>}
+          {ability.manaCost.some(Boolean) && <span><em>魔耗</em><GameText text={formatValues(ability.manaCost)} /></span>}
+          {ability.castRange.some(Boolean) && <span><em>施法距离</em><GameText text={formatValues(ability.castRange)} /></span>}
+          {ability.damage.some(Boolean) && <span><em>伤害</em><GameText text={formatValues(ability.damage)} /></span>}
         </div>
         {!!ability.specialValues.length && (
-          <details className="special-values"><summary>查看完整技能数值</summary><dl>{ability.specialValues.map((value) => <div key={value.name}><dt>{value.label}</dt><dd>{formatValues(value.values, value.isPercentage)}</dd></div>)}</dl></details>
+          <details className="special-values"><summary>查看完整技能数值</summary><dl>{ability.specialValues.map((value) => <div key={value.name}><dt>{value.label}</dt><dd><GameText text={formatValues(value.values, value.isPercentage)} /></dd></div>)}</dl></details>
         )}
-        {(ability.scepter || ability.shard) && <div className="upgrade-notes">{ability.scepter && <p><b>神杖</b>{ability.scepter}</p>}{ability.shard && <p><b>魔晶</b>{ability.shard}</p>}</div>}
-        {!!ability.notes.length && <ul className="ability-notes">{ability.notes.map((note, index) => <li key={index}>{note}</li>)}</ul>}
+        {(ability.scepter || ability.shard) && <div className="upgrade-notes">{ability.scepter && <p><b>神杖</b><GameText text={ability.scepter} /></p>}{ability.shard && <p><b>魔晶</b><GameText text={ability.shard} /></p>}</div>}
+        {!!ability.notes.length && <ul className="ability-notes">{ability.notes.map((note, index) => <li key={index}><GameText text={note} /></li>)}</ul>}
         {ability.lore && <small className="lore">{ability.lore}</small>}
       </div>
     </article>
@@ -103,7 +104,7 @@ function AbilityCard({ ability }: { ability: Ability }) {
 function TalentCell({ talent, abilities }: { talent: Ability; abilities: Ability[] }) {
   const name = displayTalentName(talent);
   const target = abilities.find((ability) => name.includes(ability.name));
-  const content = <>{target ? <AbilityImage src={target.image} alt="" isInnate={target.isInnate && target.useSharedInnateIcon !== false} /> : <b className="talent-glyph" aria-hidden="true">✦</b>}<span>{name}</span></>;
+  const content = <>{target ? <AbilityImage src={target.image} alt="" isInnate={target.isInnate && target.useSharedInnateIcon !== false} /> : <b className="talent-glyph" aria-hidden="true">✦</b>}<span><GameText text={name} /></span></>;
   return target
     ? <a className="talent-cell" id={`talent-${talent.id}`} href={`#ability-${target.id}`}>{content}</a>
     : <div className="talent-cell" id={`talent-${talent.id}`}>{content}</div>;
@@ -186,7 +187,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
               <article className={`upgrade-card is-${upgrade.className}`} key={`${upgrade.kind}-${upgrade.ability.id}`}>
                 <div className="upgrade-kind"><span>{upgrade.kind.slice(0, 1)}</span><strong>阿哈利姆{upgrade.kind}升级</strong></div>
                 <AbilityChip ability={upgrade.ability} />
-                <p>{upgrade.text}</p>
+                <p><GameText text={upgrade.text} /></p>
               </article>
             ))}</div> : <p className="section-empty">当前官方数据中没有单独的神杖或魔晶升级。</p>}
           </section>
