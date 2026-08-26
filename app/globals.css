@@ -418,9 +418,8 @@ a.talent-cell:hover { background: #171b1d; color: #e1ddd4; }
 .history-semantic > header { align-items: center; display: flex; justify-content: space-between; margin-bottom: 6px; }
 .history-semantic > header strong { color: #c5b078; font-size: 9px; letter-spacing: .06em; }
 .history-semantic > header small { color: #675e48; font-size: 7px; }
-.original-note { display: inline; margin-left: 7px; }
-.original-note summary { color: #665f4b; cursor: pointer; display: inline; font-size: 8px; }
-.original-note p { background: #171817; color: #77766f; font-style: italic; margin: 6px 0; padding: 8px; }
+.history-source-label { background: #252a2b; border: 1px solid #4a5051; color: #b9c0bc; display: inline-block; font: 700 8px/1.65 "Noto Sans SC", "Microsoft YaHei", sans-serif; letter-spacing: .07em; margin-right: 8px; padding: 0 5px; vertical-align: .14em; }
+.history-source-note, .change-note.is-source-note { color: #d0d5d1; font-family: Inter, "Segoe UI", system-ui, sans-serif; font-size: 14px; line-height: 1.75; }
 .detail-aside { display: grid; gap: 14px; height: fit-content; }
 .quick-stats, .bio-card, .provenance-card, .model-card { background: var(--panel); border: 1px solid #252a2c; padding: 18px; }
 .quick-stats { overflow: hidden; padding: 0; }
@@ -468,11 +467,17 @@ a.talent-cell:hover { background: #171b1d; color: #e1ddd4; }
 .item-primary-stats > div { align-items: baseline; background: #1b2021; border: 1px solid #303638; display: flex; gap: 9px; min-width: 132px; padding: 9px 12px; }
 .item-primary-stats dt { color: #a6aaa4; font-size: 12px; font-weight: 650; }
 .item-primary-stats dd { color: #e4b75d; font-size: 15px; font-variant-numeric: tabular-nums; font-weight: 800; margin: 0 0 0 auto; }
-.item-price { border-left: 1px solid var(--line); min-width: 120px; padding-left: 28px; }
+.item-price { border-left: 1px solid var(--line); display: grid; gap: 16px; min-width: 150px; padding-left: 28px; }
+.item-price > div + div { border-top: 1px solid #2c3234; padding-top: 14px; }
 .item-price small, .item-price strong, .item-price span { display: block; }
 .item-price small { color: #666b67; font-size: 8px; }
 .item-price strong { color: #d3a953; font: 34px Georgia, serif; margin: 6px 0; }
 .item-price span { color: #686d68; font-size: 8px; }
+.item-price .item-sell-price strong { color: #8cbf91; font-size: 24px; }
+.item-rules { background: linear-gradient(100deg, #15191a, #101314); border: 1px solid #2c3234; display: grid; gap: 0 20px; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-bottom: 34px; padding: 5px 18px; }
+.item-rules > div { align-items: baseline; border-bottom: 1px solid #282e30; display: flex; gap: 10px; justify-content: space-between; min-height: 48px; padding: 12px 0; }
+.item-rules span { color: #888f89; font-size: 11px; font-weight: 650; }
+.item-rules strong { color: #e1ded5; font-size: 13px; text-align: right; }
 .item-value-grid { display: grid; gap: 9px; grid-template-columns: repeat(3, 1fr); }
 .item-value-grid > div { background: var(--panel); border: 1px solid #252a2c; padding: 14px; }
 .item-value-grid span, .item-value-grid strong { display: block; }
@@ -529,6 +534,35 @@ a.talent-cell:hover { background: #171b1d; color: #e1ddd4; }
 .item-effect-copy dl > div { align-items: baseline; border-bottom: 1px solid #272d2f; display: flex; gap: 12px; justify-content: space-between; padding: 9px 0; }
 .item-effect-copy dt { color: #a2a7a1; font-size: 12px; font-weight: 600; }
 .item-effect-copy dd { color: #e6b75f; font-size: 14px; font-variant-numeric: tabular-nums; font-weight: 750; margin: 0; text-align: right; }
+
+.mechanic-details { border-top: 1px solid #343a3c; margin-top: 18px; padding-top: 4px; }
+.mechanic-details > summary { align-items: center; color: #d7c69b; cursor: pointer; display: flex; font-size: 13px; font-weight: 750; gap: 12px; justify-content: space-between; list-style: none; padding: 13px 2px 9px; }
+.mechanic-details > summary::-webkit-details-marker { display: none; }
+.mechanic-details > summary::before { color: #c97961; content: "＋"; font-size: 15px; }
+.mechanic-details[open] > summary::before { content: "−"; }
+.mechanic-details > summary > span { margin-right: auto; }
+.mechanic-details > summary small { color: #737a75; font-size: 10px; font-weight: 550; }
+.mechanic-details-body { display: grid; gap: 12px; padding: 5px 0 3px; }
+.mechanic-group { background: #111516; border: 1px solid #2b3133; border-left: 3px solid #76624a; padding: 15px 17px; }
+.mechanic-group.is-interactions { border-left-color: #557f91; }
+.mechanic-group.is-misc { border-left-color: #686c62; }
+.mechanic-group > header { align-items: baseline; display: flex; flex-wrap: wrap; gap: 8px 14px; margin-bottom: 10px; }
+.mechanic-group > header strong { color: #f0ede4; font-size: 14px; }
+.mechanic-group > header small { color: #767d77; font-size: 10px; }
+.mechanic-note-list { counter-reset: mechanism; list-style: none; margin: 0; padding: 0; }
+.mechanic-note { color: #d5d8d1; counter-increment: mechanism; font: 570 15px/1.85 "Noto Sans SC", "Microsoft YaHei", sans-serif; padding: 5px 0 5px 22px; position: relative; }
+.mechanic-note::before { color: #be715f; content: "•"; left: 4px; position: absolute; }
+.mechanic-note.indent-2 { border-left: 1px solid #32383a; margin-left: 18px; padding-left: 24px; }
+.mechanic-note.indent-3 { border-left: 1px solid #32383a; margin-left: 36px; padding-left: 24px; }
+.mechanic-note.indent-4 { border-left: 1px solid #32383a; margin-left: 54px; padding-left: 24px; }
+.mechanic-note.is-source-fallback { color: #d0d5d1; font-family: Inter, "Segoe UI", system-ui, sans-serif; font-size: 15px; font-weight: 540; letter-spacing: .008em; line-height: 1.8; }
+.mechanic-source-label { background: #252a2b; border: 1px solid #4a5051; color: #b9c0bc; display: inline-block; font: 700 9px/1.65 "Noto Sans SC", "Microsoft YaHei", sans-serif; letter-spacing: .08em; margin-right: 9px; padding: 0 6px; vertical-align: .14em; }
+.standalone-mechanics { display: grid; gap: 14px; }
+.standalone-mechanics > article { background: linear-gradient(110deg, #161a1b, #111415); border: 1px solid #2d3335; padding: 18px 20px; }
+.standalone-mechanics > article > h3 { color: #f0ede4; font: 650 20px/1.4 "Microsoft YaHei", sans-serif; margin: 0 0 4px; }
+.standalone-mechanics .mechanic-details { margin-top: 4px; }
+.mechanic-source > span { align-items: center; background: #48362b; border-radius: 50%; color: #e0b08e; display: flex; font: 800 9px/1 ui-monospace, monospace; height: 30px; justify-content: center; width: 30px; }
+.mechanic-source a { color: #b99d62; display: block; font-size: 9px; margin-top: 6px; }
 
 .numeric-effect { background: rgba(223, 174, 86, .1); border-radius: 2px; color: #e8bb67; font-weight: 750; padding: 0 .12em; text-shadow: 0 0 12px rgba(226, 170, 74, .12); }
 
@@ -887,6 +921,9 @@ a.talent-cell:hover { background: #171b1d; color: #e1ddd4; }
   .item-effect-copy h3 { font-size: 19px; }
   .item-effect-copy > p { font-size: 15px; line-height: 1.75; }
   .item-effect-copy dl { grid-template-columns: 1fr; }
+  .item-rules { grid-template-columns: 1fr 1fr; }
+  .mechanic-note { font-size: 14px; }
+  .mechanic-note.indent-2, .mechanic-note.indent-3, .mechanic-note.indent-4 { margin-left: 14px; }
   .history-timeline { margin-left: 8px; }.history-entry { margin-left: 19px; }.history-entry::before { left: -24px; }
   .history-entry > summary { grid-template-columns: 54px 1fr; }.history-entry > summary em { display: none; }
   .patch-year { display: block; }.patch-year > header { margin-bottom: 14px; }.patch-cards { grid-template-columns: 1fr; }

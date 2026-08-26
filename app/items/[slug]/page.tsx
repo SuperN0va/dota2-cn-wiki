@@ -3,13 +3,33 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
   formatDate, formatItemDescription, formatItemText, formatItemValueLabel, formatValues,
-  getItemBuildsInto, getItemEffects, getItemRecipeComponents, itemBySlug, itemDescriptionValueNames, items,
+  getItemBuildsInto, getItemEffects, getItemMechanicProfile, getItemRecipeComponents, itemBySlug, itemDescriptionValueNames, items,
   isItemValuePercentage,
-  type Item,
+  type Item, type MechanicBlock,
 } from '../../../lib/data';
 import { GameText } from '../../../components/game-text';
+import { MechanicDetails } from '../../../components/mechanic-details';
 
 const effectGlyphs = { active: '▶', passive: '◎', use: '◆', toggle: '↔', upgrade: '↑', effect: '✦' };
+const categoryLabels: Record<string, string> = {
+  Accessories: '配件', Armaments: '军备', Artifacts: '宝物', Consumables: '消耗品', Miscellaneous: '杂项', Secret: '神秘商店', Support: '辅助用品', Upgrades: '升级物品', Neutral: '中立物品', Enchantment: '附魔',
+};
+
+function normalizeEffectName(value: string) {
+  return value.toLocaleLowerCase('en').replace(/[\s'’·：:（）()_-]/g, '');
+}
+
+function matchMechanicBlocks(effects: ReturnType<typeof getItemEffects>, blocks: MechanicBlock[]) {
+  const used = new Set<number>();
+  const matches = effects.map((effect, effectIndex) => {
+    const names = [effect.title, effect.typeLabel].map(normalizeEffectName);
+    let index = blocks.findIndex((block, blockIndex) => !used.has(blockIndex) && [block.name, block.nameEnglish].map(normalizeEffectName).some((name) => names.includes(name)));
+    if (index < 0 && effects.length === blocks.length) index = effectIndex;
+    if (index >= 0) used.add(index);
+    return index >= 0 ? blocks[index] : null;
+  });
+  return { matches, unmatched: blocks.filter((_, index) => !used.has(index)) };
+}
 
 function groupComponents(components: Item[]) {
   const grouped = new Map<string, { item: Item; count: number }>();
@@ -57,6 +77,9 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
   if (!item) notFound();
   const description = formatItemDescription(item);
   const effects = getItemEffects(item);
+  const mechanicProfile = getItemMechanicProfile(item.slug);
+  const mechanicBlocks = mechanicProfile ? [...Object.values(mechanicProfile.abilities || {}), ...(mechanicProfile.pageMechanics || [])] : [];
+  const { matches: effectMechanics, unmatched: unmatchedMechanics } = matchMechanicBlocks(effects, mechanicBlocks);
   const effectValueNames = new Set(effects.flatMap((effect) => effect.valueNames));
   const recipeComponents = getItemRecipeComponents(item);
   const buildsInto = getItemBuildsInto(item);
@@ -68,6 +91,18 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
     && !['abilitycooldown', 'abilitymanacost'].includes(value.name.toLocaleLowerCase('en')),
   );
   const hasCurrentData = currentValues.length > 0 || (!effects.length && (item.cooldown.some(Boolean) || item.manaCost.some(Boolean)));
+  const canSell = mechanicProfile?.sellable ?? (item.cost > 0 && item.neutralTier < 0);
+  const sellValue = mechanicProfile?.sellValue ?? (canSell ? Math.floor(item.cost / 2) : null);
+  const tradeRules = mechanicProfile ? [
+    mechanicProfile.category && { label: '分类', value: categoryLabels[mechanicProfile.category] || mechanicProfile.category },
+    mechanicProfile.shops.length && { label: '商店', value: mechanicProfile.shops.join(' / ') },
+    mechanicProfile.shareable && { label: '可分享', value: mechanicProfile.shareable },
+    mechanicProfile.disassemble && { label: '可拆分', value: mechanicProfile.disassemble },
+    mechanicProfile.droppable && { label: '可丢弃', value: mechanicProfile.droppable },
+    mechanicProfile.destroyable && { label: '可销毁', value: mechanicProfile.destroyable },
+    mechanicProfile.maxStack && { label: '单格上限', value: String(mechanicProfile.maxStack) },
+    mechanicProfile.charges && { label: '初始充能', value: String(mechanicProfile.charges) },
+  ].filter(Boolean) as Array<{ label: string; value: string }> : [];
 
   return (
     <article className="detail-page item-detail-page">
@@ -88,11 +123,17 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
             {currentValues.map((value) => <div key={value.name}><dt>{formatItemValueLabel(value)}</dt><dd>{formatValues(value.values, isItemValuePercentage(value))}</dd></div>)}
           </dl>}
         </div>
-        <div className="item-price"><small>当前价格</small><strong>{item.cost > 0 ? item.cost : '—'}</strong><span>{item.cost > 0 ? '金币' : '不可购买'}</span></div>
+        <div className="item-price">
+          <div><small>购买价格</small><strong>{item.cost > 0 ? item.cost : '—'}</strong><span>{item.cost > 0 ? '金币' : '不可购买'}</span></div>
+          <div className="item-sell-price"><small>出售价格</small><strong>{canSell && sellValue !== null ? sellValue : '—'}</strong><span>{canSell && sellValue !== null ? '金币' : '不可出售'}</span></div>
+        </div>
       </header>
 
       <div className="detail-grid">
         <div className="detail-main">
+          {tradeRules.length > 0 && <section className="item-rules" aria-label="购买与持有规则">
+            {tradeRules.map((rule) => <div key={rule.label}><span>{rule.label}</span><strong>{rule.value}</strong></div>)}
+          </section>}
           {(recipeComponents.length > 0 || buildsInto.length > 0) && <section className="detail-section item-recipe-section">
             <header><p className="eyebrow accent">Recipe</p><h2>{recipeComponents.length > 0 ? '合成配方' : '可合成物品'}</h2></header>
             {recipeComponents.length > 0 && <div className="recipe-tree"><ul><RecipeBranch item={item} root /></ul></div>}
@@ -114,10 +155,16 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
                       {effect.type !== 'passive' && item.manaCost.some(Boolean) && <span>魔耗 <strong>{formatValues(item.manaCost)}</strong></span>}
                     </div>
                     {values.length > 0 && <dl>{values.map((value) => <div key={value.name}><dt>{formatItemValueLabel(value)}</dt><dd>{formatValues(value.values, isItemValuePercentage(value))}</dd></div>)}</dl>}
+                    {effectMechanics[index] && <MechanicDetails block={effectMechanics[index]!} compact />}
                   </div>
                 </article>;
               })}
             </div>
+          </section>}
+
+          {unmatchedMechanics.length > 0 && <section className="detail-section item-mechanics-section">
+            <header><p className="eyebrow accent">Mechanics</p><h2>机制与相互作用</h2></header>
+            <div className="standalone-mechanics">{unmatchedMechanics.map((block, index) => <article key={`${block.nameEnglish}:${index}`}><h3>{block.name || block.nameEnglish || item.name}</h3><MechanicDetails block={block} /></article>)}</div>
           </section>}
 
           <section className="detail-section timeline-section">
@@ -132,7 +179,7 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
               {item.legacyHistory.map((entry) => (
                 <details className="history-entry legacy" key={`legacy-${entry.version}`}>
                   <summary><span>{entry.version}</span><div><strong>{entry.version} 版本</strong><small>Liquipedia 历史补充 · CC BY-SA 3.0</small></div><em>{entry.notes.length} 项</em></summary>
-                  <div className="history-content"><ul>{entry.notes.map((note, noteIndex) => <li key={noteIndex}><GameText text={note.text} /><details className="original-note"><summary>查看英文原文</summary><p>{note.original}</p></details></li>)}</ul></div>
+                  <div className="history-content"><ul>{entry.notes.map((note, noteIndex) => <li className="history-source-note" key={noteIndex}><small className="history-source-label">英文原文</small><GameText text={note.original || note.text} /></li>)}</ul></div>
                 </details>
               ))}
               {!item.history.length && !item.legacyHistory.length && <div className="catalog-empty">暂未找到该记录对应的版本改动。</div>}
@@ -143,6 +190,7 @@ export default async function ItemPage({ params }: { params: Promise<{ slug: str
         <aside className="detail-aside">
           {item.notes.length > 0 && <section className="bio-card"><p className="eyebrow">使用说明</p><ul>{item.notes.map((note) => { const formattedNote = formatItemText(item, note); return <li key={formattedNote}><GameText text={formattedNote} /></li>; })}</ul></section>}
           {item.lore && <section className="bio-card"><p className="eyebrow">物品背景</p><p>{item.lore}</p></section>}
+          {mechanicProfile && <section className="provenance-card mechanic-source"><span>LP</span><div><strong>机制资料来源</strong><small>Liquipedia 修订 #{mechanicProfile.revisionId}</small><a href={mechanicProfile.sourceUrl} rel="noreferrer" target="_blank">查看英文原页 ↗</a></div></section>}
         </aside>
       </div>
     </article>

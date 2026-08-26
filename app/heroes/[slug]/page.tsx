@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { formatDate, formatValues, heroBySlug, heroes, type Ability, type Note } from '../../../lib/data';
+import { formatDate, formatValues, getHeroMechanicProfile, heroBySlug, heroes, type Ability, type MechanicBlock, type Note } from '../../../lib/data';
 import { AbilityImage } from '../../../components/ability-image';
 import { AttributeIcon } from '../../../components/attribute-icon';
 import { GameText } from '../../../components/game-text';
+import { MechanicDetails } from '../../../components/mechanic-details';
 
 export function generateStaticParams() {
   return heroes.map((hero) => ({ slug: hero.slug }));
@@ -63,21 +63,21 @@ function AbilityChip({ ability, compact = false }: { ability: Ability; compact?:
   );
 }
 
-function ChangeNote({ note, abilities = [], extra }: { note: Note | { text: string; original?: string; indent: number }; abilities?: Ability[]; extra?: ReactNode }) {
+function ChangeNote({ note, abilities = [], sourceOnly = false }: { note: Note | { text: string; original?: string; indent: number }; abilities?: Ability[]; sourceOnly?: boolean }) {
+  const displayText = sourceOnly ? (note.original || note.text) : note.text;
   const matches = relatedAbilities(`${note.text} ${note.original || ''}`, abilities);
   return (
-    <li className="change-note" style={{ marginLeft: `${Math.max(0, note.indent - 1) * 18}px` }}>
+    <li className={`change-note${sourceOnly ? ' is-source-note' : ''}`} style={{ marginLeft: `${Math.max(0, note.indent - 1) * 18}px` }}>
       <span className="change-note-line">
         {changeKinds(note).map((kind) => <b className={`change-badge is-${kind}`} key={kind}>{changeLabels[kind]}</b>)}
         {matches.map((ability) => <AbilityChip ability={ability} compact key={ability.id} />)}
-        <span><GameText text={note.text} /></span>
+        <span>{sourceOnly && <small className="history-source-label">英文原文</small>}<GameText text={displayText} /></span>
       </span>
-      {extra}
     </li>
   );
 }
 
-function AbilityCard({ ability }: { ability: Ability }) {
+function AbilityCard({ ability, mechanic }: { ability: Ability; mechanic?: MechanicBlock | null }) {
   return (
     <article className={`ability-card${ability.isInnate ? ' is-innate' : ''}`} id={`ability-${ability.id}`}>
       <a className="ability-card-icon" href={`#ability-${ability.id}`} aria-label={`定位到${ability.name}`}><AbilityImage src={ability.image} alt={`${ability.name}图标`} isInnate={ability.isInnate && ability.useSharedInnateIcon !== false} /></a>
@@ -95,6 +95,7 @@ function AbilityCard({ ability }: { ability: Ability }) {
         )}
         {(ability.scepter || ability.shard) && <div className="upgrade-notes">{ability.scepter && <p><b>神杖</b><GameText text={ability.scepter} /></p>}{ability.shard && <p><b>魔晶</b><GameText text={ability.shard} /></p>}</div>}
         {!!ability.notes.length && <ul className="ability-notes">{ability.notes.map((note, index) => <li key={index}><GameText text={note} /></li>)}</ul>}
+        {mechanic && <MechanicDetails block={mechanic} />}
         {ability.lore && <small className="lore">{ability.lore}</small>}
       </div>
     </article>
@@ -119,6 +120,10 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const hero = heroBySlug.get(slug);
   if (!hero) notFound();
+  const mechanicProfile = getHeroMechanicProfile(hero.slug);
+  const mechanicForAbility = (ability: Ability) => mechanicProfile?.abilities?.[ability.slug]
+    || Object.values(mechanicProfile?.abilities || {}).find((block) => block.name === ability.name || block.nameEnglish === ability.name)
+    || null;
   const relatedUnit = hero.slug === 'lone_druid' ? heroes.find((entry) => entry.slug === 'spirit_bear') : null;
   const attributeStats: Array<[string, string, number[]]> = [
     ['力', '力量', hero.stats.strength as number[]], ['敏', '敏捷', hero.stats.agility as number[]], ['智', '智力', hero.stats.intelligence as number[]],
@@ -169,7 +174,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
       </header>
 
       <nav className="hero-section-nav" aria-label="英雄详情目录">
-        <a href="#abilities">技能</a><a href="#upgrades">神杖 / 魔晶</a><a href="#talents">天赋树</a><a href="#history">版本历史</a><a href="#hero-model">模型资料</a>
+        <a href="#abilities">技能</a>{mechanicProfile?.pageMechanics?.length ? <a href="#mechanics">机制总览</a> : null}<a href="#upgrades">神杖 / 魔晶</a><a href="#talents">天赋树</a><a href="#history">版本历史</a><a href="#hero-model">模型资料</a>
       </nav>
 
       <div className="detail-grid">
@@ -177,9 +182,14 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           <section className="detail-section" id="abilities">
             <header><p className="eyebrow accent">Abilities & innate</p><h2>技能与先天能力</h2><p>点击技能目录或版本记录中的技能名称，可直接定位到当前技能详情。</p></header>
             <nav className="ability-index" aria-label="技能目录">{indexedAbilities.map((ability) => <AbilityChip ability={ability} key={ability.id} />)}</nav>
-            {!!innateAbilities.length && <div className="ability-group"><div className="ability-group-heading"><span>Innate</span><h3>先天技能</h3></div>{innateAbilities.map((ability) => <AbilityCard ability={ability} key={ability.id} />)}</div>}
-            <div className="ability-group"><div className="ability-group-heading"><span>Abilities</span><h3>英雄技能</h3></div>{regularAbilities.map((ability) => <AbilityCard ability={ability} key={ability.id} />)}</div>
+            {!!innateAbilities.length && <div className="ability-group"><div className="ability-group-heading"><span>Innate</span><h3>先天技能</h3></div>{innateAbilities.map((ability) => <AbilityCard ability={ability} mechanic={mechanicForAbility(ability)} key={ability.id} />)}</div>}
+            <div className="ability-group"><div className="ability-group-heading"><span>Abilities</span><h3>英雄技能</h3></div>{regularAbilities.map((ability) => <AbilityCard ability={ability} mechanic={mechanicForAbility(ability)} key={ability.id} />)}</div>
           </section>
+
+          {!!mechanicProfile?.pageMechanics?.length && <section className="detail-section hero-mechanics-section" id="mechanics">
+            <header><p className="eyebrow accent">Rules & interactions</p><h2>英雄机制总览</h2></header>
+            <div className="standalone-mechanics">{mechanicProfile.pageMechanics.map((block, index) => <article key={`${block.nameEnglish}:${index}`}><h3>{block.name || block.nameEnglish || hero.name}</h3><MechanicDetails block={block} /></article>)}</div>
+          </section>}
 
           <section className="detail-section" id="upgrades">
             <header><p className="eyebrow accent">Aghanim&apos;s upgrades</p><h2>神杖与魔晶升级</h2><p>升级说明来自 Valve 官方简体中文技能数据；点击技能名称可返回完整数值。</p></header>
@@ -224,7 +234,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
                             note={note}
                             abilities={hero.abilities}
                             key={noteIndex}
-                            extra={note.original && note.original !== note.text ? <details className="original-note"><summary>查看英文原文</summary><p>{note.original}</p></details> : undefined}
+                            sourceOnly
                           />
                         ))}</ul>
                       </aside>
@@ -235,7 +245,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
               {hero.legacyHistory.map((entry) => (
                 <details className="history-entry legacy" key={`legacy-${entry.version}`}>
                   <summary><span>{entry.version}</span><div><strong>{entry.version} 版本</strong><small>Liquipedia 历史补充 · CC BY-SA 3.0</small></div><em>{entry.notes.length} 项</em></summary>
-                  <div className="history-content"><ul>{entry.notes.map((note, index) => <ChangeNote note={note} abilities={hero.abilities} key={index} extra={<details className="original-note"><summary>查看英文原文</summary><p>{note.original}</p></details>} />)}</ul></div>
+                  <div className="history-content"><ul>{entry.notes.map((note, index) => <ChangeNote note={note} abilities={hero.abilities} key={index} sourceOnly />)}</ul></div>
                 </details>
               ))}
             </div>

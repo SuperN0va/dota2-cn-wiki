@@ -7,6 +7,7 @@ import cnNewsRaw from '../data/cn-news.json';
 import validationRaw from '../data/validation-report.json';
 import esportsRaw from '../data/esports.json';
 import itemStructuresRaw from '../data/item-structures.json';
+import mechanicsRaw from '../data/liquipedia-mechanics.json';
 import { buildSpiritBear } from './special-heroes';
 
 export type Note = { text: string; indent: number; icon?: string | null; original?: string };
@@ -113,6 +114,47 @@ export type ItemEffect = {
   valueNames: string[];
 };
 
+export type MechanicNote = {
+  text: string;
+  original: string;
+  indent: number;
+  translationStatus?: 'reviewed' | 'machine' | 'source';
+};
+
+export type MechanicBlock = {
+  name: string;
+  nameEnglish: string;
+  mechanics: MechanicNote[];
+  interactions: MechanicNote[];
+  misc: MechanicNote[];
+};
+
+export type ItemMechanicProfile = {
+  category: string;
+  shops: string[];
+  sellable: boolean;
+  sellValue: number | null;
+  shareable: string | null;
+  disassemble: string | null;
+  droppable: string | null;
+  destroyable: string | null;
+  maxStack: number | string | null;
+  charges: number | null;
+  abilities: Record<string, MechanicBlock>;
+  pageMechanics: MechanicBlock[];
+  sourceUrl: string;
+  revisionId: number;
+  updatedAt: string;
+};
+
+export type HeroMechanicProfile = {
+  abilities: Record<string, MechanicBlock>;
+  pageMechanics: MechanicBlock[];
+  sourceUrl: string;
+  revisionId: number;
+  updatedAt: string;
+};
+
 type ItemStructure = {
   components: string[];
   abilities: Array<{ type: string; title: string; description: string }>;
@@ -186,6 +228,11 @@ export const items = (itemsRaw as unknown as Item[]).map((item) => {
   return normalizedItem.isRecipe ? { ...normalizedItem, image: '/assets/item-recipe.png' } : normalizedItem;
 });
 export const itemStructures = (itemStructuresRaw as unknown as { items: Record<string, ItemStructure> }).items;
+export const mechanics = mechanicsRaw as unknown as {
+  _meta: { parserVersion: number; translationVersion?: number; latestPatch: string; fetchedAt: string; itemCount: number; heroCount: number };
+  items: Record<string, ItemMechanicProfile>;
+  heroes: Record<string, HeroMechanicProfile>;
+};
 export const patches = patchesRaw as unknown as Patch[];
 const standardHeroes = heroesRaw as unknown as Hero[];
 export const heroes = [...standardHeroes.filter((hero) => hero.id !== 1961), buildSpiritBear(patches)];
@@ -216,6 +263,8 @@ export const heroBySlug = new Map(heroes.map((hero) => [hero.slug, hero]));
 export const itemById = new Map(items.map((item) => [item.id, item]));
 export const itemBySlug = new Map(items.map((item) => [item.slug, item]));
 export const patchByVersion = new Map(patches.map((patch) => [patch.version, patch]));
+export const getItemMechanicProfile = (slug: string) => mechanics.items[slug] || null;
+export const getHeroMechanicProfile = (slug: string) => mechanics.heroes[slug] || null;
 
 export const heroSummaries = heroes.map((hero) => ({
   id: hero.id,

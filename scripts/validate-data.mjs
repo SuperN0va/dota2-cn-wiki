@@ -3,13 +3,16 @@ import path from 'node:path';
 
 const DATA = path.join(process.cwd(), 'data');
 const load = async (name) => JSON.parse(await readFile(path.join(DATA, name), 'utf8'));
-const [heroes, items, patches, patchIndex, meta, legacy, esports, itemStructures] = await Promise.all([
-  load('heroes.json'), load('items.json'), load('patches.json'), load('patch-index.json'), load('meta.json'), load('legacy.json'), load('esports.json'), load('item-structures.json'),
+const [heroes, items, patches, patchIndex, meta, legacy, esports, itemStructures, mechanics] = await Promise.all([
+  load('heroes.json'), load('items.json'), load('patches.json'), load('patch-index.json'), load('meta.json'), load('legacy.json'), load('esports.json'), load('item-structures.json'), load('liquipedia-mechanics.json'),
 ]);
-const [recipeIcon, dataModuleSource, syncSource] = await Promise.all([
+const [recipeIcon, dataModuleSource, syncSource, mechanicUiSource, heroPageSource, itemPageSource] = await Promise.all([
   readFile(path.join(process.cwd(), 'public', 'assets', 'item-recipe.png')).catch(() => null),
   readFile(path.join(process.cwd(), 'lib', 'data.ts'), 'utf8'),
   readFile(path.join(process.cwd(), 'scripts', 'sync-data.mjs'), 'utf8'),
+  readFile(path.join(process.cwd(), 'components', 'mechanic-details.tsx'), 'utf8'),
+  readFile(path.join(process.cwd(), 'app', 'heroes', '[slug]', 'page.tsx'), 'utf8'),
+  readFile(path.join(process.cwd(), 'app', 'items', '[slug]', 'page.tsx'), 'utf8'),
 ]);
 
 const checks = [];
@@ -112,6 +115,33 @@ const abilityStructures = Object.values(itemStructures.items).filter((item) => i
 const missingRecipeComponents = [...new Set(recipeStructures.flatMap((item) => item.components).filter((slug) => !itemSlugs.has(slug)))];
 check('物品配方结构完整', recipeStructures.length >= 100 && missingRecipeComponents.length === 0, `${recipeStructures.length} 份配方，${missingRecipeComponents.length ? `缺少 ${missingRecipeComponents.join('、')}` : '所有组件均可点击关联'}`);
 check('物品效果类型完整', abilityStructures.length >= 250 && abilityStructures.every((item) => item.abilities.every((ability) => ability.type && ability.title)), `${abilityStructures.length} 件物品含主动、被动或使用效果结构`);
+const mechanicNotes = [];
+const walkMechanics = (value) => {
+  if (Array.isArray(value)) return value.forEach(walkMechanics);
+  if (!value || typeof value !== 'object') return;
+  if (typeof value.original === 'string' && typeof value.text === 'string') mechanicNotes.push(value);
+  Object.values(value).forEach(walkMechanics);
+};
+walkMechanics(mechanics.items);
+walkMechanics(mechanics.heroes);
+const heroMechanicAbilityCount = Object.values(mechanics.heroes).reduce((sum, profile) => sum + Object.keys(profile.abilities || {}).length, 0);
+const reviewedMechanicNotes = mechanicNotes.filter((note) => note.translationStatus === 'reviewed');
+const nonReviewedMechanicNotes = mechanicNotes.filter((note) => note.translationStatus !== 'reviewed');
+const suspiciousMechanicNotes = reviewedMechanicNotes.filter((note) => /电话|交易|调试|我是个英雄|抛物器|可怕的英雄|成功的入侵|影响奖金|纪念品的伪|维基百科|维基文库|ZXQ|QXZ|⁇/i.test(note.text));
+const unresolvedMechanicNotes = mechanicNotes.filter((note) => /(?:;[A-Za-z][A-Za-z0-9_]*|%\/[A-Za-z]+\d*|\b(?:round|floor|ceil)\d+\b|\b[vr]\d+\b|\bt\d+r\b|\bbonus (?:agh|aoe|shd|t\d+[a-z]?)\b|\bModifier\s+[a-z0-9_]+|\b(?:Affect|Toggle|Autocast)\b|Abilities#|[a-z]+_[a-z0-9_]+|<\s*Abilities)/i.test(note.original));
+check('物品机制来源覆盖', mechanics._meta.itemCount >= 390 && Object.values(mechanics.items).every((profile) => profile.sourceUrl && profile.revisionId), `${mechanics._meta.itemCount} 件当前物品关联 Liquipedia 修订版本`);
+check('英雄技能机制覆盖', mechanics._meta.heroCount === heroes.length && heroMechanicAbilityCount >= 700 && Object.values(mechanics.heroes).every((profile) => profile.sourceUrl && profile.revisionId), `${mechanics._meta.heroCount}/${heroes.length} 位英雄，${heroMechanicAbilityCount} 个技能机制块`);
+check('机制英文原文可回检', mechanicNotes.length >= 15000 && mechanicNotes.every((note) => note.original.trim()), `${mechanicNotes.length} 条机制均保留英文原文`);
+check('机制翻译状态完整', mechanics._meta.translationVersion >= 2 && mechanicNotes.every((note) => ['reviewed', 'machine', 'source'].includes(note.translationStatus)), `${reviewedMechanicNotes.length} 条人工校对，${nonReviewedMechanicNotes.length} 条采用英文原文展示`);
+check('未经校对内容回退英文', mechanicUiSource.includes("reviewed ? note.text : note.original") && mechanicUiSource.includes('英文原文'), '机器草稿不会作为中文正文展示');
+check('历史补充回退英文', heroPageSource.includes('sourceOnly') && heroPageSource.includes('note.original || note.text') && itemPageSource.includes('note.original || note.text'), 'Liquipedia 未校对历史不再显示中英混排草稿');
+check('人工校对译文有效', reviewedMechanicNotes.length >= 40 && reviewedMechanicNotes.every((note) => /[\u4e00-\u9fff]/.test(note.text)), `${reviewedMechanicNotes.length} 条校对译文均含中文`);
+check('人工校对译文无异常模式', suspiciousMechanicNotes.length === 0, suspiciousMechanicNotes.length ? `异常 ${suspiciousMechanicNotes.length} 条` : '人工译文无机器误译标记或占位符残留');
+check('机制原文无模板噪声', unresolvedMechanicNotes.length === 0, unresolvedMechanicNotes.length ? `异常 ${unresolvedMechanicNotes.length} 条` : '未解析变量和内部模板记录已剔除');
+const invalidSales = Object.entries(mechanics.items).filter(([, profile]) => profile.sellable && (!Number.isFinite(profile.sellValue) || profile.sellValue < 0));
+check('物品售价规则完整', invalidSales.length === 0 && mechanics.items.arcane_blink?.sellValue === 3400 && mechanics.items.blink?.sellValue === 1125, invalidSales.length ? `异常：${invalidSales.map(([slug]) => slug).join('、')}` : '可出售物品均含售价；闪烁匕首与秘奥闪光抽查通过');
+const blinkMechanicText = (mechanics.items.blink?.pageMechanics || []).flatMap((block) => block.mechanics || []).map((note) => note.text).join(' ');
+check('闪烁当前机制同步', /1200/.test(blinkMechanicText) && !/960|1120/.test(blinkMechanicText), '机制详情使用当前最大闪烁距离，不含旧超距惩罚数值');
 check('官方版本覆盖', patches.length >= 100, `${patches.length} 个版本`);
 check('版本索引一致', patches.length === patchIndex.length, `${patches.length}/${patchIndex.length}`);
 check('最新版本一致', meta.latestPatch === patchIndex[0]?.version, meta.latestPatch);

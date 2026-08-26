@@ -14,6 +14,7 @@
     "data:sync": "node scripts/sync-data.mjs",
     "data:sync:fast": "node scripts/sync-data.mjs --no-liquipedia",
     "data:sync:esports": "node scripts/sync-esports.mjs",
+    "data:sync:mechanics": "node scripts/sync-mechanics.mjs",
     "data:sync:item-structures": "node scripts/sync-item-structures.mjs",
     "data:validate": "node scripts/validate-data.mjs"
   },

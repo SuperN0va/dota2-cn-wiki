@@ -1,6 +1,13 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { buildItemStructures } from './item-structures.mjs';
+import {
+  fetchLiquipediaMechanics,
+  inferItemEffectNames,
+  parseLiquipediaHeroPage,
+  parseLiquipediaItemPage,
+  preserveMechanicTranslations,
+} from './liquipedia-mechanics.mjs';
 
 const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, 'data');
@@ -10,6 +17,7 @@ const LIQUIPEDIA_API = 'https://liquipedia.net/dota2/api.php';
 const LIQUIPEDIA_UA = 'MidianDotaKB/1.0 (https://openai.com/contact/; community knowledge project)';
 const DATA_SCHEMA_VERSION = 8;
 const LEGACY_PARSER_VERSION = 5;
+const MECHANICS_PARSER_VERSION = 1;
 const BLINK_PENALTY_REMOVED_ITEMS = new Set(['blink', 'overwhelming_blink', 'swift_blink', 'arcane_blink']);
 const includeLiquipedia = !process.argv.includes('--no-liquipedia');
 const force = process.argv.includes('--force');
@@ -804,6 +812,56 @@ for (const hero of heroes) {
   }
 }
 
+let mechanics = force ? {} : await readJson('liquipedia-mechanics.json', {});
+const mechanicNameMap = [
+  ...items.filter((item) => item.nameEnglish && item.name).map((item) => [item.nameEnglish, item.name]),
+  ...heroes.filter((hero) => hero.nameEnglish && hero.name).map((hero) => [hero.nameEnglish, hero.name]),
+];
+const itemMechanicTargets = items
+  .filter((item) => item.isCurrent && !item.isRecipe && item.nameEnglish)
+  .map((item) => ({
+    slug: item.slug,
+    title: item.nameEnglish,
+    cost: item.cost,
+    neutralTier: item.neutralTier,
+    effectNames: inferItemEffectNames(item.description),
+  }));
+const heroMechanicTargets = heroes.map((hero) => ({
+  slug: hero.slug,
+  title: hero.nameEnglish,
+  abilities: hero.abilities.map((ability) => ({ slug: ability.slug, name: ability.name })),
+}));
+const mechanicsCacheAge = Date.now() - new Date(mechanics._meta?.fetchedAt || 0).getTime();
+const shouldRefreshMechanics = force
+  || mechanics._meta?.parserVersion !== MECHANICS_PARSER_VERSION
+  || mechanics._meta?.latestPatch !== latestPatch
+  || mechanicsCacheAge > 7 * 24 * 60 * 60 * 1000
+  || itemMechanicTargets.some((target) => !mechanics.items?.[target.slug])
+  || heroMechanicTargets.some((target) => !mechanics.heroes?.[target.slug]);
+if (includeLiquipedia && shouldRefreshMechanics) {
+  console.log('按 Liquipedia API 规范同步物品、英雄与技能机制…');
+  const itemMechanics = await fetchLiquipediaMechanics(
+    itemMechanicTargets,
+    (wikitext, target) => parseLiquipediaItemPage(wikitext, target, mechanicNameMap),
+  );
+  const heroMechanics = await fetchLiquipediaMechanics(
+    heroMechanicTargets,
+    (wikitext, target) => parseLiquipediaHeroPage(wikitext, target, mechanicNameMap),
+  );
+  const refreshedMechanics = {
+    _meta: {
+      parserVersion: MECHANICS_PARSER_VERSION,
+      latestPatch,
+      fetchedAt: new Date().toISOString(),
+      itemCount: Object.keys(itemMechanics).length,
+      heroCount: Object.keys(heroMechanics).length,
+    },
+    items: itemMechanics,
+    heroes: heroMechanics,
+  };
+  mechanics = preserveMechanicTranslations(refreshedMechanics, mechanics);
+}
+
 const cnNews = await fetchCnNews();
 const generatedAt = new Date().toISOString();
 const visibleItems = items.filter((item) => item.isCurrent && !item.isRecipe && item.name && item.name !== item.internalName);
@@ -834,6 +892,7 @@ await Promise.all([
   writeFile(path.join(DATA_DIR, 'cn-news.json'), JSON.stringify(cnNews, null, 2)),
   writeFile(path.join(DATA_DIR, 'legacy.json'), JSON.stringify(legacy)),
   writeFile(path.join(DATA_DIR, 'liquipedia-profiles.json'), JSON.stringify(heroProfiles)),
+  writeFile(path.join(DATA_DIR, 'liquipedia-mechanics.json'), JSON.stringify(mechanics)),
   writeFile(path.join(DATA_DIR, 'meta.json'), JSON.stringify(meta, null, 2)),
 ]);
 
