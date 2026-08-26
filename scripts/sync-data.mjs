@@ -3,6 +3,7 @@ import path from 'node:path';
 import { buildItemStructures } from './item-structures.mjs';
 import {
   fetchLiquipediaMechanics,
+  MECHANICS_PARSER_VERSION,
   inferItemEffectNames,
   parseLiquipediaHeroPage,
   parseLiquipediaItemPage,
@@ -17,7 +18,6 @@ const LIQUIPEDIA_API = 'https://liquipedia.net/dota2/api.php';
 const LIQUIPEDIA_UA = 'MidianDotaKB/1.0 (https://openai.com/contact/; community knowledge project)';
 const DATA_SCHEMA_VERSION = 8;
 const LEGACY_PARSER_VERSION = 5;
-const MECHANICS_PARSER_VERSION = 1;
 const BLINK_PENALTY_REMOVED_ITEMS = new Set(['blink', 'overwhelming_blink', 'swift_blink', 'arcane_blink']);
 const includeLiquipedia = !process.argv.includes('--no-liquipedia');
 const force = process.argv.includes('--force');

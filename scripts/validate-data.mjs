@@ -1,5 +1,6 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { hasUnresolvedMechanicTemplate } from './liquipedia-mechanics.mjs';
 
 const DATA = path.join(process.cwd(), 'data');
 const load = async (name) => JSON.parse(await readFile(path.join(DATA, name), 'utf8'));
@@ -128,7 +129,7 @@ const heroMechanicAbilityCount = Object.values(mechanics.heroes).reduce((sum, pr
 const reviewedMechanicNotes = mechanicNotes.filter((note) => note.translationStatus === 'reviewed');
 const nonReviewedMechanicNotes = mechanicNotes.filter((note) => note.translationStatus !== 'reviewed');
 const suspiciousMechanicNotes = reviewedMechanicNotes.filter((note) => /电话|交易|调试|我是个英雄|抛物器|可怕的英雄|成功的入侵|影响奖金|纪念品的伪|维基百科|维基文库|ZXQ|QXZ|⁇/i.test(note.text));
-const unresolvedMechanicNotes = mechanicNotes.filter((note) => /(?:;[A-Za-z][A-Za-z0-9_]*|%\/[A-Za-z]+\d*|\b(?:round|floor|ceil)\d+\b|\b[vr]\d+\b|\bt\d+r\b|\bbonus (?:agh|aoe|shd|t\d+[a-z]?)\b|\bModifier\s+[a-z0-9_]+|\b(?:Affect|Toggle|Autocast)\b|Abilities#|[a-z]+_[a-z0-9_]+|<\s*Abilities)/i.test(note.original));
+const unresolvedMechanicNotes = mechanicNotes.filter((note) => hasUnresolvedMechanicTemplate(note.original));
 check('物品机制来源覆盖', mechanics._meta.itemCount >= 390 && Object.values(mechanics.items).every((profile) => profile.sourceUrl && profile.revisionId), `${mechanics._meta.itemCount} 件当前物品关联 Liquipedia 修订版本`);
 check('英雄技能机制覆盖', mechanics._meta.heroCount === heroes.length && heroMechanicAbilityCount >= 700 && Object.values(mechanics.heroes).every((profile) => profile.sourceUrl && profile.revisionId), `${mechanics._meta.heroCount}/${heroes.length} 位英雄，${heroMechanicAbilityCount} 个技能机制块`);
 check('机制英文原文可回检', mechanicNotes.length >= 15000 && mechanicNotes.every((note) => note.original.trim()), `${mechanicNotes.length} 条机制均保留英文原文`);
@@ -138,6 +139,15 @@ check('历史补充回退英文', heroPageSource.includes('sourceOnly') && heroP
 check('人工校对译文有效', reviewedMechanicNotes.length >= 40 && reviewedMechanicNotes.every((note) => /[\u4e00-\u9fff]/.test(note.text)), `${reviewedMechanicNotes.length} 条校对译文均含中文`);
 check('人工校对译文无异常模式', suspiciousMechanicNotes.length === 0, suspiciousMechanicNotes.length ? `异常 ${suspiciousMechanicNotes.length} 条` : '人工译文无机器误译标记或占位符残留');
 check('机制原文无模板噪声', unresolvedMechanicNotes.length === 0, unresolvedMechanicNotes.length ? `异常 ${unresolvedMechanicNotes.length} 条` : '未解析变量和内部模板记录已剔除');
+check(
+  '机制英文术语不过度误判',
+  [
+    'Does not affect invulnerable units.',
+    'When unit-targeted, applies the Modifier clarity_potion.',
+    'Autocast can be toggled on or off.',
+  ].every((note) => !hasUnresolvedMechanicTemplate(note)),
+  '正常英文、Modifier 名称与内部标识可保留',
+);
 const invalidSales = Object.entries(mechanics.items).filter(([, profile]) => profile.sellable && (!Number.isFinite(profile.sellValue) || profile.sellValue < 0));
 check('物品售价规则完整', invalidSales.length === 0 && mechanics.items.arcane_blink?.sellValue === 3400 && mechanics.items.blink?.sellValue === 1125, invalidSales.length ? `异常：${invalidSales.map(([slug]) => slug).join('、')}` : '可出售物品均含售价；闪烁匕首与秘奥闪光抽查通过');
 const blinkMechanicText = (mechanics.items.blink?.pageMechanics || []).flatMap((block) => block.mechanics || []).map((note) => note.text).join(' ');

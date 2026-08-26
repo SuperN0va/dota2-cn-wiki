@@ -2,6 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import {
   fetchLiquipediaMechanics,
+  MECHANICS_PARSER_VERSION,
   inferItemEffectNames,
   parseLiquipediaHeroPage,
   parseLiquipediaItemPage,
@@ -46,7 +47,7 @@ const heroMechanics = await fetchLiquipediaMechanics(
 
 const output = preserveMechanicTranslations({
   _meta: {
-    parserVersion: 1,
+    parserVersion: MECHANICS_PARSER_VERSION,
     latestPatch: meta.latestPatch,
     fetchedAt: new Date().toISOString(),
     itemCount: Object.keys(itemMechanics).length,

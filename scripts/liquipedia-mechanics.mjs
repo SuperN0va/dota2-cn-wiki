@@ -1,6 +1,14 @@
 const LIQUIPEDIA_API = 'https://liquipedia.net/dota2/api.php';
 const LIQUIPEDIA_UA = 'MidianDotaKB/1.0 (https://openai.com/contact/; community knowledge project)';
 
+export const MECHANICS_PARSER_VERSION = 2;
+
+const unresolvedMechanicTemplatePattern = /(?:\{\{|\}\}|;[A-Za-z][A-Za-z0-9_]*|%\/[A-Za-z_]+\d*|\b(?:round|floor|ceil)\d+\b|\b[vr]\d+\b|\bt\d+[lr]\b|\bbonus\s+(?:agh|aoe|shd|tal|cas|t\d+[a-z]?)\b|Abilities#|<\s*Abilities\b)/i;
+
+export function hasUnresolvedMechanicTemplate(value = '') {
+  return unresolvedMechanicTemplatePattern.test(String(value));
+}
+
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function extractTemplateBlocks(text, templateName) {
@@ -200,9 +208,12 @@ function parseBulletNotes(raw, fields, nameMap) {
     const original = wikiToPlain(line.trim().slice(marker.length).trim(), fields);
     if (!original) continue;
     if (/^(?:fx|bonus\s+(?:agh|shd|tal|cas|aoe)|modifier|target|affect|self|enemy|teleport)$/i.test(original)) continue;
+    if (hasUnresolvedMechanicTemplate(original)) continue;
     notes.push({ indent: Math.max(1, marker.length), text: translateMechanicText(original, nameMap), original });
   }
-  if (!notes.length && expanded) notes.push({ indent: 1, text: translateMechanicText(expanded, nameMap), original: expanded });
+  if (!notes.length && expanded && !hasUnresolvedMechanicTemplate(expanded)) {
+    notes.push({ indent: 1, text: translateMechanicText(expanded, nameMap), original: expanded });
+  }
   return notes;
 }
 
