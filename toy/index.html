@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0d0e">
+  <meta name="description" content="DOTA 2 官方中文英雄、物品、机制、版本历史与职业资料库。">
+  <title>DOTA 2 FanWiki｜中文百科</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">跳到正文</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#/home" aria-label="DOTA 2 FanWiki 首页">
+        <span class="brand-mark"><img id="brand-logo" alt="" hidden><i aria-hidden="true"></i></span>
+        <span><strong>DOTA 2</strong><small>FANWIKI · 中文百科</small></span>
+      </a>
+      <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">目录</button>
+      <nav id="main-nav" class="main-nav" aria-label="主要栏目">
+        <a href="#/home" data-route="home">首页</a>
+        <a href="#/heroes" data-route="heroes">英雄</a>
+        <a href="#/items" data-route="items">物品</a>
+        <a href="#/patches" data-route="patches">版本</a>
+        <a href="#/esports" data-route="esports">职业</a>
+        <a href="#/sources" data-route="sources">来源</a>
+      </nav>
+      <button class="search-toggle" type="button" aria-label="打开全站搜索">⌕</button>
+    </div>
+  </header>
+
+  <div class="search-panel" aria-hidden="true">
+    <div class="search-shell">
+      <label for="global-search">全站搜索</label>
+      <div class="search-control"><span>⌕</span><input id="global-search" type="search" autocomplete="off" placeholder="搜索英雄、技能、物品、版本、选手或战队"><button type="button" class="search-close">关闭</button></div>
+      <div id="global-search-results" class="search-results" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <main id="content" tabindex="-1">
+    <section class="loading-view" aria-live="polite">
+      <span class="loading-rune" aria-hidden="true"></span>
+      <strong>正在读取百科数据</strong>
+      <small>首次打开会载入目录索引</small>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><strong>DOTA 2 FanWiki</strong><span>非官方中文玩家资料库</span></div>
+    <p>当前游戏资料以 Valve 官方简体中文数据为主；历史、机制与职业资料补充自 Liquipedia，并按原始来源与许可标注。DOTA 2 及相关素材权利归 Valve Corporation 所有。</p>
+    <nav><a href="#/sources">来源与许可</a><a href="https://www.dota2.com/" target="_blank" rel="noreferrer">Valve Dota 2</a><a href="https://liquipedia.net/dota2/Main_Page" target="_blank" rel="noreferrer">Liquipedia</a></nav>
+  </footer>
+  <noscript>此百科需要启用 JavaScript 才能读取静态数据分片。</noscript>
+  <script src="./app.js" defer></script>
+</body>
+</html>
