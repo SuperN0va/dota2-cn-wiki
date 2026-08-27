@@ -16,7 +16,12 @@
     "data:sync:esports": "node scripts/sync-esports.mjs",
     "data:sync:mechanics": "node scripts/sync-mechanics.mjs",
     "data:sync:item-structures": "node scripts/sync-item-structures.mjs",
-    "data:validate": "node scripts/validate-data.mjs"
+    "data:validate": "node scripts/validate-data.mjs",
+    "toy:build": "node scripts/build-toy.mjs --download-assets",
+    "toy:pack": "node scripts/build-toy.mjs --download-assets --zip",
+    "toy:build:fast": "node scripts/build-toy.mjs",
+    "toy:validate": "node scripts/validate-toy.mjs --strict-assets",
+    "vercel:build": "node scripts/build-toy.mjs --download-assets && node scripts/validate-toy.mjs --strict-assets"
   },
   "dependencies": {
     "next": "16.2.6",

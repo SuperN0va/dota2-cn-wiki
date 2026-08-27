@@ -36,8 +36,40 @@ GitHub Actions 每天自动执行一次同步。Valve 当前资料在发现新�
 
 也可以在 GitHub 仓库的 **Actions → Sync DOTA 2 data → Run workflow** 中手动触发。
 
-## 部署
+## Vercel 部署
 
-项目使用标准 Next.js，可直接导入 Vercel。Vercel 会识别框架并在 `main` 分支更新后自动部署，无需 ChatGPT 登录。
+Vercel 默认使用 `vercel.json` 构建与 Bilibili Toy 共用的精简静态站：一个页面外壳、Hash 路由、目录索引和按需 JSON 分片。这样不会再为数千个英雄、物品和版本地址分别复制 HTML 与 React Server Components 数据；图片会在构建时本地化到部署产物，访问者不会依赖本机路径。
 
-如绑定自定义域名，可在 Vercel 中设置 `NEXT_PUBLIC_SITE_URL=https://你的域名`，以生成准确的社交分享链接。
+```bash
+pnpm vercel:build
+```
+
+`main` 分支更新后 Vercel 会自动发布 `toy-dist/`。原有 Next.js 页面源码仍然保留，需要对照或回退时可以运行 `pnpm build`；它不再是 Vercel 默认产物。
+
+## Bilibili Toy 静态镜像
+
+项目包含一个与 Vercel 主站共用数据源的 Toy 专用构建。它使用单一 `index.html`、Hash 路由和按条目拆分的 JSON 数据，不依赖 Node.js 服务端，也不依赖站点根路径，适合上传到 Bilibili Toy 的随机子目录。
+
+生成完整本地化上传包：
+
+```bash
+pnpm toy:pack
+```
+
+输出文件为 `outputs/dota2-cn-wiki-toy.zip`。构建器会缓存 Valve 图片到 `.data-cache/toy-assets/`，把英雄、技能和物品图片写入 ZIP；战队 Logo、国籍旗帜、统一先天图标、属性图标、图纸卷轴与熊灵肖像直接复用 `public/assets/`。
+
+只验证页面和数据分片、暂不下载远程图片时可以运行：
+
+```bash
+pnpm toy:build:fast
+```
+
+生成的 `toy-dist/toy-manifest.json` 会记录内容数量、总文件数、包体积以及仍未本地化的远程资源数量。Toy 管理后台需要 ZIP 根目录直接包含 `index.html`，不要再额外套一层目录。
+
+上传或部署前可单独运行严格验收：
+
+```bash
+pnpm toy:validate
+```
+
+它会检查目录与详情分片是否一一对应、嵌套目录下是否仍有错误的根路径、JSON 是否可解析、本地图片引用是否存在，以及是否仍有远程图片依赖。

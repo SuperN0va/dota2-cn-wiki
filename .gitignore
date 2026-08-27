@@ -15,6 +15,7 @@
 /.next/
 /.vinext/
 /out/
+/toy-dist/
 
 # misc
 .DS_Store
@@ -31,6 +32,13 @@ yarn-error.log*
 
 # generated data sync scratch files
 .data-cache/
+.translation-env/
+.translation-nllb-env/
+.translation-cache/
+.translation-data/
+.translation-models/
+__pycache__/
+*.tsbuildinfo
 
 # deployment and generated files
 .vercel
