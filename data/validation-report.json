@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T07:28:10.421Z",
+  "generatedAt": "2026-09-16T07:47:09.727Z",
   "passed": true,
   "checks": [
     {
@@ -95,12 +95,12 @@
     {
       "name": "现代历史结构无遗漏",
       "pass": true,
-      "detail": "2933/2933 个版本结构已挂接"
+      "detail": "2935/2935 个版本结构已挂接"
     },
     {
       "name": "历史状态分类覆盖",
       "pass": true,
-      "detail": "added=1564，reworked=773，removed=2665，old=3282，new=3538，talents=7790"
+      "detail": "added=1564，reworked=773，removed=2667，old=3283，new=3539，talents=7792"
     },
     {
       "name": "物品记录总数",
@@ -170,17 +170,17 @@
     {
       "name": "英雄技能机制覆盖",
       "pass": true,
-      "detail": "127/127 位英雄，775 个技能机制块"
+      "detail": "127/127 位英雄，780 个技能机制块"
     },
     {
       "name": "机制英文原文可回检",
       "pass": true,
-      "detail": "20631 条机制均保留英文原文"
+      "detail": "20859 条机制均保留英文原文"
     },
     {
       "name": "机制翻译状态完整",
       "pass": true,
-      "detail": "986 条人工校对，19645 条采用英文原文展示"
+      "detail": "985 条人工校对，19874 条采用英文原文展示"
     },
     {
       "name": "未经校对内容回退英文",
@@ -195,7 +195,7 @@
     {
       "name": "人工校对译文有效",
       "pass": true,
-      "detail": "986 条校对译文均含中文"
+      "detail": "985 条校对译文均含中文"
     },
     {
       "name": "人工校对译文无异常模式",
@@ -225,17 +225,17 @@
     {
       "name": "官方版本覆盖",
       "pass": true,
-      "detail": "117 个版本"
+      "detail": "118 个版本"
     },
     {
       "name": "版本索引一致",
       "pass": true,
-      "detail": "117/117"
+      "detail": "118/118"
     },
     {
       "name": "最新版本一致",
       "pass": true,
-      "detail": "7.41e"
+      "detail": "7.41f"
     },
     {
       "name": "版本中文内容存在",

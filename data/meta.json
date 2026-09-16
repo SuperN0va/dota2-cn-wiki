@@ -1,12 +1,12 @@
 {
   "schemaVersion": 8,
-  "generatedAt": "2026-09-09T07:28:08.804Z",
-  "latestPatch": "7.41e",
+  "generatedAt": "2026-09-16T07:47:08.089Z",
+  "latestPatch": "7.41f",
   "counts": {
     "heroes": 127,
     "items": 408,
     "itemRecords": 544,
-    "patches": 117,
+    "patches": 118,
     "cnNews": 51,
     "legacyPages": 488
   },
