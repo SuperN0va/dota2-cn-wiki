@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T07:47:35.941Z",
+  "generatedAt": "2026-09-23T07:50:57.935Z",
   "passed": true,
   "checks": [
     {
@@ -95,12 +95,12 @@
     {
       "name": "现代历史结构无遗漏",
       "pass": true,
-      "detail": "2935/2935 个版本结构已挂接"
+      "detail": "2942/2942 个版本结构已挂接"
     },
     {
       "name": "历史状态分类覆盖",
       "pass": true,
-      "detail": "added=1564，reworked=773，removed=2667，old=3283，new=3539，talents=7792"
+      "detail": "added=1564，reworked=773，removed=2665，old=3289，new=3545，talents=7812"
     },
     {
       "name": "物品记录总数",
@@ -175,12 +175,12 @@
     {
       "name": "机制英文原文可回检",
       "pass": true,
-      "detail": "20865 条机制均保留英文原文"
+      "detail": "20862 条机制均保留英文原文"
     },
     {
       "name": "机制翻译状态完整",
       "pass": true,
-      "detail": "985 条人工校对，19880 条采用英文原文展示"
+      "detail": "985 条人工校对，19877 条采用英文原文展示"
     },
     {
       "name": "未经校对内容回退英文",
