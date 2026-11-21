@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T10:50:26.916Z",
+  "generatedAt": "2026-11-21T09:57:55.819Z",
   "passed": true,
   "checks": [
     {
@@ -95,17 +95,17 @@
     {
       "name": "现代历史结构无遗漏",
       "pass": true,
-      "detail": "2943/2943 个版本结构已挂接"
+      "detail": "2999/2999 个版本结构已挂接"
     },
     {
       "name": "历史状态分类覆盖",
       "pass": true,
-      "detail": "added=1564，reworked=773，removed=2665，old=3290，new=3546，talents=7813"
+      "detail": "added=1568，reworked=785，removed=2725，old=3351，new=3607，talents=7924"
     },
     {
       "name": "物品记录总数",
       "pass": true,
-      "detail": "544 条"
+      "detail": "566 条"
     },
     {
       "name": "物品 ID 唯一",
@@ -115,7 +115,7 @@
     {
       "name": "图纸图标本地化",
       "pass": true,
-      "detail": "129 条图纸统一使用 Liquipedia 本地卷轴资源"
+      "detail": "134 条图纸统一使用 Liquipedia 本地卷轴资源"
     },
     {
       "name": "官方物品记录无空项",
@@ -165,22 +165,22 @@
     {
       "name": "物品机制来源覆盖",
       "pass": true,
-      "detail": "398 件当前物品关联 Liquipedia 修订版本"
+      "detail": "404 件当前物品关联 Liquipedia 修订版本"
     },
     {
       "name": "英雄技能机制覆盖",
       "pass": true,
-      "detail": "127/127 位英雄，776 个技能机制块"
+      "detail": "127/127 位英雄，777 个技能机制块"
     },
     {
       "name": "机制英文原文可回检",
       "pass": true,
-      "detail": "20694 条机制均保留英文原文"
+      "detail": "20586 条机制均保留英文原文"
     },
     {
       "name": "机制翻译状态完整",
       "pass": true,
-      "detail": "989 条人工校对，19705 条采用英文原文展示"
+      "detail": "987 条人工校对，19599 条采用英文原文展示"
     },
     {
       "name": "未经校对内容回退英文",
@@ -195,7 +195,7 @@
     {
       "name": "人工校对译文有效",
       "pass": true,
-      "detail": "989 条校对译文均含中文"
+      "detail": "987 条校对译文均含中文"
     },
     {
       "name": "人工校对译文无异常模式",
@@ -225,17 +225,17 @@
     {
       "name": "官方版本覆盖",
       "pass": true,
-      "detail": "118 个版本"
+      "detail": "119 个版本"
     },
     {
       "name": "版本索引一致",
       "pass": true,
-      "detail": "118/118"
+      "detail": "119/119"
     },
     {
       "name": "最新版本一致",
       "pass": true,
-      "detail": "7.41f"
+      "detail": "7.42"
     },
     {
       "name": "版本中文内容存在",
