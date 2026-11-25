@@ -1,5 +1,13 @@
 [
   {
+    "version": "7.42a",
+    "name": "7.42a",
+    "timestamp": 1795507200,
+    "generalSections": 1,
+    "heroChanges": 40,
+    "itemChanges": 4
+  },
+  {
     "version": "7.42",
     "name": "7.42",
     "timestamp": 1794988800,

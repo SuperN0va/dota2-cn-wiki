@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T12:38:34.298Z",
+  "generatedAt": "2026-11-25T11:27:56.175Z",
   "passed": true,
   "checks": [
     {
@@ -95,12 +95,12 @@
     {
       "name": "现代历史结构无遗漏",
       "pass": true,
-      "detail": "3026/3026 个版本结构已挂接"
+      "detail": "3041/3041 个版本结构已挂接"
     },
     {
       "name": "历史状态分类覆盖",
       "pass": true,
-      "detail": "added=1570，reworked=788，removed=2731，old=3387，new=3643，talents=7983"
+      "detail": "added=1570，reworked=793，removed=2733，old=3398，new=3654，talents=8001"
     },
     {
       "name": "物品记录总数",
@@ -165,22 +165,22 @@
     {
       "name": "物品机制来源覆盖",
       "pass": true,
-      "detail": "410 件当前物品关联 Liquipedia 修订版本"
+      "detail": "415 件当前物品关联 Liquipedia 修订版本"
     },
     {
       "name": "英雄技能机制覆盖",
       "pass": true,
-      "detail": "127/127 位英雄，777 个技能机制块"
+      "detail": "127/127 位英雄，776 个技能机制块"
     },
     {
       "name": "机制英文原文可回检",
       "pass": true,
-      "detail": "20606 条机制均保留英文原文"
+      "detail": "20607 条机制均保留英文原文"
     },
     {
       "name": "机制翻译状态完整",
       "pass": true,
-      "detail": "997 条人工校对，19609 条采用英文原文展示"
+      "detail": "995 条人工校对，19612 条采用英文原文展示"
     },
     {
       "name": "未经校对内容回退英文",
@@ -195,7 +195,7 @@
     {
       "name": "人工校对译文有效",
       "pass": true,
-      "detail": "997 条校对译文均含中文"
+      "detail": "995 条校对译文均含中文"
     },
     {
       "name": "人工校对译文无异常模式",
@@ -225,17 +225,17 @@
     {
       "name": "官方版本覆盖",
       "pass": true,
-      "detail": "119 个版本"
+      "detail": "120 个版本"
     },
     {
       "name": "版本索引一致",
       "pass": true,
-      "detail": "119/119"
+      "detail": "120/120"
     },
     {
       "name": "最新版本一致",
       "pass": true,
-      "detail": "7.42"
+      "detail": "7.42a"
     },
     {
       "name": "版本中文内容存在",
